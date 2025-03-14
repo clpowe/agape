@@ -18,5 +18,10 @@ export default defineNuxtConfig({
 	],
 	hub: {
 		// NuxtHub options
+	},
+	content: {
+		preview: {
+			api: 'https://api.nuxt.studio'
+		}
 	}
 })
