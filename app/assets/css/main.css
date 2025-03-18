@@ -1,2 +1,22 @@
 @import 'tailwindcss' theme(static);
 @import '@nuxt/ui-pro';
+
+@theme static {
+	--font-sans: 'Public Sans', sans-serif;
+
+	--color-sangria-50: #ffeff0;
+	--color-sangria-100: #ffdcde;
+	--color-sangria-200: #ffbfc3;
+	--color-sangria-300: #ff9299;
+	--color-sangria-400: #ff545f;
+	--color-sangria-500: #ff202f;
+	--color-sangria-600: #ff0011;
+	--color-sangria-700: #da000e;
+	--color-sangria-800: #b4000c;
+	--color-sangria-900: #910811;
+	--color-sangria-950: #520005;
+}
+
+:root {
+	--ui-primary: var(--ui-color-primary-900);
+}
