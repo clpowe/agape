@@ -2,7 +2,6 @@
 	const { data: items } = await useAsyncData(() => {
 		return queryCollection('navigation').all()
 	})
-	console.log(items.value)
 </script>
 
 <template>
