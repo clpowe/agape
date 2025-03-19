@@ -31,7 +31,7 @@ As a law graduate, you're ready to cross the finish line and achieve your dream 
 
 At Agape Christian Bar Prep, we offer a unique approach that goes beyond just academics. We partner with you from start to finish, providing a personalized, supportive environment that meets your academic, spiritual, and emotional needs, empowering you to succeed.
 
-## The Agape Way
+## The Agape Path to Esquire
 
 ::steps{level="3"}
 
