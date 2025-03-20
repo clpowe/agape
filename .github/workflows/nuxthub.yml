@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+      
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -40,3 +40,6 @@ jobs:
         id: deploy
         with:
           project-key: agape-osaz
+
+        env:
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
