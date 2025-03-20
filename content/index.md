@@ -2,13 +2,11 @@
 title: Agape Christian Bar Prep
 navigation:
   title: Agape Christian Bar Prep
-  description:
-    Agape Christian Bar Prep offers personalized, faith-based bar exam
+  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
 seo:
-  description:
-    Agape Christian Bar Prep offers personalized, faith-based bar exam
+  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
   title: Agape Christian Bar Prep
@@ -34,7 +32,6 @@ At Agape Christian Bar Prep, we offer a unique approach that goes beyond just ac
 ## The Agape Path to Esquire
 
 ::steps{level="3"}
-
 ### Personalized Tutoring and Coaching
 
 Our tailored, one-on-one tutoring focuses on your specific strengths and challenges, ensuring that every session is meaningful and productive.

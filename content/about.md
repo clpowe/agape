@@ -2,13 +2,11 @@
 title: About | Agape Christian Bar Prep
 navigation:
   title: About | Agape Christian Bar Prep
-  description:
-    Agape Christian Bar Prep offers personalized, faith-based bar exam
+  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
 seo:
-  description:
-    Agape Christian Bar Prep offers personalized, faith-based bar exam
+  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
   title: About | Agape Christian Bar Prep
@@ -32,7 +30,6 @@ Agape Christian Bar Prep was founded in 2015 after our founder received a divine
 ## The Agape Path to Esquire
 
 ::steps{level="3"}
-
 ### Step 1
 
 Students interested in enrolling in one of our tutoring programs or writing courses must complete an application. Our team will review each application and create a personalized success plan for the student.
@@ -44,7 +41,6 @@ Students accepted into one of our tutoring programs must attend a week-long orie
 ### Step 3
 
 Students enrolled in our tutoring programs are assigned tutors who will guide them through the bar exam preparation process, help deepen their understanding of the law, and assist in developing, strengthening, and refining the analytical and writing skills needed to pass the bar exam and excel as attorneys.
-
 ::
 
 ## About our teachers
