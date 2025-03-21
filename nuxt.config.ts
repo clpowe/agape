@@ -25,7 +25,13 @@ export default defineNuxtConfig({
 			api: 'https://api.nuxt.studio'
 		}
 	},
+	runtimeConfig: {
+		uiProLicense: ''
+	},
+	ui: {
+		colorMode: false
+	},
 	uiPro: {
-		mdc: true
+		content: true
 	}
 })
