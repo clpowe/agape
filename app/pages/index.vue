@@ -1,5 +1,4 @@
 <script setup lang="ts">
-	import HeroComp from '../components/Home/HeroComp.vue'
 	const { data: home } = await useAsyncData(() =>
 		queryCollection('content').path('/').first()
 	)
@@ -11,10 +10,7 @@
 </script>
 
 <template>
-	<UContainer>
-		<HeroComp />
+	<UPage>
 		<ContentRenderer v-if="home" :value="home" />
-		<div v-else>Home not found</div>
-		<UButton color="primary">Button</UButton>
-	</UContainer>
+	</UPage>
 </template>

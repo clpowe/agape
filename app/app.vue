@@ -2,9 +2,7 @@
 	<UApp>
 		<AppHeader />
 		<UMain>
-			<NuxtLayout>
-				<NuxtPage />
-			</NuxtLayout>
+			<NuxtPage />
 		</UMain>
 	</UApp>
 </template>

@@ -3,6 +3,9 @@
 
 @theme static {
 	--font-sans: 'Public Sans', sans-serif;
+	--font-crimson: 'Crimson Text', 'serif';
+
+	--color-white: #fff;
 
 	--color-sangria-50: #ffeff0;
 	--color-sangria-100: #ffdcde;
@@ -13,8 +16,68 @@
 	--color-sangria-600: #ff0011;
 	--color-sangria-700: #da000e;
 	--color-sangria-800: #b4000c;
-	--color-sangria-900: #910811;
+	--color-sangria-900: #910811; /*main*/
 	--color-sangria-950: #520005;
+
+	--color-mystic-50: #f5f8fa;
+	--color-mystic-100: #dde9ef;
+	--color-mystic-200: #cfe2e8;
+	--color-mystic-300: #a4c8d5; /*main*/
+	--color-mystic-400: #73abbd;
+	--color-mystic-500: #5191a6;
+	--color-mystic-600: #3f768a;
+	--color-mystic-700: #345f70;
+	--color-mystic-800: #2e505e;
+	--color-mystic-900: #2a4550;
+	--color-mystic-950: #1c2d35;
+
+	--color-cherub-50: #fbf4f8;
+	--color-cherub-100: #f9eaf3;
+	--color-cherub-200: #f6dae9; /*main*/
+	--color-cherub-300: #eeb3d1;
+	--color-cherub-400: #e284b2;
+	--color-cherub-500: #d55f95;
+	--color-cherub-600: #c24076;
+	--color-cherub-700: #a72f5d;
+	--color-cherub-800: #8a2a4e;
+	--color-cherub-900: #742743;
+	--color-cherub-950: #461124;
+
+	--color-moon-raker-50: #faf7fd;
+	--color-moon-raker-100: #f2edfa;
+	--color-moon-raker-200: #e2d4f4; /*main*/
+	--color-moon-raker-300: #d6c3ef;
+	--color-moon-raker-400: #bd9ce4;
+	--color-moon-raker-500: #a376d6;
+	--color-moon-raker-600: #8d58c5;
+	--color-moon-raker-700: #7845ab;
+	--color-moon-raker-800: #653c8d;
+	--color-moon-raker-900: #533271;
+	--color-moon-raker-950: #371a51;
+
+	--color-salomie-50: #fff9eb;
+	--color-salomie-100: #fff0c6;
+	--color-salomie-200: #ffdf8b; /*main*/
+	--color-salomie-300: #ffc74a;
+	--color-salomie-400: #ffb020;
+	--color-salomie-500: #f98d07;
+	--color-salomie-600: #dd6602;
+	--color-salomie-700: #b74606;
+	--color-salomie-800: #94350c;
+	--color-salomie-900: #7a2c0d;
+	--color-salomie-950: #461502;
+
+	--color-madang-50: #f2fbf3;
+	--color-madang-100: #e0f8e2;
+	--color-madang-200: #c3efc8; /*main*/
+	--color-madang-300: #94e19e;
+	--color-madang-400: #5eca6b;
+	--color-madang-500: #38af48;
+	--color-madang-600: #299037;
+	--color-madang-700: #23722e;
+	--color-madang-800: #215a2a;
+	--color-madang-900: #1c4b24;
+	--color-madang-950: #0a2910;
 }
 
 :root {

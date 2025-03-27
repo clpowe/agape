@@ -2,11 +2,13 @@
 title: Agape Christian Bar Prep
 navigation:
   title: Agape Christian Bar Prep
-  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
+  description:
+    Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
 seo:
-  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
+  description:
+    Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
   title: Agape Christian Bar Prep
@@ -15,40 +17,106 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
   success.
 ---
 
-# Agape Christian Bar Prep
+::HeroBanner{ color="" image="/HomeHero.png" altText="Young man in glasses studying in a grey hoddie."}
+#title
+Agape Christian Bar Prep
+#headline
+Crush the Bar Exam with Faith-Fueled Focus and Expert Mentorship
+#description
+Personalized, Faith-Based Coaching That Gets Results
 
-## Find Hope, Gain Confidence, and Pass the Bar with Agape
-
-### **You Have a Vision for Your Future**
-
-As a law graduate, you're ready to cross the finish line and achieve your dream of becoming an attorney. But the bar exam looms as a final challenge on this journey.
-
-## The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need
-
-## Agape Christian Bar Prep – Your Partner for Success and Spiritual Growth
-
-At Agape Christian Bar Prep, we offer a unique approach that goes beyond just academics. We partner with you from start to finish, providing a personalized, supportive environment that meets your academic, spiritual, and emotional needs, empowering you to succeed.
-
-## The Agape Path to Esquire
-
-::steps{level="3"}
-### Personalized Tutoring and Coaching
-
-Our tailored, one-on-one tutoring focuses on your specific strengths and challenges, ensuring that every session is meaningful and productive.
-
-### Comprehensive Program Offerings
-
-From Florida Bar to Uniform and Multistate Bar Exams, Agape offers specialized courses designed for each exam. We also provide early bar prep, law school prep, and writing courses, addressing each stage of your legal journey.
-
-### Faith-Based Support System
-
-Grow in confidence and faith with our integrated spiritual resources—community prayers, support sessions, and exercises that uplift you throughout your journey.
-
-\[Apply Now]
+#cta
+::AppButton{color="neutral" size="xl" to="/about"}
+About Agape Christian
 ::
 
-## Start Your Journey Toward Bar Exam Success – Apply Now
+#cta
+::AppButton{color="primary" size="xl" to="/contact"}
+Contact Us
+::
 
-Ready to prepare with confidence and clarity? Click below to join Agape’s family and experience the support of a program built around you.
+::
 
-\[Apply Now]
+::UContainer
+
+::BreakOutBanner{color="red"}
+#quote
+The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need
+
+::
+
+## Real Mentors. Real Strategy. Real Faith.
+
+We’re more than just another bar prep course. We’re your dedicated support system, rooted in both legal expertise and Christian encouragement.
+Led by Tishia Dunham, former bar exam grader and law professor, Agape offers:
+
+- One-on-one coaching with former bar exam graders & law faculty
+- Faith-based mentoring that supports your emotional and spiritual well-being
+- Experience across subjects like Constitutional Law, Evidence, Property & more
+
+> Nearly 20 years of helping aspiring attorneys pass with purpose.
+
+## What’s Holding You Back?
+
+Struggling with motivation? Feeling lost in the sea of outlines and schedules? You’re not alone.
+Big-box bar courses leave you feeling unseen and unsupported
+
+- Big-box bar courses leave you feeling unseen and unsupported
+- Time pressures, family obligations, and burnout steal your focus
+- Doubts whisper, “Do I really have what it takes?”
+- Spiritual fatigue adds to mental overwhelm
+
+We get it. That’s exactly why Agape exists—to restore your clarity and confidence.
+
+## A Better Way to Prep: Designed Just for You
+
+We take a personalized approach to bar prep—one that works with your life, learning style, and spiritual walk.
+
+1. Here’s how we help you succeed:
+   Connect With Us
+   Book a free consultation to share your goals and challenges. We listen first.
+2. Get a Custom Plan
+   Whether you’re a first-time taker or trying again, we create a roadmap for your success:
+
+- One-on-one Bar Tutoring
+- Essay & MBE Writing Crash Courses
+- Bar Boot Camps & Early Prep Options
+- Law School Exam Skills (1L–3L)
+
+3. Stay Supported Until Exam Day
+   You’ll never have to figure it out alone. We monitor your progress, provide accountability, and offer prayer support if you desire.
+
+## Imagine Feeling Ready—Mind, Body, Spirit
+
+Visualize this: Walking into your exam knowing you’re not only prepared—but grounded.
+
+- Master essay writing, MBE strategies, and time management
+- Strengthen your faith during a high-pressure season
+- Pass the bar with purpose and step confidently into your legal calling
+
+## They Did It—So Can You
+
+“Agape gave me a study plan that fit my life. I passed—and grew spiritually in the process.”
+— Tiffany Young
+“One-on-one tutoring was a game-changer. Agape helped me believe in myself again.”
+— Sidrena Ruth
+“This wasn’t just prep. It was mentorship. I was one and done!”
+— Ashley Palmer
+“I passed because Agape showed me how to stay focused and grounded.”
+— Justin Bell
+::AppButton{color="primary" size="xl" to="/contact"}
+See More Testimonials
+::
+
+## Let’s Talk—Spots Fill Fast
+
+Our programs are personalized and intentionally limited. We keep it small so we can keep it focused—on you.
+
+- Apply Now – Reserve Your Spot Before the Next Exam Window
+- Book a Free Consultation – Let’s Plan Your Path to Victory
+- Have Questions?
+  ::AppButton{color="primary" size="xl" to="/contact"}
+  Contact Us
+  ::
+
+> You’ve come too far to be overwhelmed now. Let us help you finish this race strong—with wisdom, preparation, and unshakable faith.

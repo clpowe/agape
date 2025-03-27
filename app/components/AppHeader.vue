@@ -6,7 +6,7 @@
 
 <template>
 	<UHeader>
-		<template #title> </template>
+		<template #title>Agape Christian Bar Prep </template>
 		<UNavigationMenu :items="items" />
 	</UHeader>
 </template>

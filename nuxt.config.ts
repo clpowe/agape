@@ -14,7 +14,8 @@ export default defineNuxtConfig({
 		'@nuxt/ui-pro',
 		'@nuxt/content',
 		'@nuxt/eslint',
-		'@nuxthub/core'
+		'@nuxthub/core',
+		'@nuxt/test-utils/module'
 	],
 	css: ['~/assets/css/main.css'],
 	hub: {
