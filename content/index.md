@@ -18,55 +18,72 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 ---
 
 ::HeroBanner{ color="" image="/HomeHero.png" altText="Young man in glasses studying in a grey hoddie."}
-#title
-Agape Christian Bar Prep
-#headline
-Crush the Bar Exam with Faith-Fueled Focus and Expert Mentorship
-#description
-Personalized, Faith-Based Coaching That Gets Results
-
-#cta
-::AppButton{color="neutral" size="xl" to="/about"}
-About Agape Christian
-::
-
-#cta
-::AppButton{color="primary" size="xl" to="/contact"}
-Contact Us
-::
-
+---
+headline: Personalized, Faith-Based Coaching That Gets Results 
+description: The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need
+links:
+  - text: Get Started
+    to: /apply
+  - text: Lets Talk
+    to: /contact
+---
 ::
 
 ::UContainer
 
-::BreakOutBanner{color="red"}
-#quote
-The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need
-
+::BreakOutBanner
+---
+color: red
+quote: Crush the Bar Exam with Faith-Fueled Focus and Expert Mentorship 
+subtitle: Agape pearl of wisdom
+---
 ::
 
-## Real Mentors. Real Strategy. Real Faith.
-
-We’re more than just another bar prep course. We’re your dedicated support system, rooted in both legal expertise and Christian encouragement.
-Led by Tishia Dunham, former bar exam grader and law professor, Agape offers:
-
-- One-on-one coaching with former bar exam graders & law faculty
-- Faith-based mentoring that supports your emotional and spiritual well-being
-- Experience across subjects like Constitutional Law, Evidence, Property & more
+::UPageSection
+---
+title: How Our Program Is Different
+description: Agape Christian Bar Prep helps students prepare for success on the bar exam and in law school by focusing on personalized coaching and a faith-based environment. You’re not just getting another commercial prep course; you’re joining a dedicated family who wants to see you thrive academically and grow spiritually.
+features:
+  - title: Real Mentorship, Real Strategy, Real Faith
+    description: Led by founder Tishia Dunham, a former bar exam grader and law professor, our team of attorneys and educators brings nearly 20 years of proven success helping first-time and repeat bar takers.
+    icon: 'i-lucide-smile'
+    to: '/getting-started/icons'
+  - title: Tailored for Your Journey
+    description: Whether you’re fresh out of law school or retaking the bar, our programs are adapted to your learning style, schedule, and background. We address not only the legal content but also time management, test anxiety, and spiritual well-being.
+    icon: 'i-lucide-smile'
+    to: '/getting-started/icons'
+  - title: Christ-Centered Support
+    description: We integrate prayer, scriptural study, and uplifting community fellowship into the bar prep experience, ensuring you’re never alone on this journey.
+    icon: 'i-lucide-smile'
+    to: '/getting-started/icons'
+---
+::
 
 > Nearly 20 years of helping aspiring attorneys pass with purpose.
 
-## What’s Holding You Back?
+::UPageSection
+---
+title: What is Holding You Back?
+description: Struggling with motivation? Feeling lost in the sea of outlines and schedules? You’re not alone. Big-box bar courses leave you feeling unseen and unsupported.
+orientation: horizontal
+features:
+  - title: Big-box bar courses leave you feeling unseen and unsupported
+    description: Time pressures, family obligations, and burnout steal your focus. Doubts whisper, "Do I really have what it takes?"
+  - title: Spiritual fatigue adds to mental overwhelm
+    description: We get it. That’s exactly why Agape exists—to restore your clarity and confidence.
+  - title: 'A Better Way to Prep: Designed Just for You'
+    description: We take a personalized approach to bar prep—one that works with your life, learning style, and spiritual walk.
+---
+![my image](/HomeHero.png){class="w-full h-full rounded-[calc(var(--ui-radius)*2)]" width="352" height="350"}
+::
 
-Struggling with motivation? Feeling lost in the sea of outlines and schedules? You’re not alone.
-Big-box bar courses leave you feeling unseen and unsupported
+::BreakOutBanner
+---
+color: red
+quote: We get it. That’s exactly why Agape exists—to restore your clarity and confidence.
+---
+::
 
-- Big-box bar courses leave you feeling unseen and unsupported
-- Time pressures, family obligations, and burnout steal your focus
-- Doubts whisper, “Do I really have what it takes?”
-- Spiritual fatigue adds to mental overwhelm
-
-We get it. That’s exactly why Agape exists—to restore your clarity and confidence.
 
 ## A Better Way to Prep: Designed Just for You
 
@@ -104,6 +121,7 @@ Visualize this: Walking into your exam knowing you’re not only prepared—but 
 — Ashley Palmer
 “I passed because Agape showed me how to stay focused and grounded.”
 — Justin Bell
+
 ::AppButton{color="primary" size="xl" to="/contact"}
 See More Testimonials
 ::
@@ -120,3 +138,5 @@ Our programs are personalized and intentionally limited. We keep it small so we 
   ::
 
 > You’ve come too far to be overwhelmed now. Let us help you finish this race strong—with wisdom, preparation, and unshakable faith.
+
+::

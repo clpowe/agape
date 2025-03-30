@@ -1,5 +1,4 @@
 <script setup lang="ts">
-	import HeroComp from '../components/Home/HeroComp.vue'
 	const { data: about } = await useAsyncData(() =>
 		queryCollection('content').path('/about').first()
 	)
@@ -12,7 +11,6 @@
 
 <template>
 	<UContainer>
-		<HeroComp />
 		<ContentRenderer v-if="about" :value="about" />
 		<div v-else>Home not found</div>
 	</UContainer>

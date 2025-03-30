@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "mdc.enableFormatting": true,
+  "files.associations": {
+    "*.md": "mdc",
+    "*.css": "tailwindcss"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdc]": {
+    "editor.defaultFormatter": "Nuxt.mdc",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "Nuxt.mdc",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": true
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}
