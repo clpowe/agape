@@ -28,7 +28,7 @@ jobs:
         run: bun x nuxthub@latest ensure
 
       - name: Build application
-        run: bun build
+        run: bun run build
         env:
           NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
