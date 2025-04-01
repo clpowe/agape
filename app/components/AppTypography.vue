@@ -4,8 +4,14 @@ type Variant =
   | "heading-large"
   | "heading-medium"
   | "heading-small"
+  | "heading-xl"
+  | "heading-2xl"
   | "text"
   | "text-large"
+  | "text-medium"
+  | "text-small"
+  | "text-xl"
+  | "heading-variable-small"
   | "heading-variable-large"
   | "heading-variable";
 
@@ -15,14 +21,20 @@ const props = defineProps<{
 }>();
 
 const VARIANT_CLASSES: Record<Variant, string> = {
-  heading: "heading",
-  "heading-variable": "heading-variable",
-  "heading-large": "heading-large",
-  "heading-medium": "heading-medium",
-  "heading-small": "heading-small",
-  "heading-variable-large": "heading-variable-large",
+  "text-small": "text-small",
   text: "text",
+  "text-medium": "text-medium",
   "text-large": "text-large",
+  "text-xl": "text-xl",
+  "heading-small": "heading-small",
+  heading: "heading",
+  "heading-medium": "heading-medium",
+  "heading-large": "heading-large",
+  "heading-xl": "heading-xl",
+  "heading-2xl": "heading-2xl",
+  "heading-variable-small": "heading-variable-small",
+  "heading-variable": "heading-variable",
+  "heading-variable-large": "heading-variable-large",
 };
 
 const variantClass = computed(() => {
@@ -40,26 +52,26 @@ const variantClass = computed(() => {
 .text-small {
   font-size: 1rem;
   /* 16px */
-  font-family: Almarai, sans-serif;
+  font-family: var(--font-sans);
 }
 
 .text-medium {
   font-size: 1.333rem;
   /* ~21.3px */
-  font-family: Almarai, sans-serif;
+  font-family: var(--font-sans);
 }
 
 .text-large {
   font-size: 1.777rem;
   /* ~28.4px */
-  font-family: Almarai, sans-serif;
+  font-family: var(--font-sans);
   text-wrap: balance;
 }
 
 .text-xl {
   font-size: 2.369rem;
   /* ~37.9px */
-  font-family: Almarai, sans-serif;
+  font-family: var(--font-sans);
 }
 
 /* FIXED HEADING SIZES */
@@ -87,13 +99,13 @@ const variantClass = computed(() => {
   font-family: var(--font-crimson);
 }
 
-.header2 {
+.heading-xl {
   font-size: 4.209rem;
   line-height: 1;
   font-family: var(--font-crimson);
 }
 
-.header2-lg {
+.heading-2xl {
   font-size: 5.61rem;
   line-height: 1;
   font-family: var(--font-crimson);
@@ -112,8 +124,8 @@ const variantClass = computed(() => {
 }
 
 .heading-variable-large {
-  font-size: clamp(3.25rem, 1px + 4.5vw, 5.375rem);
-  line-height: 100%;
+  font-size: clamp(3.25rem, 1px + 4.5vw, 4.375rem);
+  line-height: 95%;
   font-family: var(--font-crimson);
   text-wrap: balance;
 }

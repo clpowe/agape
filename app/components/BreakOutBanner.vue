@@ -25,5 +25,3 @@ const props = defineProps<{
 
 const colorClass = useColorClass(props.color);
 </script>
-
-<style scoped></style>

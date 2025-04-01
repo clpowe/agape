@@ -1,7 +1,13 @@
 <script setup lang="ts">
+import { UContainer } from "#components";
 import { useColorClass } from "~/composables/useColorClass";
 
 defineOptions({ name: "HeroBanner" });
+
+interface Links {
+  text: string;
+  to: string;
+}
 
 interface HeroProps {
   headline?: string;
@@ -9,7 +15,7 @@ interface HeroProps {
   image?: string;
   description?: string;
   altText: string;
-  links?: [];
+  links?: Links[];
   color?: "primary" | "blue" | "green" | "purple" | "yellow" | "pink";
 }
 
@@ -35,7 +41,7 @@ const handleImageError = () => {
 </script>
 
 <template>
-  <div class="max-w-[1440px] mx-auto text-slate-950" :class="colorClass">
+  <UContainer class="text-slate-950" :class="colorClass">
     <div
       id="main-content"
       class="grid min-h-[700px] grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 overflow-clip"
@@ -49,7 +55,7 @@ const handleImageError = () => {
         <AppTypography tag="h2" variant="heading-variable-large">
           {{ headline }}
         </AppTypography>
-        <AppTypography tag="p" variant="text-large">
+        <AppTypography tag="p" variant="text-medium">
           {{ description }}
         </AppTypography>
 
@@ -58,17 +64,17 @@ const handleImageError = () => {
             class="rounded-full"
             color="neutral"
             size="2xl"
-            :to="links[0].to"
+            :to="links[0]?.to"
           >
-            {{ links[0].text }}
+            {{ links[0]?.text }}
           </UButton>
           <UButton
             class="rounded-full"
             color="primary"
             size="2xl"
-            :to="links[0].to"
+            :to="links[1]?.to"
           >
-            {{ links[1].text }}
+            {{ links[1]?.text }}
           </UButton>
         </div>
       </div>
@@ -97,7 +103,7 @@ const handleImageError = () => {
         </div>
       </div>
     </div>
-  </div>
+  </UContainer>
 </template>
 
 <style scoped>
