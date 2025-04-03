@@ -94,35 +94,7 @@ class: 'lg:col-span-2'
 
 ::
 
-::UPageSection
-::UPageColumns
 
-::UPageCard
----
-description: Beyond Grateful for the Agape Christian Bar Preparation Program, the Agape Christian Bar Preparation Staff, and the Agape Christian Bar Preparation Support Family!! This Review alone is not enough to express my gratitude!! Not only was I able to receive the necessary skills and knowledge to achieve passing results on my bar exam, but most importantly I was able to reclaim my relationship with GOD!!
----
-
-#footer
-::UUser
-  ---
-  name: Tiffany Young
-  ---
-::
-
-::
-
-::UPageCard
----
-description: Agape has truly been a blessing to me! I learned so much from my tutors. The one-on-one sessions that I had with my tutor not only helped me with the bar exam but with my spiritual growth as well. I am so happy that I was a part of the group for the February 2022 bar exam. Now I can say that I am one and done!
----
-#footer
-::UUser
----
-name: Ashley Palmer 
----
-::
-::
-
-::
+::TestimonialsSection
 ::
 
