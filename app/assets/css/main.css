@@ -1,9 +1,12 @@
 @import "tailwindcss" theme(static);
 @import "@nuxt/ui-pro";
 
+@source "../../../content";
+
 @theme static {
   --font-sans: "Almarai", sans-serif;
-  --font-crimson: "Crimson Text", "serif";
+  /* --font-serif: "Crimson Text", "serif"; */
+  /* --font-crimson: "Crimson Text", "serif"; */
 
   --color-white: #fffbf8;
 
@@ -84,10 +87,6 @@
   --color-madang-800: #215a2a;
   --color-madang-900: #1c4b24;
   --color-madang-950: #0a2910;
-
-
-
-
 }
 
 :root {

@@ -124,8 +124,9 @@ const variantClass = computed(() => {
 }
 
 .heading-variable-large {
-  font-size: clamp(3.25rem, 1px + 4.5vw, 4.375rem);
+  font-size: clamp(2.75rem, 1px + 4.5vw, 4rem);
   line-height: 95%;
+  font-weight: 700;
   font-family: var(--font-crimson);
   text-wrap: balance;
 }

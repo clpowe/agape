@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxthub/core",
     "@nuxt/test-utils/module",
+    "@vueuse/nuxt",
   ],
   css: ["~/assets/css/main.css"],
   hub: {
