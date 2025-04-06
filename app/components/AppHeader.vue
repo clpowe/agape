@@ -5,20 +5,19 @@ const { data: items } = await useAsyncData(() => {
 </script>
 
 <template>
-  <UHeader>
-    <template #title>Agape Christian Bar Prep </template>
-
-    <UNavigationMenu :items="items" />
-
-    <template #right>
-      <UTooltip text="Open on GitHub" :kbds="['meta', 'G']">
-        <UButton color="neutral" variant="ghost" to="https://github.com/nuxt/ui" target="_blank"
-          icon="i-simple-icons-github" aria-label="GitHub" />
-      </UTooltip>
-    </template>
-
-    <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
-    </template>
-  </UHeader>
+  <header>
+    <p>Agape Christian Bar Prep</p>
+    <nav>
+      <ul>
+        <li v-for="item in items" :key="item.id">
+          <NuxtLink :to="item.to">{{ item.label }}</NuxtLink>
+          <ul v-if="item.children">
+            <li v-for="child in item.children" :key="child.id">
+              <NuxtLink :to="child.to">{{ child.label }}</NuxtLink>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>

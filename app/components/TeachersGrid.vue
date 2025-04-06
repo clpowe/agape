@@ -13,11 +13,16 @@ defineProps<{
 </script>
 
 <template>
-  <UPageSection :title :description :headline>
-    <UPageGrid
+  <div :title :description :headline>
+    <AppTypography tag="p" variant="text">{{ title }}</AppTypography>
+    <AppTypography tag="h2" variant="heading-variable">{{
+      headline
+    }}</AppTypography>
+    <AppTypography tag="p" variant="text">{{ description }}</AppTypography>
+    <div
       class="relative grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
     >
-      <UCard v-for="(teacher, index) in teachers" :key="index">
+      <div v-for="(teacher, index) in teachers" :key="index">
         <NuxtImg
           :src="teacher.image"
           class="w-full"
@@ -25,10 +30,8 @@ defineProps<{
           height="400"
           format="avif"
         />
-        <template #footer>
-          <UUser :name="teacher.name" size="xl" />
-        </template>
-      </UCard>
-    </UPageGrid>
-  </UPageSection>
+        {{ teacher.name }}
+      </div>
+    </div>
+  </div>
 </template>

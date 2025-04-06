@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/scripts",
     "@nuxt/test-utils",
-    "@nuxt/ui-pro",
     "@nuxt/content",
     "@nuxt/eslint",
     "@nuxthub/core",
@@ -29,12 +28,5 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     uiProLicense: "",
-  },
-  ui: {
-    colorMode: false,
-  },
-  uiPro: {
-    mdc: true,
-    content: true,
   },
 });

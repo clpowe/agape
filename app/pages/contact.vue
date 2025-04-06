@@ -1,15 +1,13 @@
 <script setup lang="ts">
 const { data: contact } = await useAsyncData(() =>
-	queryCollection('content').path('/contact').first()
-)
+  queryCollection("content").path("/contact").first()
+);
 
 useSeoMeta({
-	title: contact.value?.title,
-	description: contact.value?.description
-})
+  title: contact.value?.title,
+  description: contact.value?.description,
+});
 </script>
 <template>
-	<UPage>
-		<ContentRenderer v-if="contact" :value="contact" />
-	</UPage>
+  <ContentRenderer v-if="contact" :value="contact" />
 </template>

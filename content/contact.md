@@ -18,8 +18,4 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 
 ---
 
-::IconCard
----
-title: Agape Christian Bar Prep
----
-::
+## Contact Us

@@ -1,14 +1,21 @@
 {
   "label": "services",
-  "to": "/",
+  "to": "/services",
   "children": [
     {
-      "label": "services",
-      "to": "/"
+      "label": "Law School Preparation Services",
+      "description": "Agape Christian Bar Prep offers personalized, faith-based bar exam prep with expert tutoring, tailored study plans, and spiritual support for success.",
+      "to": "/services/law-school-prep"
     },
     {
-      "label": "services",
-      "to": "/"
+      "label": "Bar Exam Services",
+      "description": "Agape Christian Bar Prep offers personalized, faith-based bar exam prep with expert tutoring, tailored study plans, and spiritual support for success.",
+      "to": "/services/bar-exam-services"
+    },
+    {
+      "label": "Law School Partnerships",
+      "description": "Agape Christian Bar Prep offers personalized, faith-based bar exam prep with expert tutoring, tailored study plans, and spiritual support for success.",
+      "to": "/services/law-school-partnerships"
     }
   ]
 }

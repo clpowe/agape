@@ -13,21 +13,17 @@ defineProps<{
 </script>
 
 <template>
-  <UPageSection :title :description :headline>
-    <UPageColumns>
-      <UPageCard
-        v-for="(testimonial, index) in testimonials"
-        :key="index"
-        :description="testimonial.quote"
-        :ui="{
-          description:
-            'before:content-[open-quote] after:content-[close-quote]',
-        }"
-      >
-        <template #footer>
-          <UUser :name="testimonial.name" size="xl" />
-        </template>
-      </UPageCard>
-    </UPageColumns>
-  </UPageSection>
+  <section :title :description :headline>
+    <AppTypography tag="p" variant="text">{{ title }}</AppTypography>
+    <div>
+      <div v-for="(testimonial, index) in testimonials" :key="index">
+        <AppTypography tag="p" variant="text" class="mt-2">
+          {{ testimonial.quote }}
+        </AppTypography>
+        <AppTypography tag="p" variant="heading">{{
+          testimonial.name
+        }}</AppTypography>
+      </div>
+    </div>
+  </section>
 </template>

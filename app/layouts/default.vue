@@ -1,7 +1,8 @@
 <template>
-  <UPage>
-    <UContainer>
+  <div>
+    <AppHeader />
+    <main>
       <slot />
-    </UContainer>
-  </UPage>
+    </main>
+  </div>
 </template>
