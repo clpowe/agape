@@ -42,7 +42,7 @@ export default defineContentConfig({
       source: "testimonials/*.md",
       schema: z.object({
         name: z.string(),
-        descripdtion: z.string(),
+        quote: z.string(),
       }),
     }),
   },

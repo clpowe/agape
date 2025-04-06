@@ -4,11 +4,9 @@
 @source "../../../content";
 
 @theme static {
-  --font-sans: "Almarai", sans-serif;
+  /* --font-sans: "Almarai", sans-serif; */
   /* --font-serif: "Crimson Text", "serif"; */
   /* --font-crimson: "Crimson Text", "serif"; */
-
-  --color-white: #fffbf8;
 
   --color-sangria-50: #ffeff0;
   --color-sangria-100: #ffdcde;
@@ -90,6 +88,5 @@
 }
 
 :root {
-  --ui-bg: var(--color-white);
   --ui-primary: var(--ui-color-primary-900);
 }

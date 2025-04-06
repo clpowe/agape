@@ -3,17 +3,22 @@ const { data: testimonials } = await useAsyncData(() =>
   queryCollection("testimonials").all()
 );
 
-console.log(testimonials.value);
+defineOptions({ name: "TestimonialsSection" });
+
+defineProps<{
+  title?: string;
+  description?: string;
+  headline?: string;
+}>();
 </script>
 
 <template>
-  <UPageSection>
+  <UPageSection :title :description :headline>
     <UPageColumns>
       <UPageCard
         v-for="(testimonial, index) in testimonials"
         :key="index"
-        variant="subtle"
-        :description="testimonial.meta?.quote || ''"
+        :description="testimonial.quote"
         :ui="{
           description:
             'before:content-[open-quote] after:content-[close-quote]',
