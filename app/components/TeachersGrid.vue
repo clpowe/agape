@@ -22,7 +22,11 @@ defineProps<{
     <div
       class="relative grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"
     >
-      <div v-for="(teacher, index) in teachers" :key="index">
+      <NuxtLink
+        v-for="(teacher, index) in teachers"
+        :key="index"
+        :to="`/teachers/${teacher.slug}`"
+      >
         <NuxtImg
           :src="teacher.image"
           class="w-full"
@@ -31,7 +35,7 @@ defineProps<{
           format="avif"
         />
         {{ teacher.name }}
-      </div>
+      </NuxtLink>
     </div>
   </div>
 </template>

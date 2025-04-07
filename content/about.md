@@ -13,6 +13,8 @@ seo:
 description: Agape Christian Bar Prep offers personalized, faith-based bar exam
   prep with expert tutoring, tailored study plans, and spiritual support for
   success.
+schemaOrg:
+  "@type": "AboutPage"
 ---
 
 ## About Agape Christian

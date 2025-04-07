@@ -26,10 +26,11 @@ export default defineContentConfig({
       }),
     }),
     teachers: defineCollection({
-      type: "data",
+      type: "page",
       source: "teachers/*.md",
       schema: z.object({
         name: z.string(),
+        slug: z.string(),
         image: z.string(),
         expertise: z.array(z.string()),
         education: z.array(z.string()),
