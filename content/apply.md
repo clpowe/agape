@@ -16,6 +16,7 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 schemaOrg:
   "@type": "AboutPage"
 ---
+## Apply
 
 We are now accepting applications for the July 2025 Florida and Uniform Bar Exams. If you are interested in enrolling in one of our July 2025 bar preparation or writing courses, complete the written application below and schedule a timed one-hour assessment. Available dates are listed in the application. A $25 application fee is required, payable via Zelle to admin@agapechristianbarprep.com or by credit card through the “Pay Bill” button on our website's homepage.
 
