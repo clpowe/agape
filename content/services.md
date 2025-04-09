@@ -1,5 +1,5 @@
 ---
-title: Agape Services 
+title: Services 
 navigation:
   title: Agape Christian Bar Prep | Services 
   description: Agape Christian Bar Prep offers personalized, faith-based bar exam

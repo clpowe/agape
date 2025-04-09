@@ -1,5 +1,5 @@
 ---
-title: About | Agape Christian Bar Prep
+title: About
 navigation:
   title: About | Agape Christian Bar Prep
   description: Agape Christian Bar Prep offers personalized, faith-based bar exam
@@ -18,7 +18,9 @@ schemaOrg:
 ---
 
 ## About Agape Christian
-Current Agape Christian Bar Prep students can use this link to access information about course enrollment.
+Our mission at Agape Christian Bar Prep is to inspire and foster the learning of law students globally and empower them along their journey to esquire and beyond, while sharing the love, comfort and compassion of Jesus Christ.  To this end, we offer tutoring and bar exam preparation services to help students prepare for success in law school and on the bar exam. We specialize in helping students overcome psychological, environmental and programmatic barriers to learning so they can fully develop their intellectual potential.
+
+Agape Christian Bar Prep is committed to creating a supportive and personalized learning environment to help students thrive and excel academically.  Integrated into our programs is an accountability system to help students set goals, measure their individual progress and improve where necessary.  Our students receive customized learning plans to help them develop the independent learning, time management and prioritization skills needed to adequately prepare for the bar exam.
 
 ##  The History of Agape Christian Bar Prep 
 Agape Christian Bar Prep was founded in 2015 after our founder received a divine calling from God to “help His people”. Since then, God has used Agape Christian Bar Prep to build and restore the confidence, hope and vision of students whose dreams of becoming attorneys were once shattered by challenging law school experiences or multiple unsuccessful attempts at passing the bar exam. At Agape Christian Bar Prep, we do more than just provide bar exam preparation and tutoring services—we build success stories and transform lives. Our unique curriculum not only promotes academic growth, but also offers students a profound opportunity to deepen their relationship with Jesus and be reminded of His promises for their lives—health, peace, and victory.

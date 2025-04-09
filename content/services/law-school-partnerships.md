@@ -1,5 +1,5 @@
 ---
-title: Agape Christian Bar Prep
+title: Law School Partnerships 
 navigation:
   title: Agape Christian Bar Prep
   description: Agape Christian Bar Prep offers personalized, faith-based bar exam
@@ -17,15 +17,63 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 
 # Law School Partnerships
 
-## Early Bar Preparation Services
-We help law schools increase an “at-risk” student’s chance of passing the bar exam by providing early bar exam preparation services to help students who have completed at least two full years of law school get a jumpstart on bar exam preparation.  Our eight-week early bar exam preparation course teaches students how to learn and develop the deeper level of thinking required for bar passage through workshops that integrate doctrine and skills.  Students enrolled in this course will be automatically enrolled in one of our writing clinics so they can learn and develop the writing skills needed to earn high scoring essays on the bar exam and improve their legal writing.  In this course, students will (1) develop critical thinking, reasoning and active learning skills; (2) strengthen issue spotting, analytical reasoning and writing skills; (3) develop a strategic approach to writing essays and answering MBE styled multiple-choice questions; and (4) start the process of mastering substantive law tested on the bar exam.
+## **Early Bar Preparation Services**  
+**Duration:** 8 weeks  
+**Description:** Provides early intervention to enhance bar exam outcomes for at-risk law students who have completed at least two years of law school.
 
-## Mindset & The Bar Exam
+**Course Structure:**
+- **Personalized Learning Plan:** Develops critical thinking, reasoning, and active learning skills.
+- **Substantive Lectures:** Integrated workshops that combine doctrine and essential bar exam skills.
+- **Small Group Tutoring:** Automatic enrollment in writing clinics to strengthen analytical writing skills.
+- **Individualized Tutoring:** Personal attention to improving issue spotting and analytical reasoning.
+- **Weekly Skill Development:** Regular exercises on writing high-scoring bar exam essays and answering multiple-choice questions.
+- **Practical Drills:** Skill-focused activities to reinforce learning and improve writing proficiency.
+- **Final Intensive Review:** Comprehensive review initiating mastery of substantive law essential for bar success.
 
-An interactive workshop series to: (1) help students develop and maintain a growth mindset with respect to learning; (2) teach students how to learn; (3) provide learning strategies and techniques students can begin to apply while in law school to help bridge the gap between law school and bar exam preparation; (4) teach students the time management skills essential for bar passage including organization, prioritization, goal setting, planning and stress management; and (5) teach students the strategies for writing high scoring essays on the bar exam.  At the conclusion of the workshop series, it is our expectation that students will appreciate the value of active and independent learning, and understand that bar passage is the result of intelligence (the ability to acquire and apply knowledge) plus “effort”.
+---
 
-## Supplemental Bar Preparation Services
-We provide individualized, comprehensive and supplemental bar exam preparation services to law schools to help their graduates prepare to pass the bar exam.  These services include: (1) customized study plans; (2) weekly one-on-one and small group tutoring; (3) writing clinics; (4) essay grading and written feedback; (5) weekly assessments to help identify and strengthen potential weaknesses; (6) recorded substantive lectures to increase students’ understanding of bar tested subjects; and (7) support and guidance throughout the bar exam preparation period.  We specialize in helping law students overcome psychological, environmental and programmatic barriers to learning so they can fully develop their intellectual potential and prepare to pass the bar exam.  We are committed to creating a supportive and personalized learning environment to help students thrive academically.  Integrated into our services is an accountability system to help students measure individual progress and improve where necessary.  
+## **Mindset & The Bar Exam**  
+**Duration:** Interactive workshop series  
+**Description:** Cultivates essential psychological and strategic skills for successful bar exam preparation and performance.
 
-## Essay Writing Boot Camp
-This course is specifically designed to help students improve their essay writing skills while building the confidence needed to perform well on the essay portion of the bar exam.   This course will equip students with the skills needed to outline and write clear, concise essays by teaching them how to (1) identify and articulate legal issues in dispute and (2) apply applicable facts to legally relevant rules of law and rule explanations to reach logical conclusions.  Students enrolled in this course will participate in a two-hour writing workshop, write and receive constructive and personalized feedback on two essays, and attend two private tutoring sessions to help them improve their analytical and writing skills.  Two weeks before the bar exam, students will meet every weekday morning to write "timed" essays to help them prepare mentally and physically for the essay portion of the bar exam. One week before the bar exam, students will participate in a simulated Florida or Uniform exam.
+**Course Structure:**
+- **Personalized Learning Plan:** Develops a growth mindset and effective learning habits.
+- **Substantive Lectures:** Workshops teaching practical learning strategies for bar exam success.
+- **Small Group Tutoring:** Group sessions on critical time management skills, prioritization, and goal setting.
+- **Individualized Tutoring:** Personal guidance for effective stress management and organization techniques.
+- **Weekly Skill Development:** Strategies for mastering high-scoring essay writing.
+- **Practical Drills:** Regular exercises applying learned skills in realistic scenarios.
+- **Final Intensive Review:** Assessment to ensure students understand active and independent learning principles for bar success.
+
+---
+
+## **Supplemental Bar Preparation Services**  
+**Duration:** Customized based on needs  
+**Description:** Comprehensive, individualized services that support law school graduates in effectively preparing for the bar exam.
+
+**Course Structure:**
+- **Personalized Learning Plan:** Customized study plans addressing individual student needs.
+- **Substantive Lectures:** Access to recorded lectures enhancing understanding of bar-tested subjects.
+- **Small Group Tutoring:** Regular small group tutoring sessions.
+- **Individualized Tutoring:** Weekly one-on-one tutoring tailored to student-specific weaknesses.
+- **Weekly Skill Development:** Weekly assessments identifying and improving weak areas.
+- **Practical Drills:** Essay grading with detailed written feedback and writing clinics.
+- **Final Intensive Review:** Continuous guidance and support throughout bar exam preparation, including an accountability system.
+
+---
+
+## **Essay Writing Boot Camp**  
+**Duration:** Intensive short-term course  
+**Description:** Specialized course enhancing analytical writing skills and essay performance for bar exam readiness.
+
+## **Course Structure:**
+- **Personalized Learning Plan:** Structured to help identify and articulate critical legal issues.
+- **Substantive Lectures:** Two-hour focused writing workshop.
+- **Small Group Tutoring:** Not applicable (emphasis on personalized approach).
+- **Individualized Tutoring:** Two private sessions refining analytical and essay-writing skills.
+- **Weekly Skill Development:** Regular practice essays with personalized feedback.
+- **Practical Drills:** Daily timed essays in the two weeks preceding the bar exam.
+- **Final Intensive Review:** Simulated bar exam administered one week prior to actual exam.
+
+---
+

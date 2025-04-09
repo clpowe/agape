@@ -1,5 +1,5 @@
 ---
-title: Law School Preparation Services
+title: MBE Only Takers 
 navigation:
   title: Law School Preparation Services
   description: Law school can be daunting and overwhelming for students; especially first year students because they have no idea what to expect or how to begin preparing for exams.  We offer several services to help law school students overcome the anxiety of law school and law school exams and reach their full potential academically.
@@ -11,39 +11,52 @@ description: Law school can be daunting and overwhelming for students; especiall
 
 # MBE Only Takers
 
-## MBE 101
+## **MBE 101**  
+**Duration:** 12 weeks  
+**Description:** This comprehensive tutoring program is specifically designed for students preparing for the MBE portion of the bar exam, enhancing their understanding and maximizing success potential.
 
-This 12-week tutoring course is tailored for those preparing for the MBE portion of the bar exam. The course is designed to enhance readiness and optimize the chances of success for those taking only one part of the bar exam. The course includes:
+**Course Structure:**
+- **Personalized Learning Plan:** Provides structured guidance to master essential laws and skills assessed on the MBE.
+- **Substantive Lectures:** Includes targeted lectures on critical bar-tested subjects, complemented by pretests and posttests.
+- **Small Group Tutoring (15 sessions):** Interactive sessions addressing specific topics within broader subjects to fill knowledge gaps, such as "Individual Rights" in Constitutional Law and "Jurisdiction & Venue" in Civil Procedure.
+- **Individualized Tutoring (5 hours):** Personalized sessions identifying and addressing each student's unique areas for improvement with customized feedback.
+- **Weekly Skill Development:** Regular IREAC exercises strengthen issue-spotting and analytical skills in answering MBE-style questions.
+- **Practical Drills:** Rule-drilling exercises assess and reinforce knowledge of frequently tested MBE subjects.
+- **Final Intensive Review:** MBE Boot Camp includes seven 90-minute sessions focusing on timed multiple-choice questions, followed by instructor-led reviews.
 
-- (1) Personalized Learning Plan: Tailored to provide structure, this plan guides students in grasping the law and skills assessed on the MBE portion of the bar exam.
-- (2) Substantive Lectures: Access lectures on bar-tested topics. Each lecture is supplemented with pretests and posttests.
-- (3) Small Group Tutoring (15 sessions): Targeting specific areas within broader bar-tested subjects, this helps students fill gaps in knowledge. For instance, students delve into topics like "Individual Rights" within Federal Constitutional Law and "Jurisdiction & Venue" in Federal Civil Procedure.  
-- (4) Individualized Tutoring (5 hours): Focuses on identifying and addressing students' specific deficiencies. Personalized feedback is provided to foster growth in performance.  
-- (5) Weekly IREAC Exercises: These exercises hone the ability to pinpoint specific issues in MBE-style questions.  
-- (6) Rule Drilling Sessions: Assess students' knowledge and understanding of the most frequently tested rules in key MBE bar-exam subjects.
-- (7) MBE Boot Camp: Comprising seven 90-minute sessions, students tackle timed MBE-style multiple-choice questions covering all subjects tested on the MBE section of the bar exam. Each session concludes with a live instructor review.
+**Cost:** $2,995.00
 
-Cost $2,995.00
+---
 
-## Bar Skills Crash Course
-This four-week course is designed to help students strengthen the foundational skills necessary to succeed on the MBE portion of the bar exam before starting the intensive bar exam preparation period. By strengthening these skills in advance, we believe students will be more confident and better prepared as they enter bar prep, ultimately increasing their chances of success on the bar exam.  Our curriculum for the course includes:
+## **Bar Skills Crash Course**  
+**Duration:** 4 weeks  
+**Description:** This preparatory course strengthens foundational bar exam skills before the intensive exam preparation period, boosting student confidence and performance on the MBE.
 
-- Week 1: How to actively learn from commercial lectures and outlines
-- Week 2: How to actively engage with practice questions, emphasizing the application of law to facts
-- Week 3: Refining and strengthening analytical and critical thinking skills tested on the MBE, with a focus on issue spotting
-- Week 4:  Skills assessments to test students’ growth
+**Course Structure:**
+- **Personalized Learning Plan:** Teaches effective strategies for actively engaging with bar exam lectures and outlines.
+- **Substantive Lectures:** Guides students on actively engaging with practice questions, emphasizing application of the law to fact patterns.
+- **Small Group Tutoring:** Enhances analytical and critical thinking skills, particularly issue spotting, essential for the MBE.
+- **Individualized Tutoring:** Skills assessments evaluate student progress and pinpoint individual strengths and weaknesses.
+- **Weekly Skill Development:** Consistent homework assignments reviewed and graded by instructors to monitor improvement.
+- **Practical Drills:** Regular, instructor-led sessions focused on practice and skill reinforcement.
+- **Final Intensive Review:** Final assessments and feedback sessions evaluate overall skill mastery and readiness.
 
-The course consists of 90-minute classes held twice a week, with homework assignments graded by the instructor between sessions. The course is offered in sections of 7 to 10 students to promote interaction and foster a supportive learning environment. For February bar takers this course will take place from mid-October to mid-November, and for July bar takers, from mid-March to mid-April. To ensure students fully benefit from the course, students are required to sign a commitment agreement, affirming their commitment to attend all classes and complete all assignments.
+**Cost:** $795.00
 
-COST $795.00
+---
 
-## Private Tutoring
-Our individualized tutoring sessions take a hands-on approach tailored to each student's specific needs and are meticulously crafted to:
-- (1) Actively Engage: Our tutors don’t just instruct—they fully engage with students, offering personalized guidance at every step.
-- (2) Empower with Proven Strategies: Together, we explore effective learning techniques, study habits, and exam-taking strategies to optimize performance.
-- (3) Identify & Address Weaknesses: Tutors work closely with students to pinpoint specific areas for improvement and develop targeted solutions.
-- (4) Bridge Knowledge Gaps: Through active discussion and hands-on exercises, we ensure that no substantive legal concepts remain unclear or misunderstood.
-- (5) Hone Writing Skills: Our tutors help elevate your exam essay writing, enabling you to articulate complex legal concepts with clarity and precision.
-- (6) Practice & Personalized Feedback: For those seeking practical experience, students can submit practice exam essays. We provide detailed, constructive feedback to refine and perfect both analytical and writing skills.
+## **Private Tutoring**  
+**Duration:** Hourly sessions  
+**Description:** Customized one-on-one tutoring sessions specifically tailored to address the unique learning needs of each student.
 
-Cost $295.00 per hour $1,250.00 for five HOURS
+**Course Structure:**
+- **Personalized Learning Plan:** Tutors actively engage students through individualized guidance at every stage of preparation.
+- **Substantive Lectures:** Empowers students with proven learning techniques, effective study habits, and exam-taking strategies.
+- **Small Group Tutoring:** Not applicable (replaced by personalized discussions focused on specific student needs).
+- **Individualized Tutoring:** Detailed attention to each student's individual weaknesses, providing targeted solutions.
+- **Weekly Skill Development:** Improves writing skills, enabling clear articulation of complex legal concepts.
+- **Practical Drills:** Students practice exam-style essays and receive personalized, detailed feedback for continuous improvement.
+- **Final Intensive Review:** In-depth review sessions addressing lingering issues, ensuring complete clarity in substantive knowledge and exam strategies.
+
+**Cost:** $295.00 per hour or $1,250.00 for five hours
+

@@ -1,5 +1,5 @@
 ---
-title: Agape Christian Bar Prep
+title: Contact
 navigation:
   title: Agape Christian Bar Prep
   description:

@@ -1,14 +1,14 @@
 <script setup lang="ts">
-const { data: about } = await useAsyncData(() =>
+const { data } = await useAsyncData(() =>
   queryCollection("content").path("/apply").first()
 );
 
 useSeoMeta({
-  title: about.value?.title,
-  description: about.value?.description,
+  title: data.value?.title,
+  description: data.value?.description,
 });
 </script>
 
 <template>
-  <ContentRenderer v-if="about" :value="about" />
+  <ContentRenderer v-if="data" :value="data" />
 </template>

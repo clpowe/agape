@@ -6,7 +6,6 @@ const { data } = await useAsyncData(route.path, () =>
 );
 
 useSeoMeta({
-  title: data.value?.title,
   description: data.value?.description,
 });
 </script>

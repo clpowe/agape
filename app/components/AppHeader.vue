@@ -12,8 +12,15 @@ const { data: items } = await useAsyncData(() => {
         <li v-for="item in items" :key="item.id">
           <NuxtLink :to="item.to">{{ item.label }}</NuxtLink>
           <ul v-if="item.children">
-            <li v-for="child in item.children" :key="child.id">
-              <NuxtLink :to="child.to">{{ child.label }}</NuxtLink>
+            <li v-for="child in item.children" :key="child.label">
+              <NuxtLink :to="child.to">
+                <AppTypography tag="p" variant="text">{{
+                  child.label
+                }}</AppTypography>
+                <AppTypography tag="p" variant="text">{{
+                  child.description
+                }}</AppTypography>
+              </NuxtLink>
             </li>
           </ul>
         </li>

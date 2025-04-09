@@ -1,5 +1,5 @@
 ---
-title: Agape Christian Bar Prep
+title: Law School Preparation Services 
 navigation:
   title: Agape Christian Bar Prep
   description: Agape Christian Bar Prep offers personalized, faith-based bar exam
@@ -16,29 +16,55 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 ---
 # Law School Preparation Services
 
-## Law School Exam Skills Crash Course
-This five-week course is designed to help students strengthen the foundational skills necessary to succeed on law school exams before starting the intensive reading and study period. By strengthening these skills in advance, we believe students will be more confident and better prepared as they enter final exams.  Our curriculum for the course includes:
-- Week 1: How to actively learn from lectures and outlines
-- Week 2: How to actively engage with practice questions, emphasizing the application of law to facts
-- Week 3: How to approach and analyze essay exams, with a focus on issue spotting
-- Week 4: Refining and strengthening analytical and critical thinking skills tested on law school exams
-- Week 5: Writing concisely in the active voice, followed by a skills assessment to test students’ growth
-The course consists of 90-minute classes held twice a week, with short homework assignments graded by the instructor between sessions. The course is offered in sections of 7 to 10 students to promote interaction and foster a supportive learning environment. The course is offered twice yearly- from mid-October to mid-November, and from mid-March to mid-April. To ensure students fully benefit from the course, students are required to sign a commitment agreement, affirming their commitment to attend all classes and complete all assignments.
+## **Law School Exam Skills Crash Course**  
+**Duration:** 5 weeks  
+**Description:** 
+Designed to build foundational skills essential for law school exam success, increasing confidence and preparation before intensive study periods.
 
-Cost: $995.00
+**Course Structure:**
+- **Personalized Learning Plan:** Structured approach to actively learning from lectures and outlines.
+- **Substantive Lectures:** Guides students on effectively engaging with practice questions, focusing on applying law to facts.
+- **Small Group Tutoring:** Interactive classes developing analytical and critical thinking skills necessary for law school exams.
+- **Individualized Tutoring:** Regular instructor feedback on homework assignments to pinpoint and address specific weaknesses.
+- **Weekly Skill Development:** Focus on concise, active-voice writing and issue spotting in essay exams.
+- **Practical Drills:** Short, graded assignments reinforcing key skills between sessions.
+- **Final Intensive Review:** Comprehensive skills assessment to evaluate overall readiness and growth.
 
-## Tutoring
-Our individualized tutoring sessions take a hands-on approach tailored to each student's specific needs and are meticulously crafted to:
-- (1) Actively Engage: Our tutors don’t just instruct—they fully engage with students, offering personalized guidance at every step.
-- (2) Empower with Proven Strategies: Together, we explore effective learning techniques, study habits, and exam-taking strategies to optimize performance.
-- (3) Identify & Address Weaknesses: Tutors work closely with students to pinpoint specific areas for improvement and develop targeted solutions.
-- (4) Bridge Knowledge Gaps: Through active discussion and hands-on exercises, we ensure that no substantive legal concepts remain unclear or misunderstood.
-- (5) Hone Writing Skills: Our tutors help elevate your exam essay writing, enabling you to articulate complex legal concepts with clarity and precision.
-- (6) Practice & Personalized Feedback: For those seeking practical experience, students can submit practice exam essays. We provide detailed, constructive feedback to refine and perfect both analytical and writing skills.
+**Cost:** $995.00
 
-Cost $295.00 per hour $1,250.00 for five hours  
+---
 
-## Exam Writing Crash Course
-Students enrolled in this course will participate in a three-hour writing workshop (live or virtual depending on time of enrollment), write and receive constructive and personalized feedback on three essays, and attend two private tutoring sessions to help improve their analytical and writing skills.
+## **Individualized Tutoring**  
+**Duration:** Hourly sessions  
+**Description:** 
+Customized tutoring sessions tailored specifically to address each student's unique needs and optimize law school exam performance.
 
-Cost $995.00
+**Course Structure:**
+- **Personalized Learning Plan:** Active engagement through personalized guidance at every stage.
+- **Substantive Lectures:** Empowers students with proven learning strategies, effective study habits, and exam-taking techniques.
+- **Small Group Tutoring:** Not applicable (replaced by personalized discussions and exercises).
+- **Individualized Tutoring:** Focused sessions identifying and addressing specific student weaknesses.
+- **Weekly Skill Development:** Enhances clarity and precision in essay writing and articulation of legal concepts.
+- **Practical Drills:** Submission and personalized feedback on practice exam essays to refine analytical and writing skills.
+- **Final Intensive Review:** Targeted review sessions to solidify knowledge gaps and strengthen exam performance.
+
+**Cost:** $295.00 per hour or $1,250.00 for five hours
+
+---
+
+## **Exam Writing Crash Course**  
+**Duration:** Intensive short-term course  
+**Description:** 
+Enhances analytical and writing skills through focused practice and individualized feedback, ideal for exam preparedness.
+
+**Course Structure:**
+- **Personalized Learning Plan:** Customized workshop focused on essential exam-writing skills.
+- **Substantive Lectures:** Three-hour writing workshop (available live or virtual).
+- **Small Group Tutoring:** Not applicable (personalized approach emphasized).
+- **Individualized Tutoring:** Two private tutoring sessions to address personal skill development.
+- **Weekly Skill Development:** Writing and receiving constructive feedback on three practice essays.
+- **Practical Drills:** Targeted writing exercises providing direct, personalized instructor feedback.
+- **Final Intensive Review:** Final assessment ensuring proficiency in critical essay-writing and analytical skills.
+
+**Cost:** $995.00
+

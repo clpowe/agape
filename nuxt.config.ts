@@ -1,11 +1,20 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
+  app: {
+    head: {
+      titleTemplate: "%s %separator %siteName",
+      templateParams: {
+        siteName: "Agape Christian Bar Prep",
+      },
+    },
+  },
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
   },
   modules: [
+    "@nuxtjs/seo",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",

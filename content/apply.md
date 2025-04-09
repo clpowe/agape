@@ -1,5 +1,5 @@
 ---
-title: About | Agape Christian Bar Prep
+title: Apply
 navigation:
   title: About | Agape Christian Bar Prep
   description: Agape Christian Bar Prep offers personalized, faith-based bar exam
