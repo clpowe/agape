@@ -15,6 +15,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxtjs/seo",
+    "@unocss/nuxt",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",

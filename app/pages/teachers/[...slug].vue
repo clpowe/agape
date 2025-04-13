@@ -12,5 +12,6 @@ useSeoMeta({
 </script>
 
 <template>
+  <NuxtImg :src="data?.meta.image" width="300" height="400" format="avif" />
   <ContentRenderer v-if="data" :value="data" />
 </template>

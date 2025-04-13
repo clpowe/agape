@@ -14,7 +14,7 @@ description: Law school can be daunting and overwhelming for students; especiall
 **Duration:** Intensive short-term course  
 **Description:** Tailored for first-time bar exam takers to confidently master the essay portion, enhancing analytical and writing skills.
 
-## **Course Structure:**
+**Course Structure:**
 - **Personalized Learning Plan:** Structured to help first-time takers swiftly identify and articulate legal issues.
 - **Substantive Lectures:** Three-hour writing crash course to build confidence and proficiency.
 - **Small Group Tutoring:** Not applicable (personalized approach emphasized).

@@ -62,7 +62,7 @@ description: Law school can be daunting and overwhelming for students; especiall
 
 ---
 
-**Bar Skills Crash Course**  
+## **Bar Skills Crash Course**  
 **Duration:** 5 weeks  
 **Description:** Prepares students by strengthening essential bar exam skills prior to intensive exam study, enhancing confidence and success potential.
 
@@ -79,7 +79,7 @@ description: Law school can be daunting and overwhelming for students; especiall
 
 ---
 
-**Private Tutoring**  
+## **Private Tutoring**  
 **Duration:** Hourly sessions  
 **Description:** Personalized one-on-one tutoring tailored specifically to each student's unique bar exam preparation needs.
 

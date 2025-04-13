@@ -13,14 +13,17 @@ defineProps<{
 </script>
 
 <template>
-  <section :title :description :headline>
-    <AppTypography tag="p" variant="text">{{ title }}</AppTypography>
+  <section>
+    <ContentHeader>
+      <template #title> {{ title }} </template>
+      <template #description> {{ description }} </template>
+    </ContentHeader>
     <div>
       <div v-for="(testimonial, index) in testimonials" :key="index">
-        <AppTypography tag="p" variant="text" class="mt-2">
+        <AppTypography tag="p" variant="text-m" class="mt-2">
           {{ testimonial.quote }}
         </AppTypography>
-        <AppTypography tag="p" variant="heading">{{
+        <AppTypography tag="p" variant="text-m">{{
           testimonial.name
         }}</AppTypography>
       </div>

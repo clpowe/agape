@@ -10,5 +10,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <ContentRenderer v-if="home" :value="home" />
+  <ContentRenderer v-if="home" :value="home" class="flow content-grid" />
 </template>
