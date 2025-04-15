@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "@nuxt/content",
     "@nuxt/eslint",
+    "reka-ui/nuxt",
     "@nuxthub/core",
     "@nuxt/test-utils/module",
     "@vueuse/nuxt",
