@@ -4,7 +4,6 @@ const { item } = defineProps({
     type: Object,
   },
 });
-console.log(item);
 </script>
 
 <template>

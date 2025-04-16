@@ -1,16 +1,6 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 import { ref } from "vue";
-import {
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuRoot,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "reka-ui";
 
 const { data: items } = await useAsyncData(() => {
   return queryCollection("navigation").all();
@@ -21,15 +11,24 @@ const currentTrigger = ref("");
 
 <template>
   <NavigationMenuRoot v-model="currentTrigger" class="NavigationMenuRoot">
-    <NavigationMenuList class="NavigationMenuList flex gap-4">
+    <NavigationMenuList class="NavigationMenuList">
       <template v-for="item in items" :key="item.id">
         <NavigationMenuItem>
-          <NavigationMenuLink v-if="!item.children" as-child>
+          <NavigationMenuLink
+            v-if="!item.children"
+            class="NavigationMenuLink"
+            as-child
+          >
             <NuxtLink class="Callout" :to="item.to">
               {{ item.label }}
             </NuxtLink>
           </NavigationMenuLink>
-          <NavigationMenuTrigger v-else class="NavigationMenuTrigger flex">
+          <NavigationMenuTrigger
+            v-else
+            class="NavigationMenuTrigger"
+            data-state="open"
+            data-active="true"
+          >
             {{ item.label }}
             <Icon icon="radix-icons:caret-down" class="CaretDown" />
           </NavigationMenuTrigger>
@@ -40,22 +39,31 @@ const currentTrigger = ref("");
             <ul class="List one">
               <li v-for="child in item.children" :key="child.label">
                 <NavigationMenuLink as-child>
-                  <NuxtLink class="Callout" :to="child.to">
-                    <div class="CalloutHeading">{{ child.label }}</div>
-                    <p class="CalloutText">
+                  <NuxtLink :to="child.to">
+                    <AppTypography
+                      variant="text-m"
+                      :is-bold="true"
+                      :is-strong="true"
+                      tag="p"
+                      >{{ child.label }}</AppTypography
+                    >
+                    <AppTypography variant="text-s" tag="p">
                       {{ child.description }}
-                    </p>
+                    </AppTypography>
                   </NuxtLink>
                 </NavigationMenuLink>
               </li>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-
-        <NavigationMenuIndicator class="NavigationMenuIndicator">
-          <div class="Arrow" />
-        </NavigationMenuIndicator>
       </template>
+      <NavigationMenuIndicator
+        class="absolute data-[state=hidden]:opacity-0 duration-200 data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full w-[--reka-navigation-menu-indicator-size] translate-x-[--reka-navigation-menu-indicator-position] mt-[1px] z-[100] flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]"
+      >
+        <div
+          class="relative top-[70%] h-[12px] w-[12px] rotate-[45deg] bg-white border"
+        />
+      </NavigationMenuIndicator>
     </NavigationMenuList>
 
     <div class="ViewportPosition">
@@ -64,7 +72,7 @@ const currentTrigger = ref("");
   </NavigationMenuRoot>
 </template>
 
-<style scoped>
+<style>
 .NavigationMenuRoot {
   position: relative;
   display: flex;
@@ -76,45 +84,27 @@ const currentTrigger = ref("");
 .NavigationMenuList {
   display: flex;
   justify-content: center;
-  background-color: white;
-  padding: 4px;
-  border-radius: 6px;
   list-style: none;
-  box-shadow: 0 2px 10px var(--black-a7);
   margin: 0;
+  gap: var(--space-s);
 }
 
 .NavigationMenuTrigger,
 .NavigationMenuLink {
-  padding: 8px 12px;
   outline: none;
   user-select: none;
-  font-weight: 500;
   line-height: 1;
-  border-radius: 4px;
-  font-size: 15px;
-  color: var(--grass-11);
-}
-.NavigationMenuTrigger:focus,
-.NavigationMenuLink:focus {
-  box-shadow: 0 0 0 2px var(--grass-7);
-}
-.NavigationMenuTrigger:hover,
-.NavigationMenuLink:hover {
-  background-color: var(--grass-3);
 }
 
 .NavigationMenuTrigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2px;
 }
 
 .NavigationMenuLink {
   display: block;
   text-decoration: none;
-  font-size: 15px;
   line-height: 1;
 }
 
@@ -125,6 +115,8 @@ const currentTrigger = ref("");
   width: 100%;
   animation-duration: 250ms;
   animation-timing-function: ease;
+  background-color: var(--raised);
+  padding: var(--space-s);
 }
 .NavigationMenuContent[data-motion="from-start"] {
   animation-name: enterFromLeft;
@@ -166,14 +158,12 @@ const currentTrigger = ref("");
 .NavigationMenuViewport {
   position: relative;
   transform-origin: top center;
-  margin-top: 10px;
   width: 100%;
   background-color: white;
-  border-radius: 6px;
   overflow: hidden;
   box-shadow:
-    hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
-    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   height: var(--reka-navigation-menu-viewport-height);
   transition:
     width,
@@ -194,20 +184,14 @@ const currentTrigger = ref("");
 
 .List {
   display: grid;
-  padding: 22px;
   margin: 0;
-  column-gap: 10px;
   list-style: none;
+  gap: var(--space-xs);
 }
 @media only screen and (min-width: 600px) {
   .List.one {
-    width: 500px;
-    grid-template-columns: 0.75fr 1fr;
-  }
-  .List.two {
-    width: 600px;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(3, 1fr);
+    width: 625px;
+    grid-template-columns: auto auto;
   }
 }
 
@@ -216,22 +200,18 @@ const currentTrigger = ref("");
   outline: none;
   text-decoration: none;
   user-select: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 15px;
   line-height: 1;
 }
 .ListItemLink:focus {
-  box-shadow: 0 0 0 2px var(--grass-7);
+  box-shadow: 0 0 0 2px red;
 }
 .ListItemLink:hover {
-  background-color: var(--mauve-3);
+  background-color: red;
 }
 
 .ListItemHeading {
   font-weight: 500;
   line-height: 1.2;
-  margin-bottom: 5px;
   color: var(--grass-12);
 }
 
@@ -239,38 +219,6 @@ const currentTrigger = ref("");
   color: var(--mauve-11);
   line-height: 1.4;
   font-weight: initial;
-}
-
-.Callout {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--green-9) 0%, var(--indigo-9) 100%);
-  border-radius: 6px;
-  padding: 25px;
-  text-decoration: none;
-  outline: none;
-  user-select: none;
-}
-.Callout:focus {
-  box-shadow: 0 0 0 2px var(--grass-7);
-}
-
-.CalloutHeading {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin-top: 16px;
-  margin-bottom: 7px;
-}
-
-.CalloutText {
-  color: var(--mauve-4);
-  font-size: 14px;
-  line-height: 1.3;
 }
 
 .ViewportPosition {
@@ -296,7 +244,7 @@ const currentTrigger = ref("");
 .Arrow {
   position: relative;
   top: 70%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 10px;
   height: 10px;
   transform: rotate(45deg);

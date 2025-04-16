@@ -19,7 +19,7 @@ onMounted(() => {
 <template>
   <div>
     <!-- Render content if data is available -->
-    <ContentRenderer v-if="data" :value="data" />
+    <ContentRenderer v-if="data" :value="data" class="flow content-grid" />
 
     <!-- Airtable embed iframe -->
     <iframe

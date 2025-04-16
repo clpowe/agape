@@ -10,7 +10,7 @@
 
   --brand: light-dark(hsl(var(--primary)), hsl(var(--primary)));
   --text-strong: light-dark(hsl(var(--black), 0.9), hsl(var(--white)));
-  --text-weak: light-dark(hsl(var(--black), 0.4), hsl(var(--white)), 0.78);
+  --text-weak: light-dark(hsl(var(--black), 0.2), hsl(var(--white)), 0.4);
   --stroke-strong: light-dark(hsl(var(--black), 0.65), hsl(var(--white)), 0.6);
   --stroke-weak: light-dark(hsl(var(--black), 0.1), hsl(var(--white)), 0.12);
   --fill: light-dark(hsl(var(--black), 0.04), hsl(var(--white)), 0.06);
@@ -26,6 +26,7 @@
   --overlay-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
+  --space-xxs: 0.25rem;
   --space-xs: 0.5rem;
   --space-s: 1rem;
   --space-m: 1.5rem;

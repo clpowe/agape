@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader />
-    <main class="flow content-grid">
+    <main>
       <slot />
     </main>
   </div>
