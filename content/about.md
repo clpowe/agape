@@ -26,22 +26,26 @@ Agape Christian Bar Prep is committed to creating a supportive and personalized 
 
 ::ContentHeader
 #title
-The History of Agape Christian Bar Prep 
+The History of Agape Christian Bar Prep
 #description
 Agape Christian Bar Prep was founded in 2015 after our founder received a divine calling from God to “help His people”. Since then, God has used Agape Christian Bar Prep to build and restore the confidence, hope and vision of students whose dreams of becoming attorneys were once shattered by challenging law school experiences or multiple unsuccessful attempts at passing the bar exam. At Agape Christian Bar Prep, we do more than just provide bar exam preparation and tutoring services—we build success stories and transform lives. Our unique curriculum not only promotes academic growth, but also offers students a profound opportunity to deepen their relationship with Jesus and be reminded of His promises for their lives—health, peace, and victory.
 ::
 
-##  The History of Agape Christian Bar Prep 
-Agape Christian Bar Prep was founded in 2015 after our founder received a divine calling from God to “help His people”. Since then, God has used Agape Christian Bar Prep to build and restore the confidence, hope and vision of students whose dreams of becoming attorneys were once shattered by challenging law school experiences or multiple unsuccessful attempts at passing the bar exam. At Agape Christian Bar Prep, we do more than just provide bar exam preparation and tutoring services—we build success stories and transform lives. Our unique curriculum not only promotes academic growth, but also offers students a profound opportunity to deepen their relationship with Jesus and be reminded of His promises for their lives—health, peace, and victory.
 
-## The Agape Path to Esquire
+
+::ContentHeader
+#title
+The Agape Path to Esquire
+#content
+---
 ### Step 1
-Students interested in enrolling in one of our tutoring programs or writing
+Students interested in our tutoring or writing programs must complete an application. Our team reviews each submission and develops a personalized success plan tailored to your needs.
 ### Step 2
-Students accepted into one of our tutoring programs must attend a week-long orientation to help them prepare mentally and emotionally for the rigors and stresses of bar prep
+Accepted students attend a week-long orientation to prepare mentally and emotionally for bar prep. Students also sign a commitment agreement to fully engage with their personalized plan.
 ### Step 3
-Students enrolled in our tutoring programs are assigned tutors who will guide them through the bar exam preparation process, help deepen their understanding of the law, and assist in developing, strengthening, and refining the analytical and writing skills needed to pass the bar exam and excel as attorneys.
-
+Enrolled students are matched with expert tutors who guide them through bar exam prep, enhance their legal understanding, and refine analytical and writing skills crucial for bar success.
+---
+::
 
 ::TeachersGrid
 ---

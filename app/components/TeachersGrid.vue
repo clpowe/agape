@@ -14,9 +14,11 @@ defineProps<{
 
 <template>
   <div :title :description :headline class="container">
-    <AppTypography tag="p" variant="text-m">{{ title }}</AppTypography>
-    <AppTypography tag="h2" variant="heading-xl">{{ headline }}</AppTypography>
-    <AppTypography tag="p" variant="text-m">{{ description }}</AppTypography>
+    <ContentHeader>
+      <template #title> {{ title }} </template>
+      <template #description> {{ description }} </template>
+    </ContentHeader>
+
     <div class="grid-container">
       <NuxtLink
         v-for="(teacher, index) in teachers"
