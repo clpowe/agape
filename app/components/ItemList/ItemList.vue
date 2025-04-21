@@ -9,3 +9,9 @@ const { items } = defineProps({
     <ItemListContent :items="items" />
   </div>
 </template>
+
+<style scoped>
+:deep(ul) {
+  list-style-type: none;
+}
+</style>

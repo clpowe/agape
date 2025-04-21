@@ -1,8 +1,10 @@
 <script setup>
 useHead({
-  bodyAttrs: {
-    colorScheme: "light",
+  htmlAttrs: {
+    lang: "en",
+    class: "light",
   },
+  bodyAttrs: {},
 });
 </script>
 

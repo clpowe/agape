@@ -7,6 +7,10 @@ const { data: items } = await useAsyncData(() => {
 });
 
 const currentTrigger = ref("");
+
+useHead({
+  htmlAttrs: {},
+});
 </script>
 
 <template>

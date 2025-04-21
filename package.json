@@ -35,9 +35,9 @@
 		"vue-router": "^4.5.0"
 	},
 	"devDependencies": {
-		"@iconify-json/lucide": "^1.2.35",
+		"@iconify-json/lucide": "^1.2.37",
 		"@unocss/nuxt": "^66.1.0-beta.11",
-		"@unocss/preset-icons": "^66.1.0-beta.11",
+		"@unocss/preset-icons": "^66.1.0-beta.12",
 		"@unocss/preset-wind4": "^66.1.0-beta.11",
 		"@vitejs/plugin-vue": "^5.2.3",
 		"@vue/test-utils": "^2.4.6",

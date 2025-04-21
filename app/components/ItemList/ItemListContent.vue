@@ -7,8 +7,9 @@ defineProps({
 </script>
 
 <template>
-  <div class="grid gap-2">
+  <ul class="grid gap-2">
     <!-- User List Empty -->
     <ListItem v-for="item in items" :key="item.title" :item="item" />
-  </div>
+  </ul>
 </template>
+<style scoped></style>
