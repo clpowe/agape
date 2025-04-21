@@ -112,4 +112,8 @@ const variantClass = computed(() => {
   font-size: 1.125rem;
   line-height: 1.5rem;
 }
+
+:deep(.highlight) {
+  color: var(--brand);
+}
 </style>
