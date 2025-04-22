@@ -43,9 +43,9 @@ Agape Christian Bar Prep empowers students to confidently conquer the bar exam a
       description: We encourag strength and clarity throughout your preparation journey.
   ---
   ::
-
+#extra
 Discover a supportive path to exam success—built around you.
-
+#actions
 [Apply Now](https://agapechristianbarprep.com)
 ::
 

@@ -7,23 +7,27 @@ defineProps<{
 
 <template>
   <section>
-    <div>
-      <div class="mb-4">
-        <AppTypography
-          tag="h2"
-          variant="heading-s"
-          :is-bold="true"
-          :is-strong="true"
-          class="mb-2"
-        >
-          <slot mdc-unwrap="p" name="title" />
-        </AppTypography>
-        <AppTypography tag="p" variant="text-m">
-          <slot mdc-unwrap="p" name="description" />
-        </AppTypography>
+    <div class="content">
+      <AppTypography
+        tag="h2"
+        variant="heading-s"
+        :is-bold="true"
+        :is-strong="true"
+      >
+        <slot mdc-unwrap="p" name="title" />
+      </AppTypography>
+      <AppTypography tag="p" variant="text-m">
+        <slot mdc-unwrap="p" name="description" />
+      </AppTypography>
+      <div>
+        <slot name="content" />
       </div>
-
-      <slot name="content" />
+      <AppTypography tag="p" variant="text-m">
+        <slot mdc-unwrap="p" name="extra" />
+      </AppTypography>
+      <div>
+        <slot name="actions" />
+      </div>
     </div>
     <NuxtImg
       v-if="img"
@@ -47,28 +51,48 @@ defineProps<{
 section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-m);
+  gap: var(--space-l);
   align-items: center;
 }
+.content {
+  display: grid;
+  gap: var(--space-s);
+}
+
 .image {
   width: 100%;
   object-fit: cover;
   border-radius: 1.5rem;
+  height: 100%;
+  max-height: 500px;
 }
 
-@media (min-width: 500px) {
-  .image {
-    height: 560px;
-  }
-}
-
-@media (min-width: 775px) {
+@media (min-width: 800px) {
   section {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .content {
+    grid-column: span 2;
   }
 
   .image {
-    height: auto;
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 975px) {
+  section {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .content {
+    grid-column: span 4;
+  }
+
+  .image {
+    grid-column: span 3;
+    height: 100%;
   }
 }
 </style>

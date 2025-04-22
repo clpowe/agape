@@ -63,8 +63,8 @@ body {
 }
 .content-grid {
   --padding-inline: 1rem;
-  --content-max-width: 1400px;
-  --breakout-max-width: 1600px;
+  --content-max-width: 1000px;
+  --breakout-max-width: 1200px;
 
   --breakout-size: calc(
     (var(--breakout-max-width) - var(--content-max-width)) / 2

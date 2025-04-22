@@ -1,20 +1,59 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import { ref } from "vue";
+import {
+  DrawerRoot,
+  DrawerTrigger,
+  DrawerPortal,
+  DrawerOverlay,
+  DrawerContent,
+} from "vaul-vue";
+import {
+  NavigationMenuRoot,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuViewport,
+} from "reka-ui";
 
 const { data: items } = await useAsyncData(() => {
   return queryCollection("navigation").all();
 });
 
 const currentTrigger = ref("");
-
-useHead({
-  htmlAttrs: {},
-});
 </script>
 
 <template>
-  <NavigationMenuRoot v-model="currentTrigger" class="NavigationMenuRoot">
+  <!-- Mobile Navigation -->
+  <div class="md:hidden">
+    <DrawerRoot :direction="'left'">
+      <DrawerTrigger class="p-2">
+        <Icon icon="mdi:menu" width="24" height="24" />
+      </DrawerTrigger>
+      <DrawerPortal>
+        <DrawerOverlay class="fixed inset-0 bg-black bg-opacity-50" />
+        <DrawerContent
+          class="fixed top-0 left-0 w-3/4 h-full bg-white p-4 overflow-y-auto"
+        >
+          <ul class="space-y-4">
+            <li v-for="item in items" :key="item.id">
+              <NuxtLink :to="item.to">
+                {{ item.label }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </DrawerContent>
+      </DrawerPortal>
+    </DrawerRoot>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <NavigationMenuRoot
+    v-model="currentTrigger"
+    class="NavigationMenuRoot hidden md:flex"
+  >
     <NavigationMenuList class="NavigationMenuList">
       <template v-for="item in items" :key="item.id">
         <NavigationMenuItem>
@@ -27,12 +66,7 @@ useHead({
               {{ item.label }}
             </NuxtLink>
           </NavigationMenuLink>
-          <NavigationMenuTrigger
-            v-else
-            class="NavigationMenuTrigger"
-            data-state="open"
-            data-active="true"
-          >
+          <NavigationMenuTrigger v-else class="NavigationMenuTrigger">
             {{ item.label }}
             <Icon icon="radix-icons:caret-down" class="CaretDown" />
           </NavigationMenuTrigger>
@@ -49,8 +83,9 @@ useHead({
                       :is-bold="true"
                       :is-strong="true"
                       tag="p"
-                      >{{ child.label }}</AppTypography
                     >
+                      {{ child.label }}
+                    </AppTypography>
                     <AppTypography variant="text-s" tag="p">
                       {{ child.description }}
                     </AppTypography>
@@ -61,15 +96,8 @@ useHead({
           </NavigationMenuContent>
         </NavigationMenuItem>
       </template>
-      <NavigationMenuIndicator
-        class="absolute data-[state=hidden]:opacity-0 duration-200 data-[state=visible]:animate-fadeIn data-[state=hidden]:animate-fadeOut top-full w-[--reka-navigation-menu-indicator-size] translate-x-[--reka-navigation-menu-indicator-position] mt-[1px] z-[100] flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]"
-      >
-        <div
-          class="relative top-[70%] h-[12px] w-[12px] rotate-[45deg] bg-white border"
-        />
-      </NavigationMenuIndicator>
+      <NavigationMenuIndicator class="NavigationMenuIndicator" />
     </NavigationMenuList>
-
     <div class="ViewportPosition">
       <NavigationMenuViewport class="NavigationMenuViewport" />
     </div>
@@ -78,11 +106,16 @@ useHead({
 
 <style>
 .NavigationMenuRoot {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  z-index: 1;
+  display: none;
+}
+@media (min-width: 768px) {
+  .NavigationMenuRoot {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    z-index: 1;
+  }
 }
 
 .NavigationMenuList {
