@@ -4,7 +4,7 @@ defineProps<{ img?: string; alt?: string }>();
 
 <template>
   <section class="HomeHero">
-    <div class="content">
+    <div class="content-wrapper">
       <AppTypography
         tag="h2"
         variant="heading-variable-l"
@@ -13,12 +13,12 @@ defineProps<{ img?: string; alt?: string }>();
       >
         <slot mdc-unwrap="p" name="title" />
       </AppTypography>
-      <div>
+      <div class="main-content">
         <AppTypography tag="p" variant="text-variable-l">
           <slot name="description" />
         </AppTypography>
         <div class="actions">
-          <slot name="actions" />
+          <slot mdc-unwrap="p" name="actions" />
         </div>
       </div>
     </div>
@@ -35,24 +35,46 @@ defineProps<{ img?: string; alt?: string }>();
   gap: var(--space-l);
 }
 
-.content {
+.content-wrapper {
   display: grid;
   gap: var(--space-s);
   padding-block: var(--space-l);
 }
 
+.main-content {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
 .image {
   grid-column: span 2;
-
   img {
     width: 100%;
+  }
+}
+
+.actions {
+  margin-top: var(--space-s);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+}
+
+@container (min-width: 350px) {
+  .actions {
+    margin-top: var(--space-s);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-s);
   }
 }
 
 @media (min-width: 700px) {
   .HomeHero {
   }
-  .content {
+  .content-wrapper {
     grid-template-columns: 1fr 1fr;
     padding-block: var(--space-xxl);
   }
