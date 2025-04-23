@@ -2,14 +2,15 @@
   color-scheme: light dark;
 
   --primary: 356, 84%, 24%;
-  --white: 60, 5%, 96%;
+  --white: 60, 14%, 96%;
   --warning: 42, 69%, 33%;
+  --black: 0, 0%, 0%;
   --success: 162, 90%, 25%;
   --error: 0, 56%, 50%;
 
   --brand: light-dark(hsla(var(--primary)), hsla(var(--primary)));
-  --text-strong: light-dark(hslaa(var(--black), 0.9), hsla(var(--white)));
-  --text-weak: light-dark(hslaa(var(--black), 0.2), hsla(var(--white)), 0.4);
+  --text-strong: light-dark(hsla(var(--black), 0.9), hsla(var(--white)));
+  --text-weak: light-dark(hsla(var(--black), 0.2), hsla(var(--white)), 0.4);
   --stroke-strong: light-dark(
     hsla(var(--black), 0.65),
     hsla(var(--white)),
@@ -18,7 +19,7 @@
   --stroke-weak: light-dark(hslaa(var(--black), 0.1), hsla(var(--white)), 0.12);
   --fill: light-dark(hslaa(var(--black), 0.04), hsla(var(--white)), 0.06);
 
-  --background: light-dark(hsla(var(--white)), hsla(var(--black)));
+  --background: light-dark(hsla(var(--white), 1), hsla(var(--black), 1));
   --base: light-dark(hsla(var(--white)), hsla(var(--black)));
   --raised: light-dark(hsla(var(--white)), hsla(0, 0, 15));
   --overlay: light-dark(hsla(var(--white)), hsla(0, 0, 20));
@@ -45,14 +46,21 @@ img.full-width {
 }
 
 .flow > * + * {
+  --flow-spacing: var(--space-xl);
   margin-top: var(--flow-spacing, 1em);
+}
+
+@media (min-width: 700px) {
+  .flow > * + * {
+    --flow-spacing: var(--space-xxl);
+  }
 }
 
 html {
 }
 body {
   font-family: "Inter";
-  background-color: var(--background);
+  background: var(--background);
 }
 
 .light {

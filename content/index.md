@@ -16,13 +16,12 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 schemaOrg:
   - "@type": AboutPage
 ---
-
-## Conquer Law School. Master the Bar. Step Into Your Calling.
-
+::HomeHero{img="/AgapeHeroImage.png" alt="Successful Diverse Students Portraits In A Row, Collage"}
+#title
+Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
+#description
 At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress, build essential skills, and support you at every stage of your legal journey.
-- Apply Now
-- Team Prayer
-- Pay Bill
+::
 
 ::content-header{img="/young_woman.png" alt="A young asian woman studying in a libraey with a laptop wearing a yellow shirt."}
 #title

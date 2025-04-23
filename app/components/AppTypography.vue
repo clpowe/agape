@@ -8,9 +8,11 @@ type Variant =
   | "heading-xl"
   | "heading-xxl"
   | "heading-3xl"
+  | "heading-variable-l"
   | "text-s"
   | "text-m"
-  | "text-l";
+  | "text-l"
+  | "text-variable-l";
 
 const props = defineProps<{
   tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
@@ -28,9 +30,11 @@ const VARIANT_CLASSES: Record<Variant, string> = {
   "heading-xl": "heading-xl",
   "heading-xxl": "heading-xxl",
   "heading-3xl": "heading-3xl",
+  "heading-variable-l": "heading-variable-l",
   "text-s": "text-s",
   "text-m": "text-m",
   "text-l": "text-l",
+  "text-variable-l": "text-variable-l",
 };
 
 const variantClass = computed(() => {
@@ -86,7 +90,7 @@ const variantClass = computed(() => {
 }
 .heading-l {
   font-size: 2.375rem;
-  line-height: 100%;
+  line-height: 150%;
 }
 .heading-xl {
   font-size: 2.8rem;
@@ -100,6 +104,10 @@ const variantClass = computed(() => {
   font-size: 4rem;
   line-height: 1.1rem;
 }
+.heading-variable-l {
+  font-size: clamp(2.2rem, 1px + 5vw, 2.8rem);
+  line-height: 1em;
+}
 .text-s {
   font-size: 0.875rem;
   line-height: 1.5rem;
@@ -111,6 +119,10 @@ const variantClass = computed(() => {
 .text-l {
   font-size: 1.125rem;
   line-height: 1.5rem;
+}
+.text-variable-l {
+  font-size: clamp(0.875rem, 1px + 2vw, 1.125rem);
+  line-height: 150%;
 }
 
 :deep(.highlight) {
