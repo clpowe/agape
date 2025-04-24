@@ -112,6 +112,7 @@ body {
   padding: var(--space-xs) var(--space-s);
   font-weight: 600;
   border-radius: var(--space-xs);
+  white-space: nowrap;
 }
 .primary {
   color: var(--background);

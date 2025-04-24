@@ -5,9 +5,7 @@ const { items } = defineProps({
 </script>
 
 <template>
-  <div class="">
-    <ItemListContent :items="items" />
-  </div>
+  <ItemListContent :items="items" />
 </template>
 
 <style scoped>

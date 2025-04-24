@@ -32,7 +32,6 @@ defineProps<{ img?: string; alt?: string }>();
 <style scoped>
 .HomeHero {
   display: grid;
-  gap: var(--space-l);
 }
 
 .content-wrapper {
@@ -56,18 +55,15 @@ defineProps<{ img?: string; alt?: string }>();
 }
 
 .actions {
-  margin-top: var(--space-s);
   display: flex;
   flex-direction: column;
-  gap: var(--space-s);
+  gap: var(--space-xs);
 }
 
-@container (min-width: 350px) {
+@container (min-width: 340px) {
   .actions {
-    margin-top: var(--space-s);
     display: flex;
     flex-direction: row;
-    gap: var(--space-s);
   }
 }
 
