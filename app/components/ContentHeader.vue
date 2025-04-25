@@ -3,6 +3,35 @@ defineProps<{
   img?: string;
   alt?: string;
 }>();
+
+const breakpoints = useBreakpoints(
+  {
+    mobile: 0, // optional
+    tablet: 525,
+    laptop: 725,
+    desktop: 900,
+  },
+  {
+    ssrWidth: 0,
+  }
+);
+
+const activeBreakpoint = breakpoints.active();
+
+const ratio = computed(() => {
+  switch (activeBreakpoint.value) {
+    case "mobile":
+      return 1.5;
+    case "tablet":
+      return 2;
+    case "laptop":
+      return 1;
+    case "desktop":
+      return 1.25;
+    default:
+      return 1;
+  }
+});
 </script>
 
 <template>
@@ -29,21 +58,23 @@ defineProps<{
         <slot name="actions" />
       </div>
     </div>
-    <NuxtImg
-      v-if="img"
-      v-slot="{ src, isLoaded, imgAttrs }"
-      :src="img"
-      :alt="alt"
-      width="488"
-      height="560"
-      class="image"
-    >
-      <!-- Show the actual image when loaded -->
-      <img v-if="isLoaded" v-bind="imgAttrs" :src="src" />
+    <div class="image">
+      <AspectRatio :ratio="ratio">
+        <NuxtImg
+          v-if="img"
+          v-slot="{ src, isLoaded, imgAttrs }"
+          :src="img"
+          :alt="alt"
+          class="h-full w-full object-cover"
+        >
+          <!-- Show the actual image when loaded -->
+          <img v-if="isLoaded" v-bind="imgAttrs" :src="src" />
 
-      <!-- Show a placeholder while loading -->
-      <img v-else src="https://placehold.co/400x400" alt="placeholder" />
-    </NuxtImg>
+          <!-- Show a placeholder while loading -->
+          <img v-else src="https://placehold.co/400x400" alt="placeholder" />
+        </NuxtImg>
+      </AspectRatio>
+    </div>
   </section>
 </template>
 
@@ -67,23 +98,9 @@ section {
   max-height: 500px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 525px) {
   section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  .content {
-    grid-column: span 2;
-  }
-
-  .image {
-    grid-column: span 2;
-  }
-}
-
-@media (min-width: 975px) {
-  section {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 
   .content {
@@ -91,6 +108,21 @@ section {
   }
 
   .image {
+    grid-column: span 4;
+  }
+}
+
+@media (min-width: 725px) {
+  section {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .content {
+    grid-column: span 2;
+  }
+
+  .image {
+    display: block;
     grid-column: span 3;
     height: 100%;
   }

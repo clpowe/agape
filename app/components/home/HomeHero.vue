@@ -24,7 +24,7 @@ defineProps<{ img?: string; alt?: string }>();
     </div>
 
     <div class="image">
-      <NuxtImg :src="img" :alt="alt" format="avif" />
+      <NuxtImg :src="img" :alt="alt" format="avif" width="1000" height="500" />
     </div>
   </section>
 </template>
