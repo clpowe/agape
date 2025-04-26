@@ -46,5 +46,14 @@ export default defineContentConfig({
         quote: z.string(),
       }),
     }),
+    frequently_asked_questions: defineCollection({
+      type: "data",
+      source: "frequentlyAskedQuestions/*.md",
+      schema: z.object({
+        question: z.string(),
+        answer: z.string(),
+        course: z.string(),
+      }),
+    }),
   },
 });
