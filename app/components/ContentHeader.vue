@@ -7,9 +7,8 @@ defineProps<{
 const breakpoints = useBreakpoints(
   {
     mobile: 0, // optional
-    tablet: 525,
-    laptop: 725,
-    desktop: 900,
+    tablet: 600,
+    desktop: 1024,
   },
   {
     ssrWidth: 0,
@@ -23,9 +22,7 @@ const ratio = computed(() => {
     case "mobile":
       return 1.5;
     case "tablet":
-      return 2;
-    case "laptop":
-      return 1;
+      return 2.1;
     case "desktop":
       return 1.25;
     default:
@@ -38,6 +35,7 @@ const ratio = computed(() => {
   <section>
     <div class="content">
       <AppTypography
+        v-if="$slots.title"
         tag="h2"
         variant="heading-s"
         :is-bold="true"
@@ -45,16 +43,16 @@ const ratio = computed(() => {
       >
         <slot mdc-unwrap="p" name="title" />
       </AppTypography>
-      <AppTypography tag="p" variant="text-m">
+      <AppTypography v-if="$slots.description" tag="p" variant="text-m">
         <slot mdc-unwrap="p" name="description" />
       </AppTypography>
-      <div>
+      <div v-if="$slots.content">
         <slot name="content" />
       </div>
-      <AppTypography tag="p" variant="text-m">
+      <AppTypography v-if="$slots.extra" tag="p" variant="text-m">
         <slot mdc-unwrap="p" name="extra" />
       </AppTypography>
-      <div>
+      <div v-if="$slots.actions">
         <slot name="actions" />
       </div>
     </div>
@@ -65,7 +63,7 @@ const ratio = computed(() => {
           v-slot="{ src, isLoaded, imgAttrs }"
           :src="img"
           :alt="alt"
-          class="h-full w-full object-cover"
+          class="h-full w-full object-cover rounded-3xl"
         >
           <!-- Show the actual image when loaded -->
           <img v-if="isLoaded" v-bind="imgAttrs" :src="src" />
@@ -83,7 +81,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-l);
-  align-items: center;
+  align-items: start;
 }
 .content {
   display: grid;
@@ -112,7 +110,7 @@ section {
   }
 }
 
-@media (min-width: 725px) {
+@media (min-width: 1024px) {
   section {
     grid-template-columns: repeat(5, 1fr);
   }

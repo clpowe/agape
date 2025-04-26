@@ -49,6 +49,7 @@ defineProps<{ img?: string; alt?: string }>();
 
 .image {
   grid-column: span 2;
+  border-radius: var(--space-l);
   img {
     width: 100%;
   }

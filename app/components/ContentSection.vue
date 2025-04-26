@@ -9,6 +9,7 @@ defineProps<{
   <section>
     <div class="content">
       <AppTypography
+        v-if="$slots.title"
         tag="h2"
         variant="heading-s"
         :is-bold="true"
@@ -16,13 +17,13 @@ defineProps<{
       >
         <slot mdc-unwrap="p" name="title" />
       </AppTypography>
-      <AppTypography tag="p" variant="text-m">
+      <AppTypography v-if="$slots.description" tag="p" variant="text-m">
         <slot mdc-unwrap="p" name="description" />
       </AppTypography>
-      <AppTypography tag="p" variant="text-m">
+      <AppTypography v-if="$slots.extra" tag="p" variant="text-m">
         <slot mdc-unwrap="p" name="extra" />
       </AppTypography>
-      <div>
+      <div v-if="$slots.actions">
         <slot name="actions" />
       </div>
     </div>
@@ -35,12 +36,12 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-l);
-  align-items: center;
+  align-items: start;
 }
 .content {
   display: grid;
-  /* gap: var(--space-s); */
-  grid-column: 1/-1;
+  gap: var(--space-s);
+  /* grid-column: 1/-1; */
 }
 
 .image {

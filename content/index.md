@@ -48,7 +48,7 @@ Agape Christian Bar Prep empowers students to confidently conquer the bar exam a
 #extra
 Discover a supportive path to exam success—built around you.
 #actions
-[Apply Now](https://agapechristianbarprep.com)
+[Apply Now](){.btn .primary}
 ::
 
 
@@ -56,7 +56,7 @@ Discover a supportive path to exam success—built around you.
 
 ::content-section
 #title
-Our Services
+Our [Services]{.highlight}
 
 #description
 The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need. Our personalized, faith-based coaching gets you where you need to be.
@@ -83,9 +83,9 @@ The bar exam feels overwhelming, and traditional prep lacks the personalized and
 
 ::content-header
 #title
-What We Offer
-::
+Quick [Links]{.highlight}
 
+#content
 - ### Bar Prep
 Agape Christian Bar Prep helps law graduates prepare to pass the bar exam.
 
@@ -97,10 +97,11 @@ Agape Christian Bar Prep partners with law schools to help prepare their student
 
 - ### Current Students
 Current Agape Christian Bar Prep students can use this link to access information about course enrollment.
+::
 
 ::testimonials-section
 ---
-description: Read what our students have to say about Agape Christian Bar Prep
-title: Student Testimonials
+  description: Read what our students have to say about Agape Christian Bar Prep
+  title: Student Testimonials
 ---
 ::
