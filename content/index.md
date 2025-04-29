@@ -81,22 +81,32 @@ The bar exam feels overwhelming, and traditional prep lacks the personalized and
   ::
 ::
 
-::content-header
+::content-section
 #title
 Quick [Links]{.highlight}
 
 #content
-- ### Bar Prep
-Agape Christian Bar Prep helps law graduates prepare to pass the bar exam.
-
-- ### Law School Prep
-Agape Christian Bar Prep helps law students prepare for success in law school.
-
-- ### Law Schools
-Agape Christian Bar Prep partners with law schools to help prepare their students for success in law school and on the bar exam.
-
-- ### Current Students
-Current Agape Christian Bar Prep students can use this link to access information about course enrollment.
+  ::QuickList
+  ---
+  items:
+    - title: Bar Prep
+      icon: IconSingleBook
+      description: Agape Christian Bar Prep helps law graduates prepare to pass the bar exam.
+      to: /bar-prep
+    - title: Law School Prep
+      icon: IconSingleBook
+      description: Agape Christian Bar Prep helps law students prepare for success in law school.
+      to: /law-school-prep
+    - title: Law Schools
+      icon: IconSingleBook
+      description: Agape Christian Bar Prep partners with law schools to help prepare their students for success in law school and on the bar exam.
+      to: /law-school-partnerships
+    - title: Current Students
+      icon: IconSingleBook
+      description: Current Agape Christian Bar Prep students can use this link to access information about course enrollment.
+      to: /student-portal
+  ---
+  ::
 ::
 
 ::testimonials-section

@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/scripts",
+    "@nuxtjs/robots",
     "@nuxt/test-utils",
     "@nuxt/content",
     "@nuxt/eslint",
@@ -27,6 +28,7 @@ export default defineNuxtConfig({
     "@nuxthub/core",
     "@nuxt/test-utils/module",
     "@vueuse/nuxt",
+    "nuxt-svgo",
   ],
   css: ["~/assets/css/main.css"],
   hub: {
@@ -36,6 +38,9 @@ export default defineNuxtConfig({
     preview: {
       api: "https://api.nuxt.studio",
     },
+  },
+  robots: {
+    sitemap: "https://agapechristianbarprep.com/sitemap.xml",
   },
   runtimeConfig: {
     uiProLicense: "",

@@ -56,10 +56,9 @@ const ratio = computed(() => {
         <slot name="actions" />
       </div>
     </div>
-    <div class="image">
+    <div v-if="img" class="image">
       <AspectRatio :ratio="ratio">
         <NuxtImg
-          v-if="img"
           v-slot="{ src, isLoaded, imgAttrs }"
           :src="img"
           :alt="alt"

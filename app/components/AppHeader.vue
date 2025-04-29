@@ -22,6 +22,15 @@ const { data: items } = await useAsyncData(() => {
   return queryCollection("navigation").all();
 });
 
+const isDark = useDark({
+  selector: "body",
+  attribute: "color-scheme",
+  valueDark: "dark",
+  valueLight: "light",
+});
+
+const toggleDark = useToggle(isDark);
+
 const currentTrigger = ref("");
 </script>
 
@@ -44,6 +53,7 @@ const currentTrigger = ref("");
               </NuxtLink>
             </li>
           </ul>
+          <button @click="toggleDark()">Toggle Dark</button>
         </DrawerContent>
       </DrawerPortal>
     </DrawerRoot>
@@ -96,6 +106,7 @@ const currentTrigger = ref("");
           </NavigationMenuContent>
         </NavigationMenuItem>
       </template>
+      <button @click="toggleDark()">cmode</button>
       <NavigationMenuIndicator class="NavigationMenuIndicator" />
     </NavigationMenuList>
     <div class="ViewportPosition">
