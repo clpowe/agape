@@ -15,7 +15,7 @@ defineProps<{ img?: string; alt?: string }>();
       </AppTypography>
       <div class="main-content">
         <AppTypography tag="p" variant="text-variable-l">
-          <slot name="description" />
+          <slot mdc-unwrap="p" name="description" />
         </AppTypography>
         <div class="actions">
           <slot mdc-unwrap="p" name="actions" />
