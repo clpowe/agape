@@ -13,9 +13,33 @@ defineProps({
   </ul>
 </template>
 <style scoped>
-ul {
+:deep(ul) {
+  grid-column: 1/-1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 800px) {
+  section {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .content {
+    grid-column: span 3;
+  }
+
+  :deep(ul) {
+    grid-column: span 4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ul {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-}
+} */
 </style>

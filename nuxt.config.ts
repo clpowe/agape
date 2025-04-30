@@ -13,6 +13,9 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+  experimental: {
+    granularCachedData: true,
+  },
   modules: [
     "@nuxtjs/seo",
     "@unocss/nuxt",

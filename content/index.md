@@ -90,21 +90,25 @@ Quick [Links]{.highlight}
   ---
   items:
     - title: Bar Prep
-      icon: IconSingleBook
-      description: Agape Christian Bar Prep helps law graduates prepare to pass the bar exam.
-      to: /bar-prep
+      icon: singlebook
+      description: Get the personalized support you need to pass the bar exam with confidence.
+      linktext: Explore Bar Prep
+      link: /services/
     - title: Law School Prep
-      icon: IconSingleBook
-      description: Agape Christian Bar Prep helps law students prepare for success in law school.
-      to: /law-school-prep
+      icon: stackedbooks
+      description: Build strong skills early and thrive through every stage of law school.
+      linktext: Start Lae School Prep
+      link: /services/law-school-prep
     - title: Law Schools
-      icon: IconSingleBook
-      description: Agape Christian Bar Prep partners with law schools to help prepare their students for success in law school and on the bar exam.
-      to: /law-school-partnerships
+      icon: openbook
+      description: We help law schools boost student success and bar passage rates.
+      linktext: Learn More about Partnerships
+      link: /services/law-school-partnerships
     - title: Current Students
-      icon: IconSingleBook
-      description: Current Agape Christian Bar Prep students can use this link to access information about course enrollment.
-      to: /student-portal
+      icon: notepad
+      description: Already enrolled? Quickly find your course updates and enrollment info here.
+      linktext: Student Portal
+      link: /student-portal
   ---
   ::
 ::
