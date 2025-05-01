@@ -4,36 +4,46 @@
   --brand-saturation: 84%;
   --brand-lightness: 24%;
 
+  --base-hue: 230;
+
   /* light */
   --brand-light: hsl(
     var(--brand-hue) var(--brand-saturation) var(--brand-lightness)
   );
-  --text-strong-light: hsl(var(--brand-hue) var(--brand-saturation) 5%);
-  --text-weak-light: hsl(var(--brand-hue) 15% 35%);
-  --surface1-light: hsl(var(--brand-hue) 15% 99%);
-  --surface2-light: hsl(var(--brand-hue) 10% 99%);
-  --surface3-light: hsl(var(--brand-hue) 10% 92%);
-  --surface4-light: hsl(var(--brand-hue) 10% 85%);
-  --surface-shadow-light: var(--brand-hue) 10% 20%;
+
+  --text-strong-light: hsl(var(--base-hue) 15% 15%);
+  --text-weak-light: hsl(var(--base-hue) 10% 40%);
+
+  --surface1-light: hsl(var(--base-hue) 15% 99%);
+  --surface2-light: hsl(var(--base-hue) 10% 99%);
+  --surface3-light: hsl(var(--base-hue) 10% 92%);
+  --surface4-light: hsl(var(--base-hue) 10% 85%);
+  --surface-shadow-light: var(--base-hue) 10% 20%;
   --shadow-strength-light: 0.02;
 
-  --stroke-strong-light: hsl(var(--brand-hue) 90% 10%);
-  --stroke-weak-light: hsl(var(--brand-hue) 15% 40%);
+  --stroke-strong-light: hsl(var(--base-hue) 10% 60%);
+  --stroke-weak-light: hsl(var(--base-hue) 10% 88%);
+
+  --fill-light: hsl(var(--base-hue) 20% 96%);
+  --background-light: hsl(0 0% 100%);
 
   /* dark */
-  --brand-dark: hsl(var(--brand-hue) 90% var(--brand-lightness));
-  --text-strong-dark: hsl(var(--brand-hue) 10% 95%);
-  --text-weak-dark: hsl(var(--brand-hue) 5% 85%);
+  --brand-dark: hsl(var(--brand-hue) 84% 64%);
+  --text-strong-dark: hsl(var(--base-hue) 15% 90%);
+  --text-weak-dark: hsl(var(--base-hue) 10% 65%);
 
-  --surface1-dark: hsl(var(--brand-hue) 10% 10%);
-  --surface2-dark: hsl(var(--brand-hue) 10% 15%);
-  --surface3-dark: hsl(var(--brand-hue) 5% 20%);
-  --surface4-dark: hsl(var(--brand-hue) 5% 25%);
-  --surface-shadow-dark: var(--brand-hue) 50% 3%;
+  --surface1-dark: hsl(var(--base-hue) 10% 10%);
+  --surface2-dark: hsl(var(--base-hue) 10% 15%);
+  --surface3-dark: hsl(var(--base-hue) 5% 20%);
+  --surface4-dark: hsl(var(--base-hue) 5% 25%);
+  --surface-shadow-dark: var(--base-hue) 50% 3%;
   --shadow-strength-dark: 0.8;
 
-  --stroke-strong-dark: hsl(var(--brand-hue) 10% 95%);
-  --stroke-weak-dark: hsl(var(--brand-hue) 5% 85%);
+  --stroke-strong-dark: hsl(var(--base-hue) 10% 40%);
+  --stroke-weak-dark: hsl(var(--base-hue) 10% 20%);
+
+  --fill-dark: hsl(var(--base-hue) 10% 12%);
+  --background-dark: hsl(0 0% 5%);
 }
 
 :root {
@@ -49,13 +59,15 @@
   --brand: var(--brand-light);
   --text-strong: var(--text-strong-light);
   --text-weak: var(--text-weak-light);
+
   --surface-1: var(--surface1-light);
+
   --stroke-strong: var(--stroke-strong-light);
   --stroke-weak: var(--stroke-weak-light);
 
-  --fill: light-dark(hsla(var(--black), 0.04), hsla(var(--white)), 0.06);
+  --fill: var(--fill-light);
+  --background: var(--background-light);
 
-  --background: light-dark(hsla(var(--white), 1), hsla(var(--black), 1));
   --base: light-dark(hsla(var(--white)), hsla(var(--black)));
   --raised: light-dark(hsla(var(--white)), hsla(0, 0, 15));
   --overlay: light-dark(hsla(var(--white)), hsla(0, 0, 20));
@@ -84,6 +96,9 @@
     --surface1: var(--surface1-dark);
     --stroke-strong: var(--stroke-strong-dark);
     --stroke-weak: var(--stroke-weak-dark);
+
+    --fill: var(--fill-dark);
+    --background: var(--background-dark);
   }
 }
 
@@ -93,13 +108,14 @@
   --brand: var(--brand-light);
   --text-strong: var(--text-strong-light);
   --text-weak: var(--text-weak-light);
+
   --surface-1: var(--surface1-light);
 
-  --surface2: var(--surface2-light);
-  --surface3: var(--surface3-light);
-  --surface4: var(--surface4-light);
-  --surface-shadow: var(--surface-shadow-light);
-  --shadow-strength: var(--shadow-strength-light);
+  --stroke-strong: var(--stroke-strong-light);
+  --stroke-weak: var(--stroke-weak-light);
+
+  --fill: var(--fill-light);
+  --background: var(--background-light);
 }
 
 [color-scheme="dark"] {
@@ -108,13 +124,12 @@
   --brand: var(--brand-dark);
   --text-strong: var(--text-strong-dark);
   --text-weak: var(--text-weak-dark);
-  --surface-1: var(--surface1-dark);
+  --surface1: var(--surface1-dark);
+  --stroke-strong: var(--stroke-strong-dark);
+  --stroke-weak: var(--stroke-weak-dark);
 
-  --surface2: var(--surface2-dark);
-  --surface3: var(--surface3-dark);
-  --surface4: var(--surface4-dark);
-  --surface-shadow: var(--surface-shadow-dark);
-  --shadow-strength: var(--shadow-strength-dark);
+  --fill: var(--fill-dark);
+  --background: var(--background-dark);
 }
 
 img.full-width {
@@ -138,7 +153,7 @@ html {
 }
 body {
   font-family: "Inter";
-  background: var(--surface-1);
+  background: var(--background);
 }
 
 .content-grid {
@@ -181,18 +196,73 @@ body {
 }
 
 .btn {
-  padding: var(--space-xs) var(--space-s);
+  background-color: var(--brand);
+  color: hsl(0 0% 100%);
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
   font-weight: 600;
-  border-radius: var(--space-xs);
-  white-space: nowrap;
-}
-.primary {
-  color: var(--text-strong-dark);
-  background: var(--brand);
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 1;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.1s ease;
 }
 
-.secondary {
+.btn:hover {
+  background-color: var(--text-weak); /* softer tone */
+  opacity: 0.8;
+}
+
+.btn:active {
+  background-color: var(--text-strong); /* stronger dark */
+  opacity: 1;
+  transform: scale(0.97);
+}
+
+.btn:focus {
+  outline: 2px solid var(--stroke-strong);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  background-color: var(--stroke-weak);
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
+.btn--outline {
+  background: none;
   color: var(--text-strong);
-  border: 1px solid var(--text-strong);
-  background-color: none;
+  border: 1px solid var(--stroke-strong);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn--outline:hover {
+  background-color: var(--fill);
+}
+
+.btn--outline:active {
+  background-color: var(--stroke-weak);
+  transform: scale(0.97);
+}
+
+.btn--outline:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.btn--outline:disabled {
+  color: var(--stroke-weak);
+  border-color: var(--stroke-weak);
+  cursor: not-allowed;
 }

@@ -32,7 +32,7 @@ const { item } = defineProps({
 
 <style scoped>
 .link {
-  outline: solid 3px var(--stroke-strong);
+  outline: solid 2px var(--stroke-strong);
   padding: var(--space-s);
   border-radius: var(--space-s);
 }
