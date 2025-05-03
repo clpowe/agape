@@ -19,7 +19,11 @@ defineProps<{
       <template #description> {{ description }} </template>
     </ContentHeader>
     <div>
-      <div v-for="(testimonial, index) in testimonials" :key="index">
+      <div
+        class="testimonial"
+        v-for="(testimonial, index) in testimonials"
+        :key="index"
+      >
         <AppTypography tag="p" variant="text-m" class="mt-2">
           {{ testimonial.quote }}
         </AppTypography>
@@ -30,3 +34,8 @@ defineProps<{
     </div>
   </section>
 </template>
+
+<style scoped>
+.testimonial {
+}
+</style>

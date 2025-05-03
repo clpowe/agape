@@ -35,106 +35,132 @@ const currentTrigger = ref("");
 </script>
 
 <template>
-  <!-- Mobile Navigation -->
-  <div class="md:hidden">
-    <DrawerRoot :direction="'left'">
-      <DrawerTrigger class="p-2">
-        <Icon icon="mdi:menu" width="24" height="24" />
-      </DrawerTrigger>
-      <DrawerPortal>
-        <DrawerOverlay class="fixed inset-0 bg-black bg-opacity-50" />
-        <DrawerContent
-          class="fixed top-0 left-0 w-3/4 h-full bg-white p-4 overflow-y-auto"
-        >
-          <ul class="space-y-4">
-            <li v-for="item in items" :key="item.id">
-              <NuxtLink :to="item.to">
-                {{ item.label }}
-              </NuxtLink>
-            </li>
-          </ul>
-          <button @click="toggleDark()">Toggle Dark</button>
-        </DrawerContent>
-      </DrawerPortal>
-    </DrawerRoot>
-  </div>
-
-  <!-- Desktop Navigation -->
-  <NavigationMenuRoot
-    v-model="currentTrigger"
-    class="NavigationMenuRoot hidden md:flex"
-  >
-    <NavigationMenuList class="NavigationMenuList">
-      <template v-for="item in items" :key="item.id">
-        <NavigationMenuItem>
-          <NavigationMenuLink
-            v-if="!item.children"
-            class="NavigationMenuLink"
-            as-child
+  <header class="content-grid full-width">
+    <!-- Mobile Navigation -->
+    <div class="md:hidden">
+      <DrawerRoot :direction="'left'">
+        <DrawerTrigger class="p-2">
+          <Icon icon="mdi:menu" width="24" height="24" />
+        </DrawerTrigger>
+        <DrawerPortal>
+          <DrawerOverlay class="fixed inset-0 bg-black bg-opacity-50" />
+          <DrawerContent
+            class="fixed top-0 left-0 w-3/4 h-full bg-white p-4 overflow-y-auto"
           >
-            <NuxtLink class="Callout" :to="item.to">
-              {{ item.label }}
-            </NuxtLink>
-          </NavigationMenuLink>
-          <NavigationMenuTrigger v-else class="NavigationMenuTrigger">
-            {{ item.label }}
-            <Icon icon="radix-icons:caret-down" class="CaretDown" />
-          </NavigationMenuTrigger>
-          <NavigationMenuContent
-            v-if="item.children"
-            class="NavigationMenuContent"
-          >
-            <ul class="List one">
-              <li v-for="child in item.children" :key="child.label">
-                <NavigationMenuLink as-child>
-                  <NuxtLink :to="child.to">
-                    <AppTypography
-                      variant="text-m"
-                      :is-bold="true"
-                      :is-strong="true"
-                      tag="p"
-                    >
-                      {{ child.label }}
-                    </AppTypography>
-                    <AppTypography variant="text-s" tag="p">
-                      {{ child.description }}
-                    </AppTypography>
-                  </NuxtLink>
-                </NavigationMenuLink>
+            <ul class="space-y-4">
+              <li v-for="item in items" :key="item.id">
+                <NuxtLink :to="item.to">
+                  {{ item.label }}
+                </NuxtLink>
               </li>
             </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-      </template>
-      <button @click="toggleDark()">cmode</button>
-      <NavigationMenuIndicator class="NavigationMenuIndicator" />
-    </NavigationMenuList>
-    <div class="ViewportPosition">
-      <NavigationMenuViewport class="NavigationMenuViewport" />
+            <button @click="toggleDark()">Toggle Dark</button>
+          </DrawerContent>
+        </DrawerPortal>
+      </DrawerRoot>
     </div>
-  </NavigationMenuRoot>
+
+    <!-- Desktop Navigation -->
+    <NavigationMenuRoot
+      v-model="currentTrigger"
+      class="NavigationMenuRoot hidden md:grid full-width"
+    >
+      <NavigationMenuList class="NavigationMenuList">
+        <div class="flex items-center gap-2">
+          <AppLogo class="text-white fill-white logo" />
+          Agape Christian
+        </div>
+        <div class="flex gap-2">
+          <template v-for="item in items" :key="item.id">
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                v-if="!item.children"
+                class="NavigationMenuLink"
+                as-child
+              >
+                <NuxtLink class="Callout" :to="item.to">
+                  {{ item.label }}
+                </NuxtLink>
+              </NavigationMenuLink>
+              <NavigationMenuTrigger v-else class="NavigationMenuTrigger">
+                <NuxtLink class="Callout" :to="item.to">
+                  {{ item.label }}
+                </NuxtLink>
+                <Icon icon="radix-icons:caret-down" class="CaretDown" />
+              </NavigationMenuTrigger>
+              <NavigationMenuContent
+                v-if="item.children"
+                class="NavigationMenuContent"
+              >
+                <ul class="List one">
+                  <li v-for="child in item.children" :key="child.label">
+                    <NavigationMenuLink as-child>
+                      <NuxtLink :to="child.to">
+                        <AppTypography
+                          variant="text-m"
+                          :is-bold="true"
+                          :is-strong="true"
+                          tag="p"
+                        >
+                          {{ child.label }}
+                        </AppTypography>
+                        <AppTypography variant="text-s" tag="p">
+                          {{ child.description }}
+                        </AppTypography>
+                      </NuxtLink>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </template>
+          <!-- <button @click="toggleDark()">cmode</button> -->
+        </div>
+
+        <NavigationMenuIndicator class="NavigationMenuIndicator" />
+      </NavigationMenuList>
+      <div class="ViewportPosition">
+        <NavigationMenuViewport class="NavigationMenuViewport" />
+      </div>
+    </NavigationMenuRoot>
+  </header>
 </template>
 
 <style>
+.logo {
+  height: 2.5rem;
+}
+
 .NavigationMenuRoot {
-  display: none;
+  display: none !important;
+}
+
+@media (min-width: 48rem) {
+  .NavigationMenuRoot {
+    display: grid !important;
+  }
 }
 @media (min-width: 768px) {
   .NavigationMenuRoot {
     position: relative;
-    display: flex;
+    display: grid;
     justify-content: center;
     width: 100vw;
     z-index: 1;
+    background-color: rgb(0, 0, 0);
+    height: 48px;
+    color: white;
+    align-items: center;
   }
 }
 
 .NavigationMenuList {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   list-style: none;
   margin: 0;
   gap: var(--space-s);
+  align-items: center;
 }
 
 .NavigationMenuTrigger,
@@ -185,7 +211,7 @@ const currentTrigger = ref("");
 }
 
 .NavigationMenuIndicator {
-  display: flex;
+  display: none;
   align-items: flex-end;
   justify-content: center;
   height: 10px;

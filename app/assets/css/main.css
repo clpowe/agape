@@ -266,3 +266,7 @@ body {
   border-color: var(--stroke-weak);
   cursor: not-allowed;
 }
+
+:focus {
+  outline: 1px solid red;
+}
