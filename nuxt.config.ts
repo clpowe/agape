@@ -18,7 +18,6 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxtjs/seo",
-    "@unocss/nuxt",
     "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
@@ -27,11 +26,11 @@ export default defineNuxtConfig({
     "@nuxt/test-utils",
     "@nuxt/content",
     "@nuxt/eslint",
-    "reka-ui/nuxt",
     "@nuxthub/core",
     "@nuxt/test-utils/module",
     "@vueuse/nuxt",
     "nuxt-svgo",
+    "@nuxt/ui-pro",
   ],
   css: ["~/assets/css/main.css"],
   hub: {

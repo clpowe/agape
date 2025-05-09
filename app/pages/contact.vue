@@ -9,5 +9,11 @@ useSeoMeta({
 });
 </script>
 <template>
-  <ContentRenderer v-if="contact" :value="contact" class="flow content-grid" />
+  <UPageBody>
+    <ContentRenderer
+      v-if="contact"
+      :value="contact"
+      class="flow content-grid"
+    />
+  </UPageBody>
 </template>

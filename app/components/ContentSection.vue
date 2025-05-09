@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <section>
+  <UPageSection orientation="horizontal" class="">
     <div class="content">
       <AppTypography
         v-if="$slots.title"
@@ -28,11 +28,11 @@ defineProps<{
       </div>
     </div>
     <slot mdc-unwrap="p" class="list" name="content" />
-  </section>
+  </UPageSection>
 </template>
 
 <style scoped>
-section {
+.section {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-l);
@@ -41,7 +41,7 @@ section {
 .content {
   display: grid;
   gap: var(--space-s);
-  /* grid-column: 1/-1; */
+  grid-column: 1/-1;
 }
 
 .image {
@@ -60,7 +60,7 @@ section {
 }
 
 @media (min-width: 800px) {
-  section {
+  .section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
@@ -77,7 +77,7 @@ section {
 }
 
 @media (min-width: 975px) {
-  section {
+  .section {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }

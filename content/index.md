@@ -16,6 +16,7 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 schemaOrg:
   - "@type": AboutPage
 ---
+
 ::HomeHero{img="/AgapeHeroImage.png" alt="Successful Diverse Students Portraits In A Row, Collage"}
 #title
 Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
@@ -26,7 +27,7 @@ At Agape Christian Bar Prep, we help students succeed in law school and pass the
 
 ::
 
-::content-header{img="/young_woman.png" alt="A young asian woman studying in a libraey with a laptop wearing a yellow shirt."}
+::content-header{ img="/young_woman.png" alt="A young asian woman studying in a libraey with a laptop wearing a yellow shirt."}
 #title
 The [Agape]{.highlight} Way How Our Program Is Different
 
@@ -38,10 +39,13 @@ Agape Christian Bar Prep empowers students to confidently conquer the bar exam a
   ---
   items:
     - title: Academic needs
+      icon: i-lucide-university
       description: We ensuring mastery of essential exam content
     - title: Emotional and Mental wellness
+      icon: i-lucide-university
       description: We provide strategies for focus and resilience.
     - title: Spiritual growth
+      icon: i-lucide-university
       description: We encourag strength and clarity throughout your preparation journey.
   ---
   ::
@@ -112,6 +116,7 @@ Quick [Links]{.highlight}
   ---
   ::
 ::
+
 
 ::testimonials-section
 ---

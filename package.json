@@ -12,7 +12,6 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@ark-ui/vue": "^5.5.0",
 		"@nuxt/content": "3.3.0",
 		"@nuxt/eslint": "1.2.0",
 		"@nuxt/fonts": "0.11.0",
@@ -20,7 +19,7 @@
 		"@nuxt/image": "1.9.0",
 		"@nuxt/scripts": "0.11.2",
 		"@nuxt/test-utils": "^3.17.2",
-		"@nuxt/ui-pro": "^3.0.0",
+		"@nuxt/ui-pro": "^3.1.1",
 		"@nuxthub/core": "0.8.18",
 		"@nuxtjs/robots": "^5.2.10",
 		"@nuxtjs/seo": "3.0.2",
@@ -31,21 +30,15 @@
 		"nuxt": "^3.17.1",
 		"nuxt-schema-org": "^5.0.4",
 		"nuxt-svgo": "4.0.18",
-		"reka-ui": "^2.2.0",
 		"typescript": "^5.8.2",
-		"vaul-vue": "^0.4.1",
 		"vue": "^3.5.13",
 		"vue-router": "^4.5.0"
 	},
 	"devDependencies": {
 		"@iconify-json/lucide": "^1.2.37",
-		"@unocss/nuxt": "^66.1.0-beta.11",
-		"@unocss/preset-icons": "^66.1.0-beta.12",
-		"@unocss/preset-wind4": "^66.1.0-beta.11",
 		"@vitejs/plugin-vue": "^5.2.3",
 		"@vue/test-utils": "^2.4.6",
 		"happy-dom": "^17.4.4",
-		"unocss": "^66.1.0-beta.11",
 		"vitest": "^3.0.9",
 		"wrangler": "^4.2.0"
 	}

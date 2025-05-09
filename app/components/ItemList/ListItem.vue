@@ -7,30 +7,20 @@ const { item } = defineProps({
 </script>
 
 <template>
-  <li class="flex">
-    <div>
-      <div class="i-lucide:badge-check icon" />
-    </div>
+  <li class="bg-elevated rounded-2xl p-4 grid gap-1">
+    <UIcon v-if="item.icon" :name="item.icon" class="size-14" />
+
     <div>
       <AppTypography
         tag="h3"
         variant="heading-xxs"
-        class="mb-1"
-        :is-bold="true"
-        :is-strong="true"
+        class="mb-1 text-default font-bold"
       >
         {{ item.title }}
       </AppTypography>
-      <AppTypography tag="p" variant="text-s">
+      <AppTypography tag="p" variant="text-s" class="text-muted">
         {{ item.description }}
       </AppTypography>
     </div>
   </li>
 </template>
-
-<style scoped>
-.icon {
-  margin-right: var(--space-xxs);
-  color: var(--brand);
-}
-</style>
