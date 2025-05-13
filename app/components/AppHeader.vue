@@ -7,10 +7,11 @@ const { data: items } = await useAsyncData(() => {
 </script>
 
 <template>
-  <UHeader>
+  <div class="container">
+<UHeader class="bg-muted">
     <template #left>
       <NuxtLink to="/">
-        <AgapeLogo class="w-10 h-10 shrink-0" />
+        <AgapeLogo class="w-10 h-10" :font-controlled="false" />
       </NuxtLink>
     </template>
 
@@ -24,6 +25,8 @@ const { data: items } = await useAsyncData(() => {
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
     </template>
   </UHeader>
+  </div>
+  
 </template>
 
 <style>

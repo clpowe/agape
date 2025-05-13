@@ -41,7 +41,10 @@ items:
 #extra
 Discover a supportive path to exam success—built around you.
 #actions
-[Apply Now](){.btn .primary}
+::UButton{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
+Apply Now
+::
+
 ::
 
 

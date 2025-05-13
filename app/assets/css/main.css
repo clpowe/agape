@@ -20,8 +20,20 @@
 
 :root {
   --ui-primary: var(--color-brand-700);
+  
+  --ui-bg: var(--ui-color-neutral-300);
+  --ui-bg-muted: var(--ui-color-neutral-50);
+  --ui-bg-elevated: var(--ui-color-neutral-100);
+  --ui-bg-accented: var(--ui-color-neutral-200);
+  --ui-bg-inverted: var(--ui-color-neutral-900);
 }
 
 .dark {
   --ui-primary: var(--color-brand-600);
+
+  --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg-muted: var(--ui-color-neutral-900);
+  --ui-bg-elevated: var(--ui-color-neutral-800);
+  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg-inverted: var(--color-white);
 }
