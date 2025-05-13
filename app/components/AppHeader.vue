@@ -10,7 +10,7 @@ const { data: items } = await useAsyncData(() => {
   <UHeader>
     <template #left>
       <NuxtLink to="/">
-        <AgapeLogo class="w-auto h-6 shrink-0" />
+        <AgapeLogo class="w-10 h-10 shrink-0" />
       </NuxtLink>
     </template>
 

@@ -45,8 +45,6 @@ const variantClass = computed(() => {
   <component
     :is="tag"
     :class="[
-      isBold ? 'font-bold' : 'font-regular',
-      isStrong ? 'text-strong' : 'text-weak',
       variantClass,
       'text-width',
     ]"
@@ -93,9 +91,23 @@ const variantClass = computed(() => {
   line-height: 150%;
 }
 .heading-xl {
-  font-size: 2.8rem;
+  font-size: 2rem;
   line-height: 100%;
+  text-wrap: balance;
 }
+@media (min-width: 400px) {
+  .heading-xl {
+    font-size: 2.4rem;
+    line-height: 100%;
+  }
+}
+@media (min-width: 600px) {
+  .heading-xl {
+    font-size: 2.8rem;
+    line-height: 100%;
+  }
+}
+
 .heading-xxl {
   font-size: 3.375rem;
   line-height: 100%;

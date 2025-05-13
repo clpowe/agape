@@ -2,5 +2,26 @@
 @import '@nuxt/ui-pro';
 
 @theme {
+  --color-brand-50: oklch(94.81% 0.023 14.26);
+  --color-brand-100: oklch(88.39% 0.054 12.47);
+  --color-brand-200: oklch(77.73% 0.113 15.89);
+  --color-brand-300: oklch(68.28% 0.174 18.7);
+  --color-brand-400: oklch(62.13% 0.217 23.28);
+  --color-brand-500: oklch(55.84% 0.22 26.5);
+  --color-brand-600: oklch(45.8% 0.178 26.02);
+  --color-brand-700: oklch(35.17% 0.134 25.33);
+  --color-brand-800: oklch(26.77% 0.098 24.41);
+  --color-brand-900: oklch(17.51% 0.06 19.12);
+  --color-brand-950: oklch(12.82% 0.038 18.14);
+
+
 	--breakpoint-xs: 30rem;
+}
+
+:root {
+  --ui-primary: var(--color-brand-700);
+}
+
+.dark {
+  --ui-primary: var(--color-brand-600);
 }

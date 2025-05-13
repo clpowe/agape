@@ -1,20 +1,5 @@
 ---
 title: Agape Christian Bar Prep
-navigation:
-  title: Agape Christian Bar Prep
-  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
-    prep with expert tutoring, tailored study plans, and spiritual support for
-    success.
-seo:
-  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
-    prep with expert tutoring, tailored study plans, and spiritual support for
-    success.
-  title: Agape Christian Bar Prep
-description: Agape Christian Bar Prep offers personalized, faith-based bar exam
-  prep with expert tutoring, tailored study plans, and spiritual support for
-  success.
-schemaOrg:
-  - "@type": AboutPage
 ---
 
 ::HomeHero{img="/AgapeHeroImage.png" alt="Successful Diverse Students Portraits In A Row, Collage"}
@@ -28,27 +13,31 @@ At Agape Christian Bar Prep, we help students succeed in law school and pass the
 ::
 
 ::content-header{ img="/young_woman.png" alt="A young asian woman studying in a libraey with a laptop wearing a yellow shirt."}
+#eyebrow
+The Agape Way
+
 #title
-The [Agape]{.highlight} Way How Our Program Is Different
+How Our Program Is Different
 
 #description
 Agape Christian Bar Prep empowers students to confidently conquer the bar exam and achieve their dreams of becoming attorneys.
 
 #content
-  ::ItemList
-  ---
-  items:
-    - title: Academic needs
-      icon: i-lucide-university
-      description: We ensuring mastery of essential exam content
-    - title: Emotional and Mental wellness
-      icon: i-lucide-university
-      description: We provide strategies for focus and resilience.
-    - title: Spiritual growth
-      icon: i-lucide-university
-      description: We encourag strength and clarity throughout your preparation journey.
-  ---
-  ::
+::ItemList
+---
+items:
+
+  - title: Emotional and Mental wellness
+    icon: i-lucide-brain
+    description: We provide strategies for focus and resilience.
+  - title: Spiritual growth
+    icon: i-lucide-twitter
+    description: We encourage strength and clarity throughout your preparation journey.
+  - title: Academic needs
+    icon: i-lucide-book-copy
+    description: We ensure mastery of essential exam content
+---
+::
 #extra
 Discover a supportive path to exam success—built around you.
 #actions
@@ -58,7 +47,7 @@ Discover a supportive path to exam success—built around you.
 
 
 
-::content-section
+::content-header
 #title
 Our [Services]{.highlight}
 
@@ -70,16 +59,22 @@ The bar exam feels overwhelming, and traditional prep lacks the personalized and
   ---
   items:
     - title: First Time Takers
+      icon: i-lucide-user
       description: Specialized courses for first-time bar exam takers emphasizing essay mastery.
     - title: Repeat Takers
+      icon: i-lucide-refresh-cw
       description: Comprehensive bar prep and tutoring tailored specifically for repeat takers.
     - title: Law School Prep
+      icon: i-lucide-school
       description: Courses and tutoring to build foundational law exam writing skills.
     - title: Bar Prep Academy
+      icon: i-lucide-notebook
       description: Personalized bar exam prep for professionals, emphasizing writing and analysis.
     - title: Multistate Bar Exam
+      icon: i-lucide-spell-check
       description: Focused MBE tutoring and skill-building for targeted bar exam success.
     - title: School Partnerships
+      icon: i-lucide-graduation-cap
       description: Early, supplemental bar prep and workshops improving mindset, essay writing.
   ---
   ::
@@ -120,8 +115,8 @@ Quick [Links]{.highlight}
 
 ::testimonials-section
 ---
-  description: Read what our students have to say about Agape Christian Bar Prep
-  title: Student Testimonials
+description: Read what our students have to say about Agape Christian Bar Prep
+title: Student Testimonials
 ---
 ::
 

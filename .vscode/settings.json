@@ -1,5 +1,5 @@
 {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "mdc.enableFormatting": true,
   "files.associations": {
@@ -25,5 +25,6 @@
   },
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+  "html.format.templating": true
 }

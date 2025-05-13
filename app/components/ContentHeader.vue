@@ -6,28 +6,46 @@ defineProps<{
 </script>
 
 <template>
-  <section class="section @container">
-    <div class="text-center">
-      <AppTypography
-        v-if="$slots.title"
-        tag="h2"
-        variant="heading-s"
-        class="font-bold text-default"
-      >
-        <slot mdc-unwrap="p" name="title" />
-      </AppTypography>
+  <section
+    class="grid gap-1.5 sm:gap-6 md:gap-10 @container w-full max-w-(--ui-container) mx-auto px-4 py-16 sm:py-24 lg:py-32"
+  >
+    <div
+      class="text-left md:text-center grid items-center gap-3 sm:gap-4 md:gap-6"
+    >
+      <div class="flex flex-col gap-2 items-center">
+        <div class="bg-primary rounded-full py-1 px-3">
+          <AppTypography
+            v-if="$slots.eyebrow"
+            tag="h2"
+            variant="text-l"
+            class="font-bold text-inverted dark:text-default"
+          >
+            <slot mdc-unwrap="p" name="eyebrow" />
+          </AppTypography>
+        </div>
+
+        <AppTypography
+          v-if="$slots.title"
+          tag="h2"
+          variant="heading-xl"
+          class="font-bold text-default"
+        >
+          <slot mdc-unwrap="p" name="title" />
+        </AppTypography>
+      </div>
       <AppTypography
         v-if="$slots.description"
         tag="p"
-        class="text-muted mx-auto max-w-3xl"
+        class="text-muted mx-auto max-w-2xl"
         variant="text-m"
       >
         <slot mdc-unwrap="p" name="description" />
       </AppTypography>
     </div>
     <div class="flex flex-col-reverse md:grid-cols-2 md:grid gap-8">
-      <div class="content @container">
-        <div v-if="$slots.content">
+      <div class="@container" :class="img ? 'col-span-1' : 'col-span-1 md:col-span-2'"
+      >
+        <div v-if="$slots.content" class="grid gap-6">
           <slot name="content" />
           <AppTypography
             v-if="$slots.extra"
@@ -35,7 +53,7 @@ defineProps<{
             variant="text-m"
             class="text-muted"
           >
-            <slot mdc-unwrap="p" name="extra" />
+            <slot mdc-unwrap="p" name="extra" class="text-pretty"/>
           </AppTypography>
           <div v-if="$slots.actions">
             <slot name="actions" />
