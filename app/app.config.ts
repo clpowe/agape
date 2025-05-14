@@ -128,6 +128,6 @@ export default defineAppConfig({
         variant: 'solid',
         size: 'md'
       }
-    }
+    },
   },
 });

@@ -14,8 +14,9 @@
   --color-brand-900: oklch(17.51% 0.06 19.12);
   --color-brand-950: oklch(12.82% 0.038 18.14);
 
-
 	--breakpoint-xs: 30rem;
+
+
 }
 
 :root {

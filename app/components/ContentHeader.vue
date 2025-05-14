@@ -68,9 +68,9 @@ defineProps<{
             class="h-full w-full object-cover rounded-3xl"
           >
             <!-- Show the actual image when loaded -->
-            <img v-if="isLoaded" v-bind="imgAttrs" :src="src" />
+            <img v-if="isLoaded" v-bind="imgAttrs" :src="src" >
             <!-- Show a placeholder while loading -->
-            <img v-else src="https://placehold.co/400x400" alt="placeholder" />
+            <img v-else src="https://placehold.co/400x400" alt="placeholder" >
           </NuxtImg>
         </div>
       </div>
