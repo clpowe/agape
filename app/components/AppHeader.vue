@@ -14,9 +14,9 @@ const isScrolled = computed(() => y.value > scrollThreshold)
 
 <template>
   <UHeader
-    class="h-[--ui-header-height] sticky top-0 z-50 transition-[width] transition-[top] duration-400 ease"
+    class="border-none bg-elevated w-full h-[--ui-header-height] py-1 mx-auto sticky top-0 z-50 transition-all duration-500 ease-(--easing)"
     :class="{
-      'backdrop-blur border-b border-default w-1/2 mx-auto top-4 rounded-full': isScrolled
+      'backdrop-blur border-b border-default w-1/2  top-4 rounded-full': isScrolled
     }"
   >
     <template #left>
@@ -40,6 +40,10 @@ const isScrolled = computed(() => y.value > scrollThreshold)
 <style scoped>
 .logo {
   height: 2.5rem;
+}
+
+.header {
+
 }
 
 .scrolled .agape-logo {
