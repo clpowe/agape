@@ -8,7 +8,12 @@ Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
 #description
 At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress, build essential skills, and support you at every stage of your legal journey.
 #actions
-[Apply Now](){.btn .primary} [schedual a consultation](/contact){.btn--outline}
+::UButton{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
+Apply Now
+::
+::UButton{variant="outline" href="/apply" size="xl" arialabel="Schedual an appointment with Agape Christian Bar Prep"}
+Schedual a consoltation
+::
 
 ::
 

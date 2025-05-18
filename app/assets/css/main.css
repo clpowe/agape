@@ -16,10 +16,12 @@
 
 	--breakpoint-xs: 30rem;
 
+  --container-8xl: 100rem;
 
 }
 
 :root {
+  interpolate-size: allow-keywords;
   overscroll-behavior: contain;
 
   --ui-primary: var(--color-brand-700);
@@ -33,6 +35,8 @@
   --ui-bg-inverted: var(--ui-color-neutral-900);
 
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
+
+  --ui-container: var(--container-8xl);
 }
 
 .dark {
@@ -51,4 +55,20 @@ html {
 
 body {
  overscroll-behavior: contain; 
+}
+
+.section {
+  display: grid;
+  background-color: var(--ui-bg-muted);
+  border-radius: var(--radius-4xl);
+
+  gap: calc(var(--spacing) * 6);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-bottom: calc(var(--spacing) * 8);
+  margin-top: calc(var(--spacing) * 6);
+  padding-top: calc(var(--spacing) * 20);
+
+  @media(width >= 64rem) {
+    padding-inline: calc(var(--spacing) * 8) ;
+  }
 }

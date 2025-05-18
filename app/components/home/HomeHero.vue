@@ -3,11 +3,12 @@ defineProps<{ img?: string; alt?: string }>();
 </script>
 
 <template>
-  <section class="HomeHero">
+  <section class="section" >
     <div class="content-wrapper">
       <AppTypography
         tag="h2"
         variant="heading-variable-l"
+        class="font-bold text-balance"
         :is-bold="true"
         :is-strong="true"
       >
@@ -30,26 +31,27 @@ defineProps<{ img?: string; alt?: string }>();
 </template>
 
 <style scoped>
-.HomeHero {
-  display: grid;
-}
+
 
 .content-wrapper {
   display: grid;
-  gap: var(--space-s);
-  padding-block: var(--space-l);
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%,300px), 1fr));
+  grid-column: span 2;
+  gap: calc(var(--spacing) * 4);
 }
 
 .main-content {
   container-type: inline-size;
   display: flex;
   flex-direction: column;
-  gap: var(--space-s);
+  gap: calc(var(--spacing) * 4);
+  margin-block-strart: var(--space-m);
 }
 
 .image {
   grid-column: span 2;
-  border-radius: var(--space-l);
+  border-radius: var(--space-m);
   img {
     width: 100%;
   }
@@ -57,23 +59,12 @@ defineProps<{ img?: string; alt?: string }>();
 
 .actions {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
+  flex-flow: row wrap;
+  gap: calc(var(--spacing) * 2);
+
 }
 
-@container (min-width: 340px) {
-  .actions {
-    display: flex;
-    flex-direction: row;
-  }
-}
 
-@media (min-width: 700px) {
-  .HomeHero {
-  }
-  .content-wrapper {
-    grid-template-columns: 1fr 1fr;
-    padding-block: var(--space-xxl);
-  }
-}
+
+
 </style>
