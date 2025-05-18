@@ -7,9 +7,9 @@ defineProps<{
 
 <template>
   <section
-    class=" mx-auto  py-16 sm:py-24 lg:py-32"
+    class=" mx-auto py-6"
   >
-    <div class="bg-muted rounded-4xl grid gap-1.5 sm:gap-6 md:gap-10 @container w-full max-w-(--ui-container) px-4 py-10 md:px-8 md:py-12">
+    <div class="bg-muted rounded-4xl grid gap-1.5 sm:gap-6 md:gap-10 @container w-full max-w-(--ui-container) px-4 lg:px-8 py-12 lg:py-20">
       <div
         class="text-left md:text-center grid items-center gap-3 sm:gap-4 md:gap-6"
       >

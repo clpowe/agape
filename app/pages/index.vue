@@ -10,7 +10,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UPage>
+  <div>
     <ContentRenderer v-if="home" :value="home" class="flow content-grid" />
-  </UPage>
+  </div>
 </template>

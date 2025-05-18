@@ -15,9 +15,9 @@ const isScrolled = computed(() => y.value > scrollThreshold)
 <template>
   <UHeader
   mode="drawer"
-    class="border-none bg-elevated w-full h-[--ui-header-height] py-1 mx-auto sticky top-0 z-50 transition-all duration-500 ease-(--easing)"
+    class=" border-none bg-elevated shadow-md w-full h-[--ui-header-height] py-4 mx-auto sticky top-0 z-50 transition-all duration-500 ease-(--easing)"
     :class="{
-      'backdrop-blur border-b border-default w-1/2  top-4 rounded-full': isScrolled
+      'backdrop-blur border-b border-default w-fit min-w-fit top-4 rounded-full': isScrolled
     }"
 
   >
@@ -28,8 +28,9 @@ const isScrolled = computed(() => y.value > scrollThreshold)
     </template>
 
     <UNavigationMenu :items="items" :arrow="false" :ui="{
-      childLink: 'group size-full px-3 py-2 rounded-md flex items-start gap-2 text-start',
-      viewport: 'bg-elevated rounded-2xl top-6 shadow-none shadow-lg ring-transparent  data-[state=open]:animate-[scale-in_100ms]  ease-(--easing) data-[state=closed]:animate-[scale-out_100ms]',
+      link:'text-lg capitalize group relative w-full flex items-center gap-1.5 font-medium before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2',
+      childLink: 'group size-full px-3 text-lg py-2 rounded-md flex items-start gap-2 text-start ',
+      viewport: 'bg-elevated rounded-2xl text-lg top-8 shadow-none shadow-lg ring-transparent  group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2',
     }"/>
 
     <template #right>
@@ -67,7 +68,7 @@ const isScrolled = computed(() => y.value > scrollThreshold)
   }
 }
 
-@keyframes slide-up {
+@keyframes slide_up {
   from {
     opacity: 1;
     transform: translateX(0);

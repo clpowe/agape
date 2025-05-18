@@ -56,7 +56,7 @@ const variantClass = computed(() => {
 <style scoped>
 .text-width {
   max-width: 75ch;
-  text-wrap: stable;
+  text-wrap: balance;
 }
 .font-regular {
   font-weight: 300;
@@ -117,7 +117,7 @@ const variantClass = computed(() => {
   line-height: 1.1rem;
 }
 .heading-variable-l {
-  font-size: clamp(2.2rem, 1px + 5vw, 2.8rem);
+  font-size: clamp(2.2rem, 1px + 5vw, 3.5rem);
   line-height: 1em;
 }
 .text-s {
@@ -138,6 +138,6 @@ const variantClass = computed(() => {
 }
 
 :deep(.highlight) {
-  color: var(--brand);
+  color: var(--ui-primary);
 }
 </style>
