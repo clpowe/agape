@@ -2,7 +2,7 @@
 title: Agape Christian Bar Prep
 ---
 
-::HomeHero{img="/AgapeHeroImage.png" alt="Successful Diverse Students Portraits In A Row, Collage"}
+::HomeHero{img="/AgapeHeroImage.png" alt="Successful Diverse Students Portraits In A Row, Collage" hydrate-never }
 #title
 Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
 #description

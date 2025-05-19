@@ -13,13 +13,11 @@ defineProps<{
 </script>
 
 <template>
-  <div :title :description :headline class="container">
     <ContentHeader>
       <template #title> {{ title }} </template>
       <template #description> {{ description }} </template>
-    </ContentHeader>
-
-    <div class="grid-container">
+     <template #content> 
+      <div class="grid-container">
       <NuxtLink
         v-for="(teacher, index) in teachers"
         :key="index"
@@ -35,8 +33,9 @@ defineProps<{
         />
         {{ teacher.name }}
       </NuxtLink>
-    </div>
-  </div>
+      </div>
+      </template>
+    </ContentHeader>
 </template>
 
 <style scoped>
