@@ -1,8 +1,8 @@
 <script setup>
 const { item } = defineProps({
-  item: {
-    type: Object,
-  },
+	item: {
+		type: Object,
+	},
 });
 </script>
 <template>

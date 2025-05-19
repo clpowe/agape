@@ -1,9 +1,9 @@
 <script setup>
-	import ListItem from './ListItem.vue'
+import ListItem from "./ListItem.vue";
 
-	defineProps({
-		items: { type: Array }
-	})
+defineProps({
+	items: { type: Array },
+});
 </script>
 
 <template>

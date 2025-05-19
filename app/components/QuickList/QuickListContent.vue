@@ -2,7 +2,7 @@
 import QuickItem from "./QuickItem.vue";
 
 defineProps({
-  items: { type: Array },
+	items: { type: Array },
 });
 </script>
 

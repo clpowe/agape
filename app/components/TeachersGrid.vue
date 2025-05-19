@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const { data: teachers } = await useAsyncData(() =>
-  queryCollection("teachers").all()
+	queryCollection("teachers").all(),
 );
 
 defineOptions({ name: "TeachersGrid" });
 
 defineProps<{
-  title?: string;
-  description?: string;
-  headline?: string;
+	title?: string;
+	description?: string;
+	headline?: string;
 }>();
 </script>
 
