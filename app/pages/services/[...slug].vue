@@ -2,11 +2,11 @@
 const route = useRoute();
 
 const { data } = await useAsyncData(route.path, () =>
-  queryCollection("content").path(route.path).first()
+	queryCollection("content").path(route.path).first(),
 );
 
 useSeoMeta({
-  description: data.value?.description,
+	description: data.value?.description,
 });
 </script>
 

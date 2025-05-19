@@ -1,18 +1,18 @@
 <script setup lang="ts">
 const { data } = await useAsyncData(() =>
-  queryCollection("content").path("/careers").first()
+	queryCollection("content").path("/careers").first(),
 );
 
 useSeoMeta({
-  title: data.value?.title,
-  description: data.value?.description,
+	title: data.value?.title,
+	description: data.value?.description,
 });
 
 onMounted(() => {
-  const script = document.createElement("script");
-  script.src = "https://static.airtable.com/js/embed/embed_snippet_v1.js";
-  script.async = true;
-  document.body.appendChild(script);
+	const script = document.createElement("script");
+	script.src = "https://static.airtable.com/js/embed/embed_snippet_v1.js";
+	script.async = true;
+	document.body.appendChild(script);
 });
 </script>
 

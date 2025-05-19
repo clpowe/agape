@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useAsyncData, useScroll } from '#imports'
-import AgapeLogo from '~/assets/icons/agape-logo.svg'
+import AgapeLogo from "~/assets/icons/agape-logo.svg";
 
-const { data: items } = await useAsyncData('navigation-items', () => {
-  return queryCollection('navigation').all()
-})
+const { data: items } = await useAsyncData("navigation-items", () => {
+	return queryCollection("navigation").all();
+});
 
-const { y } = useScroll(window)
-const scrollThreshold = 50
-const isScrolled = computed(() => y.value > scrollThreshold)
+const { y } = useWindowScroll();
+const scrollThreshold = 50;
+const isScrolled = computed(() => y.value > scrollThreshold);
 </script>
 
 <template>
