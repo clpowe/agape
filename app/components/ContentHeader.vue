@@ -45,7 +45,7 @@ defineProps<{
       <div class="flex flex-col-reverse md:grid-cols-2 md:grid gap-8">
         <div class="@container" :class="img ? 'col-span-1' : 'col-span-1 md:col-span-2'"
         >
-          <div v-if="$slots.content" class="grid gap-6">
+          <div v-if="$slots.content" class="">
             <slot name="content" />
             <AppTypography
               v-if="$slots.extra"

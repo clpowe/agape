@@ -55,8 +55,7 @@ const variantClass = computed(() => {
 
 <style scoped>
 .text-width {
-  max-width: 75ch;
-  text-wrap: balance;
+  width: 100%;
 }
 .font-regular {
   font-weight: 300;
@@ -73,22 +72,27 @@ const variantClass = computed(() => {
 .heading-xxs {
   font-size: 1.25rem;
   line-height: 100%;
+  text-wrap:balance;
 }
 .heading-xs {
   font-size: 1.5rem;
   line-height: 100%;
+  text-wrap:balance;
 }
 .heading-s {
   font-size: 1.75rem;
   line-height: 100%;
+  text-wrap:balance;
 }
 .heading-m {
   font-size: 2rem;
   line-height: 100%;
+  text-wrap:balance;
 }
 .heading-l {
   font-size: 2.375rem;
   line-height: 150%;
+  text-wrap:balance;
 }
 .heading-xl {
   font-size: 2rem;
@@ -123,18 +127,22 @@ const variantClass = computed(() => {
 .text-s {
   font-size: 1rem;
   line-height: 160%;
+  text-wrap: wrap;
 }
 .text-m {
   font-size: 1.125rem;
   line-height: 160%;
+  text-wrap: wrap;
 }
 .text-l {
   font-size: 1.25rem;
   line-height: 150%;
+  text-wrap: wrap;
 }
 .text-variable-l {
   font-size: clamp(0.875rem, 1px + 2vw, 1.125rem);
   line-height: 150%;
+  text-wrap: wrap;
 }
 
 :deep(.highlight) {

@@ -37,32 +37,38 @@ function select(index: number) {
       <template #title> {{ title }} </template>
       <template #description> {{ description }} </template>
       <template #content>
+        <div class="flow">
         <UCarousel
           ref="carousel"
           v-slot="{ item }"
-          arrows
-          active
-          loop
-          align="center"
           :items="testimonials"
           :prev="{ onClick: onClickPrev }"
           :next="{ onClick: onClickNext }"
+          
+          active
+          loop
+          align="center"
+          container-scroll="keepSnaps"
+          
+          
+          :ui="{ item: '' }"
+          class="w-full mx-auto"
           @select="onSelect"
         >
-          <motion.div>
-            <AppTypography tag="p" variant="text-m" class="quote">
+          <motion.div class="box">
+            <AppTypography tag="p" variant="text-xl" class="quote">
               {{ item.quote }}
             </AppTypography>
-            <AppTypography
+            <!-- <AppTypography
               tag="p"
               variant="text-l"
               :is-bold="true"
               :is-strong="true"
               >{{ item.name }}</AppTypography
-            >
+            > -->
           </motion.div>
         </UCarousel>
-        <div class="">
+        <div class="buton-wrapper">
           <UButton
             v-for="(item, index) in testimonials"
             :key="index"
@@ -73,9 +79,30 @@ function select(index: number) {
             {{ item.name }}
           </UButton>
         </div>
+        </div>
       </template>
     </ContentHeader>
   </section>
 </template>
 
-<style></style>
+<style scoped>
+.quote{
+  font-size: clamp(1.2rem, 1px + 5vw, 2rem);
+  line-height: 1.2em;
+  margin-inline: auto;
+  max-width: 55ch;
+  text-wrap:pretty;
+  text-align: center;
+}
+.buton-wrapper {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  content: center;
+  place-items: center;
+  place-content: center;
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
+  gap: 1rem;
+}
+</style>
