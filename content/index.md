@@ -3,17 +3,20 @@ title: Agape Christian Bar Prep
 ---
 
 ::HomeHero{img="/AgapeHeroImage.png" alt="Successful Diverse Students Portraits In A Row, Collage" hydrate-never }
+
 #title
 Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
+
 #description
 At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress, build essential skills, and support you at every stage of your legal journey.
+
 #actions
-::UButton{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
-Apply Now
-::
-::UButton{variant="outline" href="/apply" size="xl" arialabel="Schedual an appointment with Agape Christian Bar Prep"}
-Schedual a consoltation
-::
+  ::UButton{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
+  Apply Now
+  ::
+  ::UButton{variant="outline" href="/apply" size="xl" arialabel="Schedual an appointment with Agape Christian Bar Prep"}
+  Schedual a consoltation
+  ::
 
 ::
 
@@ -28,27 +31,26 @@ How Our Program Is Different
 Agape Christian Bar Prep empowers students to confidently conquer the bar exam and achieve their dreams of becoming attorneys.
 
 #content
-::ItemList
----
-items:
-
-  - title: Emotional and Mental wellness
-    icon: i-lucide-brain
-    description: We provide strategies for focus and resilience.
-  - title: Spiritual growth
-    icon: i-lucide-twitter
-    description: We encourage strength and clarity throughout your preparation journey.
-  - title: Academic needs
-    icon: i-lucide-book-copy
-    description: We ensure mastery of essential exam content
----
-::
+  ::ItemList
+  ---
+  items:
+    - title: Emotional and Mental wellness
+      icon: i-lucide-brain
+      description: We provide strategies for focus and resilience.
+    - title: Spiritual growth
+      icon: i-lucide-twitter
+      description: We encourage strength and clarity throughout your preparation journey.
+    - title: Academic needs
+      icon: i-lucide-book-copy
+      description: We ensure mastery of essential exam content
+  ---
+  ::
 #extra
 Discover a supportive path to exam success—built around you.
 #actions
-::UButton{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
-Apply Now
-::
+  ::UButton{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
+  Apply Now
+  ::
 
 ::
 
@@ -128,11 +130,11 @@ title: Student Testimonials
 ---
 ::
 
-::content-header
+::content-header{direction="horizontal" text="left" }
 #title
 Frequently Asked [Questions]{.highlight}
 
 #content
-::FrequentlyAskedQuestions
-::
+  ::FrequentlyAskedQuestions
+  ::
 ::

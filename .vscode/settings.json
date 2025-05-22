@@ -2,12 +2,14 @@
 	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "biomejs.biome",
 	"mdc.enableFormatting": true,
+	"css.format.enable": true,
+	"css.formatter.enabled": true,
 	"files.associations": {
 		"*.md": "mdc",
 		"*.css": "tailwindcss"
 	},
 	"[vue]": {
-		"editor.defaultFormatter": "biomejs.biome"
+		"editor.defaultFormatter": "Vue.volar"
 	},
 	"[mdc]": {
 		"editor.defaultFormatter": "Nuxt.mdc",
@@ -26,5 +28,14 @@
 	"editor.quickSuggestions": {
 		"strings": "on"
 	},
-	"html.format.templating": true
+	"html.format.templating": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"css": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[tailwindcss]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }

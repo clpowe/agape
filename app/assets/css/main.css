@@ -2,82 +2,115 @@
 @import "@nuxt/ui-pro";
 
 @theme {
-	--color-brand-50: oklch(94.81% 0.023 14.26);
-	--color-brand-100: oklch(88.39% 0.054 12.47);
-	--color-brand-200: oklch(77.73% 0.113 15.89);
-	--color-brand-300: oklch(68.28% 0.174 18.7);
-	--color-brand-400: oklch(62.13% 0.217 23.28);
-	--color-brand-500: oklch(55.84% 0.22 26.5);
-	--color-brand-600: oklch(45.8% 0.178 26.02);
-	--color-brand-700: oklch(35.17% 0.134 25.33);
-	--color-brand-800: oklch(26.77% 0.098 24.41);
-	--color-brand-900: oklch(17.51% 0.06 19.12);
-	--color-brand-950: oklch(12.82% 0.038 18.14);
+  --color-brand-50: oklch(94.81% 0.023 14.26);
+  --color-brand-100: oklch(88.39% 0.054 12.47);
+  --color-brand-200: oklch(77.73% 0.113 15.89);
+  --color-brand-300: oklch(68.28% 0.174 18.7);
+  --color-brand-400: oklch(62.13% 0.217 23.28);
+  --color-brand-500: oklch(55.84% 0.22 26.5);
+  --color-brand-600: oklch(45.8% 0.178 26.02);
+  --color-brand-700: oklch(35.17% 0.134 25.33);
+  --color-brand-800: oklch(26.77% 0.098 24.41);
+  --color-brand-900: oklch(17.51% 0.06 19.12);
+  --color-brand-950: oklch(12.82% 0.038 18.14);
 
-	--breakpoint-xs: 30rem;
+  --breakpoint-xs: 30rem;
 
-	--container-8xl: 100rem;
+  --container-8xl: 100rem;
 }
 
 :root {
-	interpolate-size: allow-keywords;
-	overscroll-behavior: contain;
+  interpolate-size: allow-keywords;
+  overscroll-behavior: contain;
 
-	--ui-primary: var(--color-brand-700);
+  --ui-primary: var(--color-brand-700);
 
-	--ui-header-height: --spacing(16);
+  --ui-header-height: --spacing(16);
 
-	--ui-bg: var(--ui-color-neutral-300);
-	--ui-bg-muted: var(--ui-color-neutral-50);
-	--ui-bg-elevated: var(--ui-color-neutral-100);
-	--ui-bg-accented: var(--ui-color-neutral-200);
-	--ui-bg-inverted: var(--ui-color-neutral-900);
+  --ui-bg: var(--ui-color-neutral-300);
+  --ui-bg-muted: var(--ui-color-neutral-50);
+  --ui-bg-elevated: var(--ui-color-neutral-100);
+  --ui-bg-accented: var(--ui-color-neutral-200);
+  --ui-bg-inverted: var(--ui-color-neutral-900);
 
-	--easing: cubic-bezier(0.5, 0, 0.5, 1);
+  --easing: cubic-bezier(0.5, 0, 0.5, 1);
 
-	--ui-container: var(--container-8xl);
+  --ui-container: var(--container-8xl);
 }
 
 .dark {
-	--ui-primary: var(--color-brand-600);
+  --ui-primary: var(--color-brand-600);
 
-	--ui-bg: var(--ui-color-neutral-950);
-	--ui-bg-muted: var(--ui-color-neutral-900);
-	--ui-bg-elevated: var(--ui-color-neutral-800);
-	--ui-bg-accented: var(--ui-color-neutral-700);
-	--ui-bg-inverted: var(--color-white);
+  --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg-muted: var(--ui-color-neutral-900);
+  --ui-bg-elevated: var(--ui-color-neutral-800);
+  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg-inverted: var(--color-white);
 }
 
 html {
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
-	overscroll-behavior: contain;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  overscroll-behavior: contain;
 }
 
 body {
-	overscroll-behavior: contain;
-	min-block-size: 100vh;
-	line-height: 1.6;
+  overscroll-behavior: contain;
+  min-block-size: 100vh;
+  line-height: 1.6;
 }
 
 @layer layout {
-	.flow > * + * {
-		margin-block-start: var(--flow-space, 2rem);
-	}
-	.section {
-		display: grid;
-		background-color: var(--ui-bg-muted);
-		border-radius: var(--radius-4xl);
+  .flow > * + * {
+    margin-block-start: var(--flow-space, 2rem);
+  }
 
-		gap: calc(var(--spacing) * 6);
-		padding-inline: calc(var(--spacing) * 4);
-		padding-bottom: calc(var(--spacing) * 8);
-		margin-top: calc(var(--spacing) * 6);
-		padding-top: calc(var(--spacing) * 20);
+  .wrapper {
+    --wrapper-max-width: 1130px;
+    --wrapper-padding: 1rem;
 
-		@media (width >= 64rem) {
-			padding-inline: calc(var(--spacing) * 8);
-		}
-	}
+    max-width: var(--wrapper-max-width);
+    margin-inline: auto;
+    padding-inline: var(--wrapper-padding);
+
+    /* helps to match the Figma file */
+    box-sizing: content-box;
+  }
+
+  .wrapper[data-width="narrow"] {
+    --wrapper-max-width: 720px;
+  }
+
+  .wrapper[data-width="wide"] {
+    --wrapper-max-width: 1330px;
+  }
+
+  .wrapper[data-direction="vertical"] {
+    display: grid;
+  }
+
+  .wrapper[data-direction="horizontal"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+
+    @media (width>600px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .section {
+    background-color: var(--ui-bg-muted);
+    border-radius: var(--radius-4xl);
+
+    gap: calc(var(--spacing) * 6);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-bottom: calc(var(--spacing) * 8);
+    margin-top: calc(var(--spacing) * 6);
+    padding-top: calc(var(--spacing) * 20);
+
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+  }
 }

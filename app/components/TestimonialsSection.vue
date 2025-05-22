@@ -1,33 +1,33 @@
 <script setup lang="ts">
 import { motion } from "motion-v";
 const { data: testimonials } = await useAsyncData(() =>
-	queryCollection("testimonials").all(),
+  queryCollection("testimonials").all(),
 );
 
 defineOptions({ name: "TestimonialsSection" });
 
 defineProps<{
-	title?: string;
-	description?: string;
-	headline?: string;
+  title?: string;
+  description?: string;
+  headline?: string;
 }>();
 const carousel = useTemplateRef("carousel");
 const activeIndex = ref(0);
 
 function onClickPrev() {
-	activeIndex.value--;
+  activeIndex.value--;
 }
 function onClickNext() {
-	activeIndex.value++;
+  activeIndex.value++;
 }
 function onSelect(index: number) {
-	activeIndex.value = index;
+  activeIndex.value = index;
 }
 
 function select(index: number) {
-	activeIndex.value = index;
+  activeIndex.value = index;
 
-	carousel.value?.emblaApi?.scrollTo(index);
+  carousel.value?.emblaApi?.scrollTo(index);
 }
 </script>
 
@@ -38,47 +38,29 @@ function select(index: number) {
       <template #description> {{ description }} </template>
       <template #content>
         <div class="flow">
-        <UCarousel
-          ref="carousel"
-          v-slot="{ item }"
-          :items="testimonials"
-          :prev="{ onClick: onClickPrev }"
-          :next="{ onClick: onClickNext }"
-          
-          active
-          loop
-          align="center"
-          container-scroll="keepSnaps"
-          
-          
-          :ui="{ item: '' }"
-          class="w-full mx-auto"
-          @select="onSelect"
-        >
-          <motion.div class="box">
-            <AppTypography tag="p" variant="text-l" class="quote">
-              {{ item.quote }}
-            </AppTypography>
-            <!-- <AppTypography
+          <UCarousel ref="carousel" v-slot="{ item }" :items="testimonials" :prev="{ onClick: onClickPrev }"
+            :next="{ onClick: onClickNext }" active loop align="center" container-scroll="keepSnaps" :ui="{ item: '' }"
+            class="w-full mx-auto" @select="onSelect">
+            <motion.div class="box">
+              <AppTypography tag="p" variant="text-l" class="quote">
+                {{ item.quote }}
+              </AppTypography>
+              <!-- <AppTypography
               tag="p"
               variant="text-l"
               :is-bold="true"
               :is-strong="true"
               >{{ item.name }}</AppTypography
             > -->
-          </motion.div>
-        </UCarousel>
-        <div class="buton-wrapper">
-          <UButton
-            v-for="(item, index) in testimonials"
-            :key="index"
-            class="opacity-25 hover:opacity-100 transition-opacity"
-            :class="{ 'opacity-100': activeIndex === index }"
-            @click="select(index)"
-          >
-            {{ item.name }}
-          </UButton>
-        </div>
+            </motion.div>
+          </UCarousel>
+          <div class="buton-wrapper">
+            <UButton v-for="(item, index) in testimonials" :key="index"
+              class="opacity-25 hover:opacity-100 transition-opacity" :class="{ 'opacity-100': activeIndex === index }"
+              @click="select(index)">
+              {{ item.name }}
+            </UButton>
+          </div>
         </div>
       </template>
     </ContentHeader>
@@ -86,14 +68,15 @@ function select(index: number) {
 </template>
 
 <style scoped>
-.quote{
+.quote {
   font-size: clamp(1.2rem, 1px + 5vw, 2rem);
   line-height: 1.2em;
   margin-inline: auto;
   max-width: 55ch;
-  text-wrap:pretty;
+  text-wrap: pretty;
   text-align: center;
 }
+
 .buton-wrapper {
   width: 100%;
   display: inline-flex;
