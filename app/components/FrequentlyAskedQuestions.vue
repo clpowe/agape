@@ -18,7 +18,7 @@ const items = computed<AccordionItem[]>(() => {
 </script>
 
 <template>
-  <h2>Frequently Asked Questions</h2>
+  
   <UAccordion
     v-if="items.length > 0"
     :items="items"

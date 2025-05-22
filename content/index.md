@@ -88,7 +88,7 @@ The bar exam feels overwhelming, and traditional prep lacks the personalized and
   ::
 ::
 
-::content-section
+::content-header
 #title
 Quick [Links]{.highlight}
 
@@ -128,5 +128,11 @@ title: Student Testimonials
 ---
 ::
 
+::content-header
+#title
+Frequently Asked [Questions]{.highlight}
+
+#content
 ::FrequentlyAskedQuestions
+::
 ::

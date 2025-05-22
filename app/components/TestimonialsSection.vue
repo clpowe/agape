@@ -56,7 +56,7 @@ function select(index: number) {
           @select="onSelect"
         >
           <motion.div class="box">
-            <AppTypography tag="p" variant="text-xl" class="quote">
+            <AppTypography tag="p" variant="text-l" class="quote">
               {{ item.quote }}
             </AppTypography>
             <!-- <AppTypography
