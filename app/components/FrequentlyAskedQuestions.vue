@@ -18,6 +18,11 @@ const items = computed<AccordionItem[]>(() => {
 </script>
 
 <template>
-
-	<UAccordion v-if="items.length > 0" :items="items" type="single" :collapsible="true" />
+	<UAccordion v-if="items.length > 0" :items="items" type="single" :collapsible="true">
+		<template #default="{ item }">
+			<AppTypography tag="h3" variant="text-l" class="mb-1" :is-bold="true" :is-strong="true">
+				{{ item.label }}
+			</AppTypography>
+		</template>
+	</UAccordion>
 </template>

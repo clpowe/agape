@@ -34,7 +34,8 @@ function select(index: number) {
 <template>
   <section>
     <ContentHeader>
-      <template #title> {{ title }} </template>
+      <template #title>
+        {{ title }} </template>
       <template #description> {{ description }} </template>
       <template #content>
         <div class="flow">

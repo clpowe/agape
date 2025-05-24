@@ -13,9 +13,8 @@ defineProps<{
     <div class="wrapper flow @container" :data-width="width" :data-direction="direction">
       <div class="heading" :data-text="text">
         <div class="flex flex-col gap-2 items-center">
-          <div class="bg-primary rounded-full py-1 px-3">
-            <AppTypography v-if="$slots.eyebrow" tag="p" variant="text-l"
-              class="font-bold text-inverted dark:text-default">
+          <div v-if="$slots.eyebrow" class="bg-primary rounded-full py-1 px-3">
+            <AppTypography tag="p" variant="text-l" class="font-bold text-inverted dark:text-default">
               <slot mdc-unwrap="p" name="eyebrow" />
             </AppTypography>
           </div>
