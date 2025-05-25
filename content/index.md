@@ -130,7 +130,7 @@ title: Student Testimonials
 ---
 ::
 
-::content-header{direction="horizontal" text="left" }
+::content-header{direction="horizontal" text="left" class="" }
 #title
 Frequently Asked [Questions]{.highlight}
 

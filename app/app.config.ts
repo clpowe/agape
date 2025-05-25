@@ -141,5 +141,10 @@ export default defineAppConfig({
 				size: "md",
 			},
 		},
+		accordion: {
+			slots: {
+				item: "bg-elevated rounded-2xl p-4",
+			},
+		},
 	},
 });

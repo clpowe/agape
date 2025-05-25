@@ -12,7 +12,8 @@ type Variant =
 	| "text-s"
 	| "text-m"
 	| "text-l"
-	| "text-variable-l";
+	| "text-variable-l"
+  | "faq-text"
 
 const props = defineProps<{
 	tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
@@ -35,6 +36,7 @@ const VARIANT_CLASSES: Record<Variant, string> = {
 	"text-m": "text-m",
 	"text-l": "text-l",
 	"text-variable-l": "text-variable-l",
+  "faq-text": "faq-text"
 };
 
 const variantClass = computed(() => {
@@ -143,6 +145,12 @@ const variantClass = computed(() => {
   font-size: clamp(0.875rem, 1px + 2vw, 1.125rem);
   line-height: 150%;
   text-wrap: wrap;
+}
+
+.faq-text {
+ font-size: 1.25rem;
+  line-height: 110%;
+  text-wrap: wrap; 
 }
 
 :deep(.highlight) {

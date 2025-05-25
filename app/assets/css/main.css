@@ -14,6 +14,18 @@
   --color-brand-900: oklch(17.51% 0.06 19.12);
   --color-brand-950: oklch(12.82% 0.038 18.14);
 
+  --ui-color-secondary-50: oklch(1 0 0);
+  --ui-color-secondary-100: oklch(97.31% 0.004 91.45);
+  --ui-color-secondary-200: oklch(95.15% 0.007 97.35);
+  --ui-color-secondary-300: oklch(92.43% 0.011 95.17);
+  --ui-color-secondary-400: oklch(90.32% 0.014 92.99);
+  --ui-color-secondary-500: oklch(87.57% 0.018 92.7);
+  --ui-color-secondary-600: oklch(76.03% 0.036 92.33);
+  --ui-color-secondary-700: oklch(63.07% 0.051 92.7);
+  --ui-color-secondary-800: oklch(47.8% 0.039 94.31);
+  --ui-color-secondary-900: oklch(29.65% 0.021 95.69);
+  --ui-color-secondary-950: oklch(20.07% 0.01 88.81);
+
   --breakpoint-xs: 30rem;
 
   --container-8xl: 100rem;
@@ -27,11 +39,11 @@
 
   --ui-header-height: --spacing(16);
 
-  --ui-bg: var(--ui-color-neutral-300);
-  --ui-bg-muted: var(--ui-color-neutral-50);
-  --ui-bg-elevated: var(--ui-color-neutral-100);
-  --ui-bg-accented: var(--ui-color-neutral-200);
-  --ui-bg-inverted: var(--ui-color-neutral-900);
+  --ui-bg: var(--ui-color-secondary-500);
+  --ui-bg-muted: var(--ui-color-secondary-100);
+  --ui-bg-elevated: var(--ui-color-secondary-50);
+  --ui-bg-accented: var(--ui-color-secondary-200);
+  --ui-bg-inverted: var(--ui-color-secondary-900);
 
   --easing: cubic-bezier(0.5, 0, 0.5, 1);
 
