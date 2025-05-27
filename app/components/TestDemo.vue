@@ -21,13 +21,13 @@
                         </button>
                         <ul :id="`submenu-${i}`" class="" role="menu" v-show="openIndex === i">
                             <li v-for="(svc, j) in services" :key="j">
-                                <a role="menuitem" :href="svc.href">{{ svc.label }}</a>
+                                <NuxtLink role="menuitem" :to="svc.href">{{ svc.label }}</NuxtLink>
                             </li>
                         </ul>
                     </template>
                     <template v-else>
-                        <a class="main-link" :href="item.href"
-                            @keydown="onButtonKeydown($event, null)">{{ item.label }}</a>
+                        <NuxtLink class="main-link" :to="item.href" @keydown="onButtonKeydown($event, null)">
+                            {{ item.label }}</NuxtLink>
                     </template>
                 </li>
             </ul>
@@ -43,7 +43,7 @@
                     </button>
                     <ul :id="`submenu-${i}`" class="disclosure-submenu" role="menu" v-show="openIndex === i">
                         <li v-for="(svc, j) in services" :key="j">
-                            <a role="menuitem" :href="svc.href">{{ svc.label }}</a>
+                            <NuxtLink role="menuitem" :to="svc.href">{{ svc.label }}</NuxtLink>
                         </li>
                     </ul>
                 </template>
@@ -59,6 +59,11 @@
 import { ref } from 'vue'
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
 import { useEventListener } from '@vueuse/core'
+const route = useRoute()
+
+watch(() => route.fullPath, () => {
+    closeMobileMenu()
+})
 
 const items = [
     { label: 'Home', href: '/' },
