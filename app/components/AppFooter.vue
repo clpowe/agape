@@ -1,3 +1,3 @@
 <template>
-  <UFooter> Footer </UFooter>
+  <footer> Footer </footer>
 </template>
