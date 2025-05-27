@@ -10,7 +10,7 @@
         </button>
 
         <!-- Native Popover -->
-        <dialog popover id="mobile-menu" ref="mobileMenuRef" popover-backdrop ">
+        <dialog id="mobile-menu" ref="mobileMenuRef" popover popover-backdrop>
             <button aria-label=" Close menu" @click="closeMobileMenu">✕</button>
             <ul class="">
                 <li v-for="(item, i) in items" :key="i">
@@ -19,9 +19,11 @@
                             :aria-controls="`submenu-${i}`" @click="toggle(i)" @keydown="onButtonKeydown($event, i)">
                             {{ item.label }}
                         </button>
-                        <ul :id="`submenu-${i}`" class="" role="menu" v-show="openIndex === i">
+                        <ul v-show="openIndex === i" :id="`submenu-${i}`" class="" role="menu">
                             <li v-for="(svc, j) in services" :key="j">
-                                <NuxtLink role="menuitem" :to="svc.href">{{ svc.label }}</NuxtLink>
+                                <NuxtLink role="menuitem" :to="svc.href">{{
+                                    svc.label
+                                }}</NuxtLink>
                             </li>
                         </ul>
                     </template>
@@ -41,9 +43,11 @@
                         :aria-controls="`submenu-${i}`" @click="toggle(i)" @keydown="onButtonKeydown($event, i)">
                         {{ item.label }}
                     </button>
-                    <ul :id="`submenu-${i}`" class="disclosure-submenu" role="menu" v-show="openIndex === i">
+                    <ul v-show="openIndex === i" :id="`submenu-${i}`" class="disclosure-submenu" role="menu">
                         <li v-for="(svc, j) in services" :key="j">
-                            <NuxtLink role="menuitem" :to="svc.href">{{ svc.label }}</NuxtLink>
+                            <NuxtLink role="menuitem" :to="svc.href">{{
+                                svc.label
+                            }}</NuxtLink>
                         </li>
                     </ul>
                 </template>
@@ -56,91 +60,98 @@
 </template>
 
 <script setup>
-import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
-const route = useRoute()
+import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
+const route = useRoute();
 
-watch(() => route.fullPath, () => {
-    closeMobileMenu()
-    openIndex.value = null
-})
+watch(
+    () => route.fullPath,
+    () => {
+        closeMobileMenu();
+        openIndex.value = null;
+    }
+);
 
 const items = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', submenu: true },
-    { label: 'Contact', href: '/contact' },
-    { label: 'Apply', href: '/apply' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Current Students', href: '/students' },
-]
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", submenu: true },
+    { label: "Contact", href: "/contact" },
+    { label: "Apply", href: "/apply" },
+    { label: "Careers", href: "/careers" },
+    { label: "Current Students", href: "/student-portal" },
+];
 
 const services = [
-    { label: 'Law School Preparation Services', href: '/services/law-school-prep' },
-    { label: 'Bar Prep Academy', href: '/services/bar-prep-academy' },
-    { label: 'Law School Partnerships', href: '/services/law-school-partnerships' },
-    { label: 'First Time Takers', href: '/services/first-time-takers' },
-    { label: 'MBE Only Takers', href: '/services/mbe-only-takers' },
-    { label: 'Repeat Takers', href: '/services/repeat-takers' },
-]
+    {
+        label: "Law School Preparation Services",
+        href: "/services/law-school-prep",
+    },
+    { label: "Bar Prep Academy", href: "/services/bar-prep-academy" },
+    {
+        label: "Law School Partnerships",
+        href: "/services/law-school-partnerships",
+    },
+    { label: "First Time Takers", href: "/services/first-time-takers" },
+    { label: "MBE Only Takers", href: "/services/mbe-only-takers" },
+    { label: "Repeat Takers", href: "/services/repeat-takers" },
+];
 
-const openIndex = ref(null)
-const navRef = useTemplateRef("navRef")
-const mobileMenuRef = useTemplateRef('mobileMenuRef')
+const openIndex = ref(null);
+const navRef = useTemplateRef("navRef");
+const mobileMenuRef = useTemplateRef("mobileMenuRef");
 
-const { activate, deactivate } = useFocusTrap(mobileMenuRef)
+const { activate, deactivate } = useFocusTrap(mobileMenuRef);
 
 function toggle(index) {
-    openIndex.value = openIndex.value === index ? null : index
+    openIndex.value = openIndex.value === index ? null : index;
 }
 
 function onKeydown(e) {
-    if (e.key === 'Escape') {
-        openIndex.value = null
+    if (e.key === "Escape") {
+        openIndex.value = null;
     }
 }
 
 function onButtonKeydown(e, idx) {
-    const topButtons = Array.from(navRef.value.querySelectorAll('.main-link'))
-    const current = topButtons.indexOf(e.target)
-    if (['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) {
-        e.preventDefault()
-        const max = topButtons.length
-        let next = 0
-        if (e.key === 'ArrowRight') next = (current + 1) % max
-        if (e.key === 'ArrowLeft') next = (current - 1 + max) % max
-        if (e.key === 'Home') next = 0
-        if (e.key === 'End') next = max - 1
-        topButtons[next].focus()
+    const topButtons = Array.from(navRef.value.querySelectorAll(".main-link"));
+    const current = topButtons.indexOf(e.target);
+    if (["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) {
+        e.preventDefault();
+        const max = topButtons.length;
+        let next = 0;
+        if (e.key === "ArrowRight") next = (current + 1) % max;
+        if (e.key === "ArrowLeft") next = (current - 1 + max) % max;
+        if (e.key === "Home") next = 0;
+        if (e.key === "End") next = max - 1;
+        topButtons[next].focus();
     }
-    if ((e.key === 'Enter' || e.key === ' ') && idx != null) {
-        e.preventDefault()
-        toggle(idx)
+    if ((e.key === "Enter" || e.key === " ") && idx != null) {
+        e.preventDefault();
+        toggle(idx);
     }
 }
 
-useEventListener(navRef, 'focusout', (e) => {
+useEventListener(navRef, "focusout", (e) => {
     if (!navRef.value.contains(e.relatedTarget)) {
-        openIndex.value = null
+        openIndex.value = null;
     }
-})
+});
 
 function toggleMobileMenu() {
-    mobileMenuRef.value.showModal()
-    activate()
+    mobileMenuRef.value.showModal();
+    activate();
 }
 
 function closeMobileMenu() {
-    mobileMenuRef.value.close()
-    deactivate()
+    mobileMenuRef.value.close();
+    deactivate();
 }
 </script>
-
 
 <style scoped>
 .hamburger {
     display: block;
 }
-
 
 .disclosure-nav {
     display: none;
