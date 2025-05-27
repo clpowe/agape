@@ -1,79 +1,185 @@
-<script setup lang="ts">
-import AgapeLogo from "~/assets/icons/agape-logo.svg";
-
-const { data: items } = await useAsyncData("navigation-items", () => {
-	return queryCollection("navigation").all();
-});
-
-const { y } = useWindowScroll();
-const scrollThreshold = 50;
-const isScrolled = computed(() => y.value > scrollThreshold);
-</script>
-
 <template>
-  <UHeader
-  mode="drawer"
-    class=" border-none bg-elevated shadow-md w-full h-[--ui-header-height] py-4 mx-auto sticky top-0 z-50 transition-all duration-500 ease-(--easing)"
-    :class="{
-      'backdrop-blur border-b border-default w-fit min-w-fit top-4 rounded-full': isScrolled
-    }"
+    <nav ref="navRef" aria-label="Main navigation">
+        <!-- Mobile Hamburger -->
+        <button ref="hamburger" class="hamburger" aria-haspopup="true" aria-controls="mobile-menu"
+            @click="toggleMobileMenu">
+            <span class="sr-only">Menu</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
+                <path d="M3 6h18M3 12h18M3 18ah18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
 
-  >
-    <template #left>
-      <NuxtLink to="/">
-        <AgapeLogo class="w-14 h-14 transition-all duration-300" :font-controlled="false" />
-      </NuxtLink>
-    </template>
+        <!-- Native Popover -->
+        <dialog popover id="mobile-menu" ref="mobileMenuRef" popover-backdrop ">
+            <button aria-label=" Close menu" @click="closeMobileMenu">✕</button>
+            <ul class="">
+                <li v-for="(item, i) in items" :key="i">
+                    <template v-if="item.submenu">
+                        <button type="button" class="main-link" :aria-expanded="openIndex === i"
+                            :aria-controls="`submenu-${i}`" @click="toggle(i)" @keydown="onButtonKeydown($event, i)">
+                            {{ item.label }}
+                        </button>
+                        <ul :id="`submenu-${i}`" class="" role="menu" v-show="openIndex === i">
+                            <li v-for="(svc, j) in services" :key="j">
+                                <NuxtLink role="menuitem" :to="svc.href">{{ svc.label }}</NuxtLink>
+                            </li>
+                        </ul>
+                    </template>
+                    <template v-else>
+                        <NuxtLink class="main-link" :to="item.href" @keydown="onButtonKeydown($event, null)">
+                            {{ item.label }}</NuxtLink>
+                    </template>
+                </li>
+            </ul>
+        </dialog>
 
-    <UNavigationMenu :items="items" :arrow="false" :ui="{
-      link:'text-lg capitalize group relative w-full flex items-center gap-1.5 font-medium before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2',
-      childLink: 'group size-full px-3 text-lg py-2 rounded-md flex items-start gap-2 text-start ',
-      viewport: 'bg-elevated rounded-2xl text-lg top-8 shadow-none shadow-lg ring-transparent  group relative w-full flex items-center gap-1.5 font-medium text-sm before:absolute before:z-[-1] before:rounded-md focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-2',
-    }"/>
-
-    <template #right>
-      <UColorModeButton />
-    </template>
-
-    <template #body>
-      <UNavigationMenu title="Navigation" overlay="false" :items="items" orientation="vertical" class="-mx-2.5" ui:{}/>
-    </template>
-  </UHeader>
+        <!-- Desktop Disclosure Navigation -->
+        <ul class="disclosure-nav desktop-nav" @keydown="onKeydown">
+            <li v-for="(item, i) in items" :key="i">
+                <template v-if="item.submenu">
+                    <button type="button" class="main-link" :aria-expanded="openIndex === i"
+                        :aria-controls="`submenu-${i}`" @click="toggle(i)" @keydown="onButtonKeydown($event, i)">
+                        {{ item.label }}
+                    </button>
+                    <ul :id="`submenu-${i}`" class="disclosure-submenu" role="menu" v-show="openIndex === i">
+                        <li v-for="(svc, j) in services" :key="j">
+                            <NuxtLink role="menuitem" :to="svc.href">{{ svc.label }}</NuxtLink>
+                        </li>
+                    </ul>
+                </template>
+                <template v-else>
+                    <a class="main-link" :href="item.href" @keydown="onButtonKeydown($event, null)">{{ item.label }}</a>
+                </template>
+            </li>
+        </ul>
+    </nav>
 </template>
 
+<script setup>
+import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
+const route = useRoute()
+
+watch(() => route.fullPath, () => {
+    closeMobileMenu()
+    openIndex.value = null
+})
+
+const items = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', submenu: true },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Apply', href: '/apply' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Current Students', href: '/students' },
+]
+
+const services = [
+    { label: 'Law School Preparation Services', href: '/services/law-school-prep' },
+    { label: 'Bar Prep Academy', href: '/services/bar-prep-academy' },
+    { label: 'Law School Partnerships', href: '/services/law-school-partnerships' },
+    { label: 'First Time Takers', href: '/services/first-time-takers' },
+    { label: 'MBE Only Takers', href: '/services/mbe-only-takers' },
+    { label: 'Repeat Takers', href: '/services/repeat-takers' },
+]
+
+const openIndex = ref(null)
+const navRef = useTemplateRef("navRef")
+const mobileMenuRef = useTemplateRef('mobileMenuRef')
+
+const { activate, deactivate } = useFocusTrap(mobileMenuRef)
+
+function toggle(index) {
+    openIndex.value = openIndex.value === index ? null : index
+}
+
+function onKeydown(e) {
+    if (e.key === 'Escape') {
+        openIndex.value = null
+    }
+}
+
+function onButtonKeydown(e, idx) {
+    const topButtons = Array.from(navRef.value.querySelectorAll('.main-link'))
+    const current = topButtons.indexOf(e.target)
+    if (['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) {
+        e.preventDefault()
+        const max = topButtons.length
+        let next = 0
+        if (e.key === 'ArrowRight') next = (current + 1) % max
+        if (e.key === 'ArrowLeft') next = (current - 1 + max) % max
+        if (e.key === 'Home') next = 0
+        if (e.key === 'End') next = max - 1
+        topButtons[next].focus()
+    }
+    if ((e.key === 'Enter' || e.key === ' ') && idx != null) {
+        e.preventDefault()
+        toggle(idx)
+    }
+}
+
+useEventListener(navRef, 'focusout', (e) => {
+    if (!navRef.value.contains(e.relatedTarget)) {
+        openIndex.value = null
+    }
+})
+
+function toggleMobileMenu() {
+    mobileMenuRef.value.showModal()
+    activate()
+}
+
+function closeMobileMenu() {
+    mobileMenuRef.value.close()
+    deactivate()
+}
+</script>
+
+
 <style scoped>
-.logo {
-  height: 2.5rem;
+.hamburger {
+    display: block;
 }
 
-.header {
 
+.disclosure-nav {
+    display: none;
+    gap: 1rem;
 }
 
-.scrolled .agape-logo {
-  height: 2rem;
-  width: 2rem;
+/* Positioning only */
+.disclosure-nav>li {
+    position: relative;
 }
 
-@keyframes slide_down {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.disclosure-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
-@keyframes slide_up {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+[popover] {
+    display: none;
+    position: fixed;
+    inset: 0;
+}
+
+[popover][open] {
+    display: block;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+@media (width > 500px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+        position: relative;
+    }
 }
 </style>

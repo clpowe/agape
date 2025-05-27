@@ -39,28 +39,21 @@ function select(index: number) {
       <template #description> {{ description }} </template>
       <template #content>
         <div class="flow">
-          <UCarousel ref="carousel" v-slot="{ item }" :items="testimonials" :prev="{ onClick: onClickPrev }"
+          <!-- <UCarousel ref="carousel" v-slot="{ item }" :items="testimonials" :prev="{ onClick: onClickPrev }"
             :next="{ onClick: onClickNext }" active loop align="center" container-scroll="keepSnaps" :ui="{ item: '' }"
             class="w-full mx-auto" @select="onSelect">
             <motion.div class="box">
               <AppTypography tag="p" variant="text-l" class="quote">
                 {{ item.quote }}
               </AppTypography>
-              <!-- <AppTypography
-              tag="p"
-              variant="text-l"
-              :is-bold="true"
-              :is-strong="true"
-              >{{ item.name }}</AppTypography
-            > -->
             </motion.div>
-          </UCarousel>
+          </UCarousel> -->
           <div class="buton-wrapper">
-            <UButton v-for="(item, index) in testimonials" :key="index"
+            <button v-for="(item, index) in testimonials" :key="index"
               class="opacity-25 hover:opacity-100 transition-opacity" :class="{ 'opacity-100': activeIndex === index }"
               @click="select(index)">
               {{ item.name }}
-            </UButton>
+            </button>
           </div>
         </div>
       </template>
