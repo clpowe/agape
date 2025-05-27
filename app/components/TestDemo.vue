@@ -63,6 +63,7 @@ const route = useRoute()
 
 watch(() => route.fullPath, () => {
     closeMobileMenu()
+    openIndex.value = null
 })
 
 const items = [
