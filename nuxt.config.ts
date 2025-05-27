@@ -31,8 +31,6 @@ export default defineNuxtConfig({
 		"@nuxt/test-utils/module",
 		"@vueuse/nuxt",
 		"nuxt-svgo",
-		"motion-v/nuxt",
-		"@nuxt/ui-pro",
 	],
 	css: ["~/assets/css/main.css"],
 	hub: {
