@@ -11,6 +11,8 @@
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     scroll-behavior: smooth;
+    interpolate-size: allow-keywords;
+    overscroll-behavior: contain;
   }
 
   body,
@@ -73,34 +75,81 @@
   }
 }
 
-:root {
-  --color-brand-50: oklch(94.81% 0.023 14.26);
-  --color-brand-100: oklch(88.39% 0.054 12.47);
-  --color-brand-200: oklch(77.73% 0.113 15.89);
-  --color-brand-300: oklch(68.28% 0.174 18.7);
-  --color-brand-400: oklch(62.13% 0.217 23.28);
-  --color-brand-500: oklch(55.84% 0.22 26.5);
-  --color-brand-600: oklch(45.8% 0.178 26.02);
-  --color-brand-700: oklch(35.17% 0.134 25.33);
-  --color-brand-800: oklch(26.77% 0.098 24.41);
-  --color-brand-900: oklch(17.51% 0.06 19.12);
-  --color-brand-950: oklch(12.82% 0.038 18.14);
+@layer base {
+  :root {
+    --color-brand-50: oklch(94.81% 0.023 14.26);
+    --color-brand-100: oklch(88.39% 0.054 12.47);
+    --color-brand-200: oklch(77.73% 0.113 15.89);
+    --color-brand-300: oklch(68.28% 0.174 18.7);
+    --color-brand-400: oklch(62.13% 0.217 23.28);
+    --color-brand-500: oklch(55.84% 0.22 26.5);
+    --color-brand-600: oklch(45.8% 0.178 26.02);
+    --color-brand-700: oklch(35.17% 0.134 25.33);
+    --color-brand-800: oklch(26.77% 0.098 24.41);
+    --color-brand-900: oklch(17.51% 0.06 19.12);
+    --color-brand-950: oklch(12.82% 0.038 18.14);
 
-  --ui-color-secondary-50: oklch(1 0 0);
-  --ui-color-secondary-100: oklch(97.31% 0.004 91.45);
-  --ui-color-secondary-200: oklch(95.15% 0.007 97.35);
-  --ui-color-secondary-300: oklch(92.43% 0.011 95.17);
-  --ui-color-secondary-400: oklch(90.32% 0.014 92.99);
-  --ui-color-secondary-500: oklch(87.57% 0.018 92.7);
-  --ui-color-secondary-600: oklch(76.03% 0.036 92.33);
-  --ui-color-secondary-700: oklch(63.07% 0.051 92.7);
-  --ui-color-secondary-800: oklch(47.8% 0.039 94.31);
-  --ui-color-secondary-900: oklch(29.65% 0.021 95.69);
-  --ui-color-secondary-950: oklch(20.07% 0.01 88.81);
+    --color-secondary-50: oklch(1 0 0);
+    --color-secondary-100: oklch(97.31% 0.004 91.45);
+    --color-secondary-200: oklch(95.15% 0.007 97.35);
+    --color-secondary-300: oklch(92.43% 0.011 95.17);
+    --color-secondary-400: oklch(90.32% 0.014 92.99);
+    --color-secondary-500: oklch(87.57% 0.018 92.7);
+    --color-secondary-600: oklch(76.03% 0.036 92.33);
+    --color-secondary-700: oklch(63.07% 0.051 92.7);
+    --color-secondary-800: oklch(47.8% 0.039 94.31);
+    --color-secondary-900: oklch(29.65% 0.021 95.69);
+    --color-secondary-950: oklch(20.07% 0.01 88.81);
 
-  --breakpoint-xs: 30rem;
+    --ff-body: "inter", sans-serif;
 
-  --container-8xl: 100rem;
+    --breakpoint-xs: 30rem;
+
+    --container-8xl: 100rem;
+
+    --space-xxl: 0.25rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-m: 1.5rem;
+    --space-l: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 5rem;
+
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.5rem;
+    --fs-800: 2rem;
+    --fs-900: 3.75rem;
+    --fs-1000: 3.75rem;
+  }
+
+  :root {
+    html {
+      -moz-text-size-adjust: none;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+      overscroll-behavior: contain;
+    }
+
+    body {
+      overscroll-behavior: contain;
+      min-block-size: 100vh;
+      line-height: 1.6;
+    }
+
+    --text-strong: var(--color-secondary-950);
+    --text-weak: var(--color-secondary-800);
+    --text-brand: var(--color-brand-500);
+
+    --stroke-strong: var();
+    --stroke-weak: var();
+
+    --background-primary: var(--color-secondary-200);
+    --background-secondary: var(--color-secondary-400);
+    --background-terciary: var(--color-secondary-50);
+  }
 }
 
 :root {
@@ -122,27 +171,12 @@
   --ui-container: var(--container-8xl);
 }
 
-.dark {
-  --ui-primary: var(--color-brand-600);
-
-  --ui-bg: var(--ui-color-neutral-950);
-  --ui-bg-muted: var(--ui-color-neutral-900);
-  --ui-bg-elevated: var(--ui-color-neutral-800);
-  --ui-bg-accented: var(--ui-color-neutral-700);
-  --ui-bg-inverted: var(--color-white);
-}
-
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-  overscroll-behavior: contain;
-}
-
-body {
-  overscroll-behavior: contain;
-  min-block-size: 100vh;
-  line-height: 1.6;
+@layer base {
+  body {
+    color: var(--text-strong);
+    font-family: var(--ff-body);
+    background-color: var(--background-secondary);
+  }
 }
 
 @layer layout {
@@ -184,7 +218,7 @@ body {
     }
   }
   .section {
-    background-color: var(--ui-bg-muted);
+    background-color: var(--background-primary);
     border-radius: var(--radius-4xl);
 
     gap: calc(var(--spacing) * 6);
