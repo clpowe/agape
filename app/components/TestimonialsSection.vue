@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { motion } from "motion-v";
 const { data: testimonials } = await useAsyncData(() =>
   queryCollection("testimonials").all(),
 );
