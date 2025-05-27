@@ -12,7 +12,7 @@
         <!-- Native Popover -->
         <dialog popover id="mobile-menu" ref="mobileMenuRef" popover-backdrop ">
             <button aria-label=" Close menu" @click="closeMobileMenu">✕</button>
-            <ul class="disclosure-nav">
+            <ul class="">
                 <li v-for="(item, i) in items" :key="i">
                     <template v-if="item.submenu">
                         <button type="button" class="main-link" :aria-expanded="openIndex === i"
@@ -83,7 +83,7 @@ const openIndex = ref(null)
 const navRef = useTemplateRef("navRef")
 const mobileMenuRef = useTemplateRef('mobileMenuRef')
 
-const { hasFocus, activate, deactivate } = useFocusTrap(mobileMenuRef)
+const { activate, deactivate } = useFocusTrap(mobileMenuRef)
 
 function toggle(index) {
     openIndex.value = openIndex.value === index ? null : index
@@ -133,6 +133,16 @@ function closeMobileMenu() {
 
 
 <style scoped>
+.hamburger {
+    display: block;
+}
+
+
+.disclosure-nav {
+    display: none;
+    gap: 1rem;
+}
+
 /* Positioning only */
 .disclosure-nav>li {
     position: relative;
@@ -154,13 +164,13 @@ function closeMobileMenu() {
     display: block;
 }
 
-@media (max-width: 768px) {
+@media (width > 500px) {
     .desktop-nav {
-        display: none;
+        display: flex;
     }
 
     .hamburger {
-        display: block;
+        display: none;
         position: relative;
     }
 }
