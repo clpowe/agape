@@ -103,11 +103,11 @@
 
     --ff-body: "inter", sans-serif;
 
-    --breakpoint-xs: 30rem;
+    --border-radius-1: 0.25rem;
+    --border-radius-2: 0.5rem;
+    --border-radius-3: 0.75rem;
 
-    --container-8xl: 100rem;
-
-    --space-xxl: 0.25rem;
+    --space-xxs: 0.25rem;
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-m: 1.5rem;
@@ -152,25 +152,6 @@
   }
 }
 
-:root {
-  interpolate-size: allow-keywords;
-  overscroll-behavior: contain;
-
-  --ui-primary: var(--color-brand-700);
-
-  --ui-header-height: --spacing(16);
-
-  --ui-bg: var(--ui-color-secondary-500);
-  --ui-bg-muted: var(--ui-color-secondary-100);
-  --ui-bg-elevated: var(--ui-color-secondary-50);
-  --ui-bg-accented: var(--ui-color-secondary-200);
-  --ui-bg-inverted: var(--ui-color-secondary-900);
-
-  --easing: cubic-bezier(0.5, 0, 0.5, 1);
-
-  --ui-container: var(--container-8xl);
-}
-
 @layer base {
   body {
     color: var(--text-strong);
@@ -194,14 +175,14 @@
 
     /* helps to match the Figma file */
     box-sizing: content-box;
-  }
 
-  .wrapper[data-width="narrow"] {
-    --wrapper-max-width: 720px;
-  }
+    &[data-width="narrow"] {
+      --wrapper-max-width: 720px;
+    }
 
-  .wrapper[data-width="wide"] {
-    --wrapper-max-width: 1330px;
+    &[data-width="wide"] {
+      --wrapper-max-width: 1330px;
+    }
   }
 
   .wrapper[data-direction="vertical"] {
