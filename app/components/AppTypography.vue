@@ -44,7 +44,7 @@ const variantClass = computed(() => {
 });
 </script>
 <template>
-  <component :is="tag" :class="[variantClass, 'text-width']">
+  <component :is="tag" :class="[variantClass, 'text-width', { 'font-bold': isBold, 'text-strong': isStrong }]">
     <slot />
   </component>
 </template>
