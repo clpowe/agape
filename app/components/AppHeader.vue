@@ -1,90 +1,16 @@
-<template>
-    <header>
-        <div class="wrapper" data-width="wide">
-            <div class="site_header">
-                <NuxtLink class="logo" to="/">
-                    <AppLogo class="agape-logo" />
-                    <AppTypography tag="p" variant="heading-xxs" is-bold="true">
-                        Agape Christian
-                    </AppTypography>
-                </NuxtLink>
-                <!-- Mobile Hamburger -->
-                <button ref="hamburger" class="hamburger" aria-haspopup="true" aria-controls="mobile-menu"
-                    @click="toggleMobileMenu">
-                    <span class="sr-only">Menu</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
-                        <path d="M3 6h18M3 12h18M3 18ah18" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" />
-                    </svg>
-                </button>
-
-                <!-- Native Popover -->
-                <dialog id="mobile-menu" ref="mobileMenuRef" popover popover-backdrop>
-                    <button aria-label=" Close menu" @click="closeMobileMenu">✕</button>
-                    <ul class="">
-                        <li v-for="(item, i) in items" :key="i">
-                            <template v-if="item.submenu">
-                                <button type="button" class="main-link" :aria-expanded="openIndex === i"
-                                    :aria-controls="`submenu-${i}`" @click="toggle(i)"
-                                    @keydown="onButtonKeydown($event, i)">
-                                    {{ item.label }}
-                                </button>
-                                <ul v-show="openIndex === i" :id="`submenu-${i}`" class="" role="menu">
-                                    <li v-for="(svc, j) in services" :key="j">
-                                        <NuxtLink role="menuitem" :to="svc.href">{{
-                                            svc.label
-                                        }}</NuxtLink>
-                                    </li>
-                                </ul>
-                            </template>
-                            <template v-else>
-                                <NuxtLink class="main-link" :to="item.href" @keydown="onButtonKeydown($event, null)">
-                                    {{ item.label }}</NuxtLink>
-                            </template>
-                        </li>
-                    </ul>
-                </dialog>
-
-                <nav ref="navRef" aria-label="Main navigation">
-                    <!-- Desktop Disclosure Navigation -->
-                    <ul class="disclosure-nav desktop-nav" @keydown="onKeydown">
-                        <li v-for="(item, i) in items" :key="i">
-                            <template v-if="item.children">
-                                <button type="button" class="main-link" :aria-expanded="openIndex === i"
-                                    :aria-controls="`submenu-${i}`" @click="toggle(i)"
-                                    @keydown="onButtonKeydown($event, i)">
-                                    {{ item.label }}
-                                </button>
-                                <ul v-show="openIndex === i" :id="`submenu-${i}`" class="submenu" role="menu">
-                                    <li v-for="(svc, j) in item.children" :key="j">
-                                        <SubMenuItem :to="svc.to">
-                                            <template #label>
-                                                {{ svc.label }}
-                                            </template>
-
-                                            <template #description>
-                                                {{ svc.description }}
-                                            </template>
-                                        </SubMenuItem>
-                                    </li>
-                                </ul>
-                            </template>
-                            <template v-else>
-                                <NuxtLink class="main-link" :to="item.to" @keydown="onButtonKeydown($event, null)">
-                                    {{ item.label }}</NuxtLink>
-                            </template>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
-        </div>
-    </header>
-</template>
-
 <script setup>
 import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
-import SubMenuItem from "./SubMenuItem.vue";
+import {
+    NavigationMenuContent,
+    NavigationMenuIndicator,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuRoot,
+    NavigationMenuTrigger,
+    NavigationMenuViewport,
+} from 'reka-ui'
+import NavigationItem from "./AppNavigation/NavigationItem.vue";
 
 const route = useRoute();
 
@@ -166,11 +92,104 @@ function closeMobileMenu() {
     mobileMenuRef.value.close();
     deactivate();
 }
+
+const currentTrigger = ref('')
 </script>
+
+<template>
+    <header>
+        <div class="wrapper" data-width="wide">
+            <div class="site_header">
+                <NuxtLink class="logo" to="/">
+                    <AppLogo class="agape-logo" />
+                    <AppTypography tag="p" variant="heading-xxs" is-bold="true">
+                        Agape Christian
+                    </AppTypography>
+                </NuxtLink>
+                <!-- Mobile Hamburger -->
+                <button ref="hamburger" class="hamburger" aria-haspopup="true" aria-controls="mobile-menu"
+                    @click="toggleMobileMenu">
+                    <span class="sr-only">Menu</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
+                        <path d="M3 6h18M3 12h18M3 18ah18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
+                    </svg>
+                </button>
+
+                <!-- Native Popover -->
+                <dialog id="mobile-menu" ref="mobileMenuRef" popover popover-backdrop>
+                    <button aria-label=" Close menu" @click="closeMobileMenu">✕</button>
+                    <ul class="">
+                        <li v-for="(item, i) in items" :key="i">
+                            <template v-if="item.submenu">
+                                <button type="button" class="main-link" :aria-expanded="openIndex === i"
+                                    :aria-controls="`submenu-${i}`" @click="toggle(i)"
+                                    @keydown="onButtonKeydown($event, i)">
+                                    {{ item.label }}
+                                </button>
+                                <ul v-show="openIndex === i" :id="`submenu-${i}`" class="" role="menu">
+                                    <li v-for="(svc, j) in services" :key="j">
+                                        <NuxtLink role="menuitem" :to="svc.href">{{
+                                            svc.label
+                                        }}</NuxtLink>
+                                    </li>
+                                </ul>
+                            </template>
+                            <template v-else>
+                                <NuxtLink class="main-link" :to="item.href" @keydown="onButtonKeydown($event, null)">
+                                    {{ item.label }}</NuxtLink>
+                            </template>
+                        </li>
+                    </ul>
+                </dialog>
+
+                <NavigationMenuRoot ref="navRef" v-model="currentTrigger" class="NavigationMenuRoot">
+                    <!-- Desktop Disclosure Navigation -->
+                    <NavigationMenuList class="NavigationMenuList">
+                        <NavigationMenuItem v-for="(item, i) in items" :key="i">
+                            <template v-if="item.children">
+                                <NavigationMenuTrigger class="main-link">
+                                    {{ item.label }}
+                                </NavigationMenuTrigger>
+                                <NavigationMenuContent class="NavigationMenuContent">
+                                    <ul class="List two">
+                                        <NavigationItem v-for="(svc, j) in item.children" :key="j" :title="svc.label"
+                                            :to="svc.to">
+                                            {{ svc.description }}
+                                        </NavigationItem>
+                                    </ul>
+                                </NavigationMenuContent>
+                            </template>
+                            <template v-else>
+                                <NavigationMenuItem>
+                                    <NavigationMenuLink as-child>
+                                        <NuxtLink class="main-link" :to="item.to">
+                                            {{ item.label }}</NuxtLink>
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                            </template>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                    <div class="ViewportPosition">
+                        <NavigationMenuViewport class="NavigationMenuViewport" />
+                    </div>
+                </NavigationMenuRoot>
+            </div>
+
+        </div>
+    </header>
+</template>
+
+
 
 <style scoped>
 header {
     margin: var(--space-xs);
+}
+
+.NavigationMenuRoot {
+    position: relative;
+    z-index: 1;
 }
 
 .site_header {
@@ -198,59 +217,88 @@ header {
 }
 
 
-.desktop-nav {
+:deep(.NavigationMenuList) {
     display: flex;
     list-style: none;
+    align-items: center;
     margin: 0;
     padding: 0;
     gap: var(--space-xs);
 
-    li {
-        position: static;
-    }
-
-    @media (width < 600px) {
-        display: none;
-    }
-}
-
-.submenu {
-    position: absolute;
-    background-color: var(--background-primary);
-    list-style: none;
-    max-width: 600px;
-
-    padding: var(--space-sm);
-    top: 150%;
-    left: -140%;
-    width: 90vw;
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xs);
-
-    text-decoration: none;
-
-    li {
-        position: static;
-    }
-
-    .menuitem {
+    a {
         text-decoration: none;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--space-xs);
-    }
-
-    @media (width > 760px) {
-        left: -250%;
-        top: 175%;
-        width: 98vw;
     }
 }
 
-a {
-    text-decoration: none;
+:deep(.NavigationMenuContent) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation-duration: 250ms;
+    animation-timing-function: ease;
+
+    @media only screen and (min-width: 600px) {
+        width: auto;
+    }
+}
+
+.List {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    padding: var(--space-sm);
+
+}
+
+@media only screen and (min-width: 600px) {
+    .List.one {
+        width: 500px;
+        grid-template-columns: 0.75fr 1fr;
+    }
+
+    .List.two {
+        width: 600px;
+        grid-auto-flow: column;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+:deep(.NavigationMenuViewport) {
+    position: relative;
+    transform-origin: top center;
+    margin-top: var(--space-xs);
+    width: 100%;
+    background-color: var(--background-primary);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+    height: var(--reka-navigation-menu-viewport-height);
+    transition: width, height, 300ms ease;
+}
+
+.NavigationMenuViewport[data-state='open'] {
+    animation: scaleIn 200ms ease;
+}
+
+.NavigationMenuViewport[data-state='closed'] {
+    animation: scaleOut 200ms ease;
+}
+
+@media only screen and (min-width: 600px) {
+    .NavigationMenuViewport {
+        width: var(--reka-navigation-menu-viewport-width);
+    }
+}
+
+.ViewportPosition {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    perspective: 2000px;
 }
 
 .hamburger {
@@ -279,6 +327,30 @@ a {
     .hamburger {
         display: none;
         position: relative;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-30deg) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0deg) scale(1);
+    }
+}
+
+@keyframes scaleOut {
+    from {
+        opacity: 1;
+        transform: rotateX(0deg) scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: rotateX(-10deg) scale(0.95);
     }
 }
 </style>
