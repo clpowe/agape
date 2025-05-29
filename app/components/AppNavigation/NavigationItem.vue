@@ -8,8 +8,8 @@ defineProps<{
 
 <template>
     <li>
-        <NavigationMenuLink as-child>
-            <NuxtLink v-bind="$attrs">
+        <NavigationMenuLink class="NavigationMenuLink" as-child>
+            <NuxtLink v-bind="$attrs" class="ListItemLink">
                 <p class="title">
                     {{ title }}
                 </p>
@@ -22,11 +22,16 @@ defineProps<{
 </template>
 
 <style scoped>
+:deep(.NavigationMenuLink) {
+    display: block;
+    text-decoration: none;
+    line-height: 1;
+}
+
 .title {
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 700;
-    color: red;
 }
 
 .details {

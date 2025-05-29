@@ -49,6 +49,21 @@
     line-height: 1.1;
   }
 
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: auto; /* Change cursor to default */
+  }
+
+  a:hover,
+  a:visited,
+  a:focus,
+  a:active {
+    color: inherit;
+    text-decoration: inherit;
+    cursor: auto;
+  }
+
   h1,
   h2,
   h3,
