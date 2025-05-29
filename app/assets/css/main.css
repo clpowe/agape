@@ -118,9 +118,9 @@
 
     --ff-body: "inter", sans-serif;
 
-    --border-radius-1: 0.25rem;
-    --border-radius-2: 0.5rem;
-    --border-radius-3: 0.75rem;
+    --border-radius-1: 0.5rem;
+    --border-radius-2: 0.75rem;
+    --border-radius-3: 1rem;
 
     --space-xxs: 0.25rem;
     --space-xs: 0.5rem;
@@ -158,8 +158,8 @@
     --text-weak: var(--color-secondary-800);
     --text-brand: var(--color-brand-500);
 
-    --stroke-strong: var();
-    --stroke-weak: var();
+    --stroke-strong: var(--color-secondary-800);
+    --stroke-weak: var(--color-secondary-600);
 
     --background-primary: var(--color-secondary-200);
     --background-secondary: var(--color-secondary-400);

@@ -1,4 +1,5 @@
 <script setup>
+import { Icon } from '@iconify/vue'
 import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
 import {
     NavigationMenuContent,
@@ -52,12 +53,6 @@ function toggle(index) {
     openIndex.value = openIndex.value === index ? null : index;
 }
 
-function onKeydown(e) {
-    if (e.key === "Escape") {
-        openIndex.value = null;
-    }
-}
-
 function onButtonKeydown(e, idx) {
     const topButtons = Array.from(navRef.value.querySelectorAll(".main-link"));
     const current = topButtons.indexOf(e.target);
@@ -109,11 +104,8 @@ const currentTrigger = ref('')
                 <!-- Mobile Hamburger -->
                 <button ref="hamburger" class="hamburger" aria-haspopup="true" aria-controls="mobile-menu"
                     @click="toggleMobileMenu">
-                    <span class="sr-only">Menu</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
-                        <path d="M3 6h18M3 12h18M3 18ah18" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" />
-                    </svg>
+                    <span>Menu</span>
+                    <Icon icon="material-symbols:menu-rounded" />
                 </button>
 
                 <!-- Native Popover -->
@@ -149,7 +141,8 @@ const currentTrigger = ref('')
                         <NavigationMenuItem v-for="(item, i) in items" :key="i">
                             <template v-if="item.children">
                                 <NavigationMenuTrigger class="main-link">
-                                    {{ item.label }}
+                                    <NuxtLink :to="item.to">{{ item.label }}</NuxtLink>
+                                    <Icon icon="radix-icons:caret-down" class="CaretDown" />
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent class="NavigationMenuContent">
                                     <ul class="List one">
@@ -185,12 +178,21 @@ const currentTrigger = ref('')
 
 <style scoped>
 header {
-    margin: var(--space-xs);
+    margin: var(--space-sm);
+}
+
+button,
+p {
+    all: unset;
 }
 
 .NavigationMenuRoot {
     position: relative;
     z-index: 1;
+
+    @media (width < 600px) {
+        display: none;
+    }
 }
 
 .site_header {
@@ -199,8 +201,8 @@ header {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-inline: var(--space-xs);
-    padding-block: var(--space-xs);
+    padding-inline: var(--space-sm);
+    padding-block: var(--space-sm);
     border-radius: var(--border-radius-3);
 }
 
@@ -234,6 +236,37 @@ header {
     a {
         text-decoration: none;
     }
+}
+
+:deep(.main-link),
+.NavigationMenuLink {
+    border: none;
+    display: inline-flex;
+    background-color: transparent;
+    padding: var(--space-xs) var(--space-xs);
+    outline: none;
+    user-select: none;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1;
+    border-radius: var(--border-radius-1);
+}
+
+:deep(.main-link:focus),
+.NavigationMenuLink:focus {
+    box-shadow: 0 0 0 2px var(--stroke-strong);
+}
+
+:deep(.main-link:hover),
+.NavigationMenuLink:hover {
+    background-color: var(--background-secondary);
+}
+
+:deep(.main-link) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
 }
 
 :deep(.NavigationMenuContent) {
@@ -289,10 +322,10 @@ header {
 :deep(.NavigationMenuViewport) {
     position: relative;
     transform-origin: top center;
-    margin-top: var(--space-xs);
+    margin-top: var(--space-sm);
     width: 100%;
     background-color: var(--background-primary);
-    border-radius: 6px;
+    border-radius: var(--border-radius-3);
     overflow: hidden;
     box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
     height: var(--reka-navigation-menu-viewport-height);
@@ -323,12 +356,21 @@ header {
     perspective: 2000px;
 }
 
+.CaretDown {
+    position: relative;
+    top: 1px;
+    transition: transform 250ms ease;
+}
+
+[data-state='open']>.CaretDown {
+    transform: rotate(-180deg);
+}
+
+
 .hamburger {
     display: block;
     margin-inline-start: auto;
 }
-
-
 
 [popover] {
     display: none;
@@ -339,8 +381,6 @@ header {
 [popover][open] {
     display: block;
 }
-
-
 
 @media (width >=600px) {
     .hamburger {

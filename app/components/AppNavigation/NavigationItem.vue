@@ -26,6 +26,15 @@ defineProps<{
     display: block;
     text-decoration: none;
     line-height: 1;
+    padding: var(--space-xs);
+    border-radius: var(--border-radius-1);
+}
+
+.ListItemLink {}
+
+:deep(.NavigationMenuLink:hover) {
+
+    background-color: var(--background-secondary);
 }
 
 .title {
