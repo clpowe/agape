@@ -152,7 +152,7 @@ const currentTrigger = ref('')
                                     {{ item.label }}
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent class="NavigationMenuContent">
-                                    <ul class="List two">
+                                    <ul class="List one">
                                         <NavigationItem v-for="(svc, j) in item.children" :key="j" :title="svc.label"
                                             :to="svc.to">
                                             {{ svc.description }}
@@ -169,6 +169,7 @@ const currentTrigger = ref('')
                                 </NavigationMenuItem>
                             </template>
                         </NavigationMenuItem>
+
                     </NavigationMenuList>
                     <div class="ViewportPosition">
                         <NavigationMenuViewport class="NavigationMenuViewport" />
@@ -214,6 +215,11 @@ header {
         width: 2.5rem;
         fill: var(--color-secondary-950);
     }
+
+    a {
+        text-decoration: none;
+        color: var(--color-secondary-950)
+    }
 }
 
 
@@ -234,9 +240,25 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     animation-duration: 250ms;
     animation-timing-function: ease;
+
+    &[data-motion='from-start'] {
+        animation-name: enterFromLeft;
+    }
+
+    &[data-motion='from-end'] {
+        animation-name: enterFromRight;
+    }
+
+    &[data-motion='to-start'] {
+        animation-name: exitToLeft;
+    }
+
+    &[data-motion='to-end'] {
+        animation-name: exitToRight;
+    }
 
     @media only screen and (min-width: 600px) {
         width: auto;
@@ -245,22 +267,22 @@ header {
 
 .List {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    list-style: none;
     padding: var(--space-sm);
-
+    margin: 0;
+    border-radius: var(--border-radius-3);
+    gap: var(--space-xs);
+    list-style: none;
 }
 
 @media only screen and (min-width: 600px) {
     .List.one {
         width: 500px;
-        grid-template-columns: 0.75fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .List.two {
         width: 600px;
-        grid-auto-flow: column;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -306,10 +328,7 @@ header {
     margin-inline-start: auto;
 }
 
-/* Positioning only */
-.disclosure-nav>li {
-    position: relative;
-}
+
 
 [popover] {
     display: none;
@@ -327,6 +346,54 @@ header {
     .hamburger {
         display: none;
         position: relative;
+    }
+}
+
+@keyframes enterFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes enterFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes exitToRight {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+}
+
+@keyframes exitToLeft {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-200px);
     }
 }
 
