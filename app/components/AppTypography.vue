@@ -73,37 +73,37 @@ const variantClass = computed(() => {
 .heading-xxs {
   font-size: 1.25rem;
   line-height: 100%;
-  text-wrap: balance;
+
 }
 
 .heading-xs {
   font-size: 1.5rem;
   line-height: 100%;
-  text-wrap: balance;
+
 }
 
 .heading-s {
   font-size: 1.75rem;
   line-height: 100%;
-  text-wrap: balance;
+
 }
 
 .heading-m {
   font-size: 2rem;
   line-height: 100%;
-  text-wrap: balance;
+
 }
 
 .heading-l {
   font-size: 2.375rem;
   line-height: 150%;
-  text-wrap: balance;
+
 }
 
 .heading-xl {
   font-size: 2rem;
   line-height: 100%;
-  text-wrap: balance;
+
 }
 
 @media (min-width: 400px) {

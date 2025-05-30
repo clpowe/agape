@@ -28,7 +28,11 @@ defineProps<{
     border-radius: var(--border-radius-1);
 }
 
-.ListItemLink {}
+.ListItemLink {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xxs);
+}
 
 :deep(.NavigationMenuLink:hover) {
     background-color: var(--background-secondary);
@@ -43,5 +47,6 @@ defineProps<{
 .details {
     font-size: 0.75rem;
     line-height: 1.25rem;
+    text-wrap: balance;
 }
 </style>

@@ -78,7 +78,11 @@ const currentTrigger = ref('')
 
 <style scoped>
 header {
-    margin-block: var(--space-sm);
+    margin-block: var(--space-xs);
+
+    @media (width > 440px) {
+        margin-block: var(--space-sm);
+    }
 }
 
 button,
@@ -207,9 +211,9 @@ p {
     list-style: none;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (width > 440px) {
     .List.one {
-        width: 500px;
+        width: 600px;
         grid-template-columns: 1fr 1fr;
     }
 
@@ -222,7 +226,7 @@ p {
 :deep(.NavigationMenuViewport) {
     position: relative;
     transform-origin: top center;
-    margin-top: var(--space-sm);
+    margin-top: var(--space-l);
     width: 100%;
     background-color: var(--background-primary);
     border-radius: var(--border-radius-3);

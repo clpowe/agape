@@ -15,7 +15,7 @@ const useIdFunction = () => useId()
     <div>
       <AppHeader />
       <NuxtLoadingIndicator />
-      <main>
+      <main class="">
         <NuxtLayout>
           <NuxtPage />
         </NuxtLayout>
