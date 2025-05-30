@@ -37,14 +37,12 @@ import { Icon } from '@iconify/vue'
 import {
     DialogClose,
     DialogContent,
-    DialogDescription,
     DialogOverlay,
     DialogPortal,
     DialogRoot,
     DialogTitle,
     DialogTrigger,
 } from 'reka-ui'
-import { NuxtLink } from '#components'
 const { data: items } = useNuxtData("navigation-items")
 
 console.log(items.value)
