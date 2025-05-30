@@ -122,7 +122,7 @@ p {
     position: relative;
     z-index: 1;
 
-    @media (width < 600px) {
+    @media (width <=700px) {
         display: none;
     }
 }
@@ -304,16 +304,6 @@ p {
     margin-inline-start: auto;
 }
 
-/* [popover] {
-    display: none;
-    position: fixed;
-    inset: 0;
-}
-
-[popover][open] {
-    display: block;
-} */
-
 :deep(.DrawerContent) {
     background-color: white;
     border-radius: 6px;
@@ -336,13 +326,6 @@ p {
     animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
-@media (width >=600px) {
-    .hamburger {
-        display: none;
-        position: relative;
-    }
-}
 
 @keyframes enterFromRight {
     from {

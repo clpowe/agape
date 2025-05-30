@@ -1,7 +1,7 @@
 <template>
     <DialogRoot>
-        <DialogTrigger class="Button grass">
-            Edit profile
+        <DialogTrigger class="trigger">
+            <Icon icon="lucide:menu" />
         </DialogTrigger>
         <DialogPortal>
             <AnimatePresence multiple>
@@ -57,6 +57,15 @@ const transition = {
 </script>
 
 <style scoped>
+.trigger {
+    display: block;
+
+    @media(width > 700px) {
+        display: none;
+    }
+
+}
+
 .DialogOverlay {
     background-color: var(--black-a9);
     position: fixed;
@@ -94,5 +103,11 @@ const transition = {
     color: var(--mauve-11);
     font-size: 15px;
     line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 </style>
