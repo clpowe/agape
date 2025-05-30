@@ -1,6 +1,5 @@
 <script setup>
 import { Icon } from '@iconify/vue'
-import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
 import {
     NavigationMenuContent,
     NavigationMenuIndicator,
@@ -12,6 +11,7 @@ import {
     NavigationMenuViewport,
 } from 'reka-ui'
 import NavigationItem from "./AppNavigation/NavigationItem.vue";
+import NavigationDrawer from './AppNavigation/NavigationDrawer.vue';
 
 const route = useRoute();
 
@@ -28,49 +28,15 @@ watch(
     }
 );
 
-const services = [
-    {
-        label: "Law School Preparation Services",
-        href: "/services/law-school-prep",
-    },
-    { label: "Bar Prep Academy", href: "/services/bar-prep-academy" },
-    {
-        label: "Law School Partnerships",
-        href: "/services/law-school-partnerships",
-    },
-    { label: "First Time Takers", href: "/services/first-time-takers" },
-    { label: "MBE Only Takers", href: "/services/mbe-only-takers" },
-    { label: "Repeat Takers", href: "/services/repeat-takers" },
-];
+
 
 const openIndex = ref(null);
 const navRef = useTemplateRef("navRef");
 const mobileMenuRef = useTemplateRef("mobileMenuRef");
 
-const { activate, deactivate } = useFocusTrap(mobileMenuRef);
 
-function toggle(index) {
-    openIndex.value = openIndex.value === index ? null : index;
-}
 
-function onButtonKeydown(e, idx) {
-    const topButtons = Array.from(navRef.value.querySelectorAll(".main-link"));
-    const current = topButtons.indexOf(e.target);
-    if (["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) {
-        e.preventDefault();
-        const max = topButtons.length;
-        let next = 0;
-        if (e.key === "ArrowRight") next = (current + 1) % max;
-        if (e.key === "ArrowLeft") next = (current - 1 + max) % max;
-        if (e.key === "Home") next = 0;
-        if (e.key === "End") next = max - 1;
-        topButtons[next].focus();
-    }
-    if ((e.key === "Enter" || e.key === " ") && idx != null) {
-        e.preventDefault();
-        toggle(idx);
-    }
-}
+
 
 useEventListener(navRef, "focusout", (e) => {
     if (!navRef.value.contains(e.relatedTarget)) {
@@ -78,10 +44,7 @@ useEventListener(navRef, "focusout", (e) => {
     }
 });
 
-function toggleMobileMenu() {
-    mobileMenuRef.value.showModal();
-    activate();
-}
+
 
 function closeMobileMenu() {
     mobileMenuRef.value.close();
@@ -102,38 +65,7 @@ const currentTrigger = ref('')
                     </AppTypography>
                 </NuxtLink>
                 <!-- Mobile Hamburger -->
-                <button ref="hamburger" class="hamburger" aria-haspopup="true" aria-controls="mobile-menu"
-                    @click="toggleMobileMenu">
-                    <span>Menu</span>
-                    <Icon icon="material-symbols:menu-rounded" />
-                </button>
-
-                <!-- Native Popover -->
-                <dialog id="mobile-menu" ref="mobileMenuRef" popover popover-backdrop>
-                    <button aria-label=" Close menu" @click="closeMobileMenu">✕</button>
-                    <ul class="">
-                        <li v-for="(item, i) in items" :key="i">
-                            <template v-if="item.submenu">
-                                <button type="button" class="main-link" :aria-expanded="openIndex === i"
-                                    :aria-controls="`submenu-${i}`" @click="toggle(i)"
-                                    @keydown="onButtonKeydown($event, i)">
-                                    {{ item.label }}
-                                </button>
-                                <ul v-show="openIndex === i" :id="`submenu-${i}`" class="" role="menu">
-                                    <li v-for="(svc, j) in services" :key="j">
-                                        <NuxtLink role="menuitem" :to="svc.href">{{
-                                            svc.label
-                                        }}</NuxtLink>
-                                    </li>
-                                </ul>
-                            </template>
-                            <template v-else>
-                                <NuxtLink class="main-link" :to="item.href" @keydown="onButtonKeydown($event, null)">
-                                    {{ item.label }}</NuxtLink>
-                            </template>
-                        </li>
-                    </ul>
-                </dialog>
+                <NavigationDrawer />
 
                 <NavigationMenuRoot ref="navRef" v-model="currentTrigger" class="NavigationMenuRoot">
                     <!-- Desktop Disclosure Navigation -->
@@ -178,7 +110,7 @@ const currentTrigger = ref('')
 
 <style scoped>
 header {
-    margin: var(--space-sm);
+    margin-block: var(--space-sm);
 }
 
 button,
@@ -372,7 +304,7 @@ p {
     margin-inline-start: auto;
 }
 
-[popover] {
+/* [popover] {
     display: none;
     position: fixed;
     inset: 0;
@@ -380,7 +312,30 @@ p {
 
 [popover][open] {
     display: block;
+} */
+
+:deep(.DrawerContent) {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 450px;
+    max-height: 85vh;
+    padding: 25px;
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+:deep(.DialogOverlay) {
+    background-color: var(--black-a9);
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 
 @media (width >=600px) {
     .hamburger {
