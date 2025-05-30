@@ -3,7 +3,6 @@ import { Icon } from '@iconify/vue'
 import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
 import {
     NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
@@ -277,19 +276,19 @@ p {
     animation-duration: 250ms;
     animation-timing-function: ease;
 
-    &[data-motion='from-start'] {
+    [data-motion='from-start'] {
         animation-name: enterFromLeft;
     }
 
-    &[data-motion='from-end'] {
+    [data-motion='from-end'] {
         animation-name: enterFromRight;
     }
 
-    &[data-motion='to-start'] {
+    [data-motion='to-start'] {
         animation-name: exitToLeft;
     }
 
-    &[data-motion='to-end'] {
+    [data-motion='to-end'] {
         animation-name: exitToRight;
     }
 

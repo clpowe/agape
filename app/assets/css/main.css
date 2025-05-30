@@ -28,7 +28,6 @@
     margin: 0;
   }
 
-  /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
   [role="list"] {
     list-style: none;
     margin: 0;
