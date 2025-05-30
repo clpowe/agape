@@ -12,43 +12,14 @@ import {
 import NavigationItem from "./AppNavigation/NavigationItem.vue";
 import NavigationDrawer from './AppNavigation/NavigationDrawer.vue';
 
-const route = useRoute();
 
 
 const { data: items } = await useAsyncData("navigation-items", () => {
     return queryCollection("navigation").all();
 });
 
-watch(
-    () => route.fullPath,
-    () => {
-        closeMobileMenu();
-        openIndex.value = null;
-    }
-);
 
 
-
-const openIndex = ref(null);
-const navRef = useTemplateRef("navRef");
-const mobileMenuRef = useTemplateRef("mobileMenuRef");
-
-
-
-
-
-useEventListener(navRef, "focusout", (e) => {
-    if (!navRef.value.contains(e.relatedTarget)) {
-        openIndex.value = null;
-    }
-});
-
-
-
-function closeMobileMenu() {
-    mobileMenuRef.value.close();
-    deactivate();
-}
 
 const currentTrigger = ref('')
 </script>
@@ -59,14 +30,15 @@ const currentTrigger = ref('')
             <div class="site_header">
                 <NuxtLink class="logo" to="/">
                     <AppLogo class="agape-logo" />
-                    <AppTypography tag="p" variant="heading-xxs" is-bold="true">
+                    <AppTypography tag="p" variant="heading-xxs" :is-bold="true">
                         Agape Christian
                     </AppTypography>
                 </NuxtLink>
                 <!-- Mobile Hamburger -->
                 <NavigationDrawer />
 
-                <NavigationMenuRoot ref="navRef" v-model="currentTrigger" class="NavigationMenuRoot">
+                <NavigationMenuRoot v-if="items.length > 0" ref="navRef" v-model="currentTrigger"
+                    class="NavigationMenuRoot">
                     <!-- Desktop Disclosure Navigation -->
                     <NavigationMenuList class="NavigationMenuList">
                         <NavigationMenuItem v-for="(item, i) in items" :key="i">
@@ -85,12 +57,10 @@ const currentTrigger = ref('')
                                 </NavigationMenuContent>
                             </template>
                             <template v-else>
-                                <NavigationMenuItem>
-                                    <NavigationMenuLink as-child>
-                                        <NuxtLink class="main-link" :to="item.to">
-                                            {{ item.label }}</NuxtLink>
-                                    </NavigationMenuLink>
-                                </NavigationMenuItem>
+                                <NavigationMenuLink as-child>
+                                    <NuxtLink class="main-link" :to="item.to">
+                                        {{ item.label }}</NuxtLink>
+                                </NavigationMenuLink>
                             </template>
                         </NavigationMenuItem>
 
@@ -100,7 +70,6 @@ const currentTrigger = ref('')
                     </div>
                 </NavigationMenuRoot>
             </div>
-
         </div>
     </header>
 </template>

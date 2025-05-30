@@ -4,7 +4,7 @@
             <Icon icon="lucide:menu" />
         </DialogTrigger>
         <DialogPortal>
-            <AnimatePresence multiple>
+            <AnimatePresence>
                 <DialogOverlay as-child class="DialogOverlay">
                     <Motion :initial="{ opacity: 0, scale: 0 }" :animate="{ opacity: 1, scale: 1 }"
                         :exit="{ opacity: 0, scale: 0.6 }" />

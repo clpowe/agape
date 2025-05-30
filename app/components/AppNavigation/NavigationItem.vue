@@ -7,18 +7,16 @@ defineProps<{
 </script>
 
 <template>
-    <li>
-        <NavigationMenuLink class="NavigationMenuLink" as-child>
-            <NuxtLink v-bind="$attrs" class="ListItemLink">
-                <p class="title">
-                    {{ title }}
-                </p>
-                <p class="details">
-                    <slot />
-                </p>
-            </NuxtLink>
-        </NavigationMenuLink>
-    </li>
+    <NavigationMenuLink class="NavigationMenuLink" as-child>
+        <NuxtLink v-bind="$attrs" class="ListItemLink">
+            <p class="title">
+                {{ title }}
+            </p>
+            <p class="details">
+                <slot />
+            </p>
+        </NuxtLink>
+    </NavigationMenuLink>
 </template>
 
 <style scoped>
@@ -33,7 +31,6 @@ defineProps<{
 .ListItemLink {}
 
 :deep(.NavigationMenuLink:hover) {
-
     background-color: var(--background-secondary);
 }
 

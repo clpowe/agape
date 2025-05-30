@@ -1,5 +1,5 @@
 <template>
-  <UContainer>
+  <div>
     <slot />
-  </UContainer>
+  </div>
 </template>
