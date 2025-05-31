@@ -62,6 +62,7 @@ export default defineContentConfig({
 				title: z.string(),
 				duration: z.string().optional(),
 				description: z.string().optional(),
+				program: z.string(),
 				course_structure: z.array(
 					z
 						.object({
