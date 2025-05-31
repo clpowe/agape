@@ -57,7 +57,7 @@ export default defineContentConfig({
 		}),
 		courses: defineCollection({
 			type: 'page',
-			source: 'courses/**.yml',
+			source: 'courses/**/*.yml',
 			schema: z.object({
 				title: z.string(),
 				duration: z.string().optional(),
