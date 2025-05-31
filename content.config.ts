@@ -55,5 +55,23 @@ export default defineContentConfig({
 				course: z.string(),
 			}),
 		}),
+		courses: defineCollection({
+			type: 'page',
+			source: 'courses/**.yml',
+			schema: z.object({
+				title: z.string(),
+				duration: z.string().optional(),
+				description: z.string().optional(),
+				course_structure: z.array(
+					z
+						.object({
+							title: z.string(),
+							description: z.string().optional(),
+						})
+						.optional(),
+				),
+				price: z.string(),
+			}),
+		}),
 	},
 });
