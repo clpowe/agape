@@ -2,12 +2,19 @@ title: Individualized Tutoring
 description: Customized tutoring sessions tailored specifically to address each student's unique needs and optimize law school exam performance.
 duration: Hourly sessions 
 program: law-school-prep
-Course Structure:
-  - Personalized Learning Plan: Active engagement through personalized guidance at every stage.
-  - Substantive Lectures: Empowers students with proven learning strategies, effective study habits, and exam-taking techniques.
-  - Small Group Tutoring: Not applicable (replaced by personalized discussions and exercises).
-  - Individualized Tutoring: Focused sessions identifying and addressing specific student weaknesses.
-  - Weekly Skill Development: Enhances clarity and precision in essay writing and articulation of legal concepts.
-  - Practical Drills: Submission and personalized feedback on practice exam essays to refine analytical and writing skills.
-  - Final Intensive Review: Targeted review sessions to solidify knowledge gaps and strengthen exam performance.
-cost: $295.00 per hour or $1,250.00 for five hours
+course_structure:
+  - title: Personalized Learning Plan
+    description: Active engagement through personalized guidance at every stage.
+  - title: Substantive Lectures
+    description: Empowers students with proven learning strategies, effective study habits, and exam-taking techniques.
+  - title: Small Group Tutoring
+    description: Not applicable (replaced by personalized discussions and exercises).
+  - title: Individualized Tutoring
+    description: Focused sessions identifying and addressing specific student weaknesses.
+  - title: Weekly Skill Development
+    description: Enhances clarity and precision in essay writing and articulation of legal concepts.
+  - title: Practical Drills
+    description: Submission and personalized feedback on practice exam essays to refine analytical and writing skills.
+  - title: Final Intensive Review
+    description: Targeted review sessions to solidify knowledge gaps and strengthen exam performance.
+price: $295.00 per hour or $1,250.00 for five hours

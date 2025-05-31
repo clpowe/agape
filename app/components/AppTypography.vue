@@ -1,50 +1,26 @@
 <script setup lang="ts">
-type Variant =
-  | "heading-xxs"
-  | "heading-xs"
-  | "heading-s"
-  | "heading-m"
-  | "heading-l"
-  | "heading-xl"
-  | "heading-xxl"
-  | "heading-3xl"
-  | "heading-variable-l"
-  | "text-s"
-  | "text-m"
-  | "text-l"
-  | "text-variable-l"
-  | "faq-text";
 
-const props = defineProps<{
-  tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p";
-  variant: Variant;
-  isBold?: boolean;
-  isStrong?: boolean;
-}>();
+type Variant = Parameters<typeof useVariantClass>[0]
 
-const VARIANT_CLASSES: Record<Variant, string> = {
-  "heading-xxs": "heading-xxs",
-  "heading-xs": "heading-xs",
-  "heading-s": "heading-s",
-  "heading-m": "heading-m",
-  "heading-l": "heading-l",
-  "heading-xl": "heading-xl",
-  "heading-xxl": "heading-xxl",
-  "heading-3xl": "heading-3xl",
-  "heading-variable-l": "heading-variable-l",
-  "text-s": "text-s",
-  "text-m": "text-m",
-  "text-l": "text-l",
-  "text-variable-l": "text-variable-l",
-  "faq-text": "faq-text",
-};
+const props = withDefaults(defineProps<{
+  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p',
+  variant: Variant,
+  isBold?: boolean,
+  isStrong?: boolean
+}>(), {
+  isBold: false,
+  isStrong: false
+})
 
-const variantClass = computed(() => {
-  return VARIANT_CLASSES[props.variant];
-});
+const variantClass = useVariantClass(props.variant)
 </script>
+
 <template>
-  <component :is="tag" :class="[variantClass, 'text-width', { 'font-bold': isBold, 'text-strong': isStrong }]">
+  <component :is="tag" :class="[
+    variantClass,
+    'text-width',
+    { 'font-bold': isBold, 'text-strong': isStrong, 'text-weak': !isStrong }
+  ]">
     <slot />
   </component>
 </template>

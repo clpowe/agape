@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Icon } from '#components';
 import AppTypography from '../AppTypography.vue';
 
 const { course } = defineProps({
@@ -7,27 +8,76 @@ const { course } = defineProps({
     },
 });
 
-console.log(course);
+console.log(course?.value);
 </script>
 <template>
     <section class="section">
-        <AppTypography tag="h2" variant="heading-xxs" class="font-bold text-default">
-            {{ course?.title }}
-        </AppTypography>
-        <div class="flex gap-2 flex-wrap">
-            <AppTypography tag="p" variant="text-s" class="text-muted">
-                {{ course?.duration }}
+        <div class="flex flex-wrap">
+            <AppTypography tag="h2" variant="heading-l" class="font-bold text-default">
+                {{ course?.title }}
             </AppTypography>
-            <AppTypography tag="p" variant="text-s" class="text-muted">
-                {{ course?.meta.cost }}
-            </AppTypography>
+            <div class="course_details">
+                <div class="description">
+                    <AppTypography tag="p" variant="text-m">
+                        {{ course?.description }}
+                    </AppTypography>
+                </div>
+                <div class="stats flex gap-2 flex-wrap">
+                    <div class="course_time">
+                        <Icon name="lucide:alarm-clock" size="1.5rem" alt="" class="icon" />
+                        <AppTypography tag="p" variant="text-s" class="text-muted">
+                            {{ course?.duration }}
+                        </AppTypography>
+                    </div>
+                    <div class="course_cost ">
+                        <Icon name="lucide:badge-dollar-sign" size="1.5rem" class="icon" />
+                        <AppTypography tag="p" variant="text-s" class="text-muted">
+                            {{ course?.price }}
+                        </AppTypography>
+                    </div>
+                </div>
+                <div>
+
+
+                </div>
+            </div>
         </div>
         <div>
-            <AppTypography tag="p" variant="text-s" class="text-muted">
-                {{ course?.description }}
-            </AppTypography>
+            <div v-for="lesson in course?.course_structure" :key="lesson.title">
+                {{ lesson.title }}<br>
+                {{ lesson.description }}
+            </div>
         </div>
+
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.course_details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+
+    .stats {
+        display: flex;
+        gap: var(--space-sm);
+        flex-wrap: wrap;
+    }
+}
+
+.course_time,
+.course_cost {
+    display: flex;
+    gap: var(--space-xxs);
+    align-items: center;
+
+    background-color: var(--background-terciary);
+    padding: var(--space-xs);
+    border-radius: var(--border-radius-1);
+
+    .icon {
+        fill: var(--color-brand-500);
+        color: var(--color-brand-500);
+    }
+}
+</style>
