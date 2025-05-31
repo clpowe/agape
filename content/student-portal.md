@@ -16,7 +16,8 @@ description: Agape Christian Bar Prep offers personalized, faith-based bar exam
 schemaOrg:
   "@type": "AboutPage"
 ---
-
+::ContentHeader
+#content
 ## Login
 If you are a current student access your account here
 [login]()
@@ -24,3 +25,4 @@ If you are a current student access your account here
 ## Register
 If you are a new student register here
 [register]()
+::

@@ -221,12 +221,12 @@
     border-radius: var(--border-radius-3);
 
     gap: var(--space-m);
-    padding-inline: var(--space-m);
+    padding-inline: var(--space-sm);
     padding-bottom: var(--space-l);
     padding-top: var(--space-l);
 
     @media (width > 440px) {
-      padding-inline: var(--space-xl);
+      padding-inline: var(--space-m);
     }
   }
 }

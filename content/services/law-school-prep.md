@@ -1,24 +1,26 @@
 ---
-title: Law School Preparation Services 
+title: Law School Preparation Services
 navigation:
   title: Agape Christian Bar Prep
-  description: Agape Christian Bar Prep offers personalized, faith-based bar exam
+description: Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
 seo:
   description: Agape Christian Bar Prep offers personalized, faith-based bar exam
     prep with expert tutoring, tailored study plans, and spiritual support for
     success.
-  title: Agape Christian Bar Prep
+title: Agape Christian Bar Prep
 description: Agape Christian Bar Prep offers personalized, faith-based bar exam
   prep with expert tutoring, tailored study plans, and spiritual support for
   success.
 ---
+:::ContentHeader
+#title
 # Law School Preparation Services
 
-## **Law School Exam Skills Crash Course**  
-**Duration:** 5 weeks  
-**Description:** 
+## **Law School Exam Skills Crash Course**
+**Duration:** 5 weeks
+**Description:**
 Designed to build foundational skills essential for law school exam success, increasing confidence and preparation before intensive study periods.
 
 **Course Structure:**
@@ -34,9 +36,9 @@ Designed to build foundational skills essential for law school exam success, inc
 
 ---
 
-## **Individualized Tutoring**  
-**Duration:** Hourly sessions  
-**Description:** 
+## **Individualized Tutoring**
+**Duration:** Hourly sessions
+**Description:**
 Customized tutoring sessions tailored specifically to address each student's unique needs and optimize law school exam performance.
 
 **Course Structure:**
@@ -52,9 +54,9 @@ Customized tutoring sessions tailored specifically to address each student's uni
 
 ---
 
-## **Exam Writing Crash Course**  
-**Duration:** Intensive short-term course  
-**Description:** 
+## **Exam Writing Crash Course**
+**Duration:** Intensive short-term course
+**Description:**
 Enhances analytical and writing skills through focused practice and individualized feedback, ideal for exam preparedness.
 
 **Course Structure:**

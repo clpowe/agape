@@ -45,8 +45,6 @@ import {
 } from 'reka-ui'
 const { data: items } = useNuxtData("navigation-items")
 
-console.log(items.value)
-
 const transition = {
     duration: 0.15,
     ease: [0.16, 0.01, .3, 1],

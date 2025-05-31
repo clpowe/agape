@@ -9,8 +9,8 @@ defineProps<{
 </script>
 
 <template>
-  <section class="section">
-    <div class="wrapper @container" :data-width="width" :data-direction="direction">
+  <section class="section wrapper flow" data-width="wide">
+    <div class="@container" :data-width="width" :data-direction="direction">
       <div class="heading" :data-text="text">
         <div class="flex flex-col gap-2 items-center">
           <div v-if="$slots.eyebrow" class="bg-primary rounded-full py-1 px-3">
