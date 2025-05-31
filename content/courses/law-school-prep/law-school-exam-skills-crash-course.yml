@@ -3,11 +3,18 @@ duration: 5 weeks
 description: Designed to build foundational skills essential for law school exam success, increasing confidence and preparation before intensive study periods.
 program: law-school-prep
 course_structure: 
-  - Personalized Learning Plan: Structured approach to actively learning from lectures and outlines.
-  - Substantive Lectures: Guides students on effectively engaging with practice questions, focusing on applying law to facts.
-  - Small Group Tutoring: Interactive classes developing analytical and critical thinking skills necessary for law school exams.
-  - Individualized Tutoring: Regular instructor feedback on homework assignments to pinpoint and address specific weaknesses.
-  - Weekly Skill Development: Focus on concise, active-voice writing and issue spotting in essay exams.
-  - Practical Drills: Short, graded assignments reinforcing key skills between sessions.
-  - Final Intensive Review: Comprehensive skills assessment to evaluate overall readiness and growth.
-cost: $995.00
+  - title: Personalized Learning Plan
+    description: Structured approach to actively learning from lectures and outlines.
+  - title: Substantive Lectures
+    description: Guides students on effectively engaging with practice questions, focusing on applying law to facts.
+  - title: Small Group Tutoring
+    description: Interactive classes developing analytical and critical thinking skills necessary for law school exams.
+  - title: Individualized Tutoring
+    description: Regular instructor feedback on homework assignments to pinpoint and address specific weaknesses.
+  - title: Weekly Skill Development
+    description: Focus on concise, active-voice writing and issue spotting in essay exams.
+  - title: Practical Drills
+    description: Short, graded assignments reinforcing key skills between sessions.
+  - title: Final Intensive Review
+    description: Comprehensive skills assessment to evaluate overall readiness and growth.
+price: $995.00
