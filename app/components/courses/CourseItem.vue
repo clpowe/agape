@@ -11,14 +11,14 @@ const { course } = defineProps({
 console.log(course?.value);
 </script>
 <template>
-    <section class="section">
+    <section class="section course">
         <div class="flex flex-wrap">
-            <AppTypography tag="h2" variant="heading-l" class="font-bold text-default">
+            <AppTypography tag="h2" variant="heading-l">
                 {{ course?.title }}
             </AppTypography>
             <div class="course_details">
                 <div class="description">
-                    <AppTypography tag="p" variant="text-m">
+                    <AppTypography tag="p" variant="text-m" class="max-w-2xl">
                         {{ course?.description }}
                     </AppTypography>
                 </div>
@@ -43,14 +43,14 @@ console.log(course?.value);
             </div>
         </div>
         <div class="structure flex flex-col">
-            <div class="title">
-                <AppTypography tag="h3" variant="heading-m" class="font-bold text-default">
-                    Course Structure
-                </AppTypography>
-            </div>
+            <AppTypography tag="h3" variant="heading-m" class="title">
+                Course Structure
+            </AppTypography>
             <div class="list">
                 <div v-for="lesson in course?.course_structure" :key="lesson.title" class="lesson">
-                    <Icon :name="`lucide:${lesson.icon}`" size="2rem" class="icon" />
+                    <div class="icon-wrapper">
+                        <Icon :name="`lucide:${lesson.icon}`" size="2rem" class="icon" />
+                    </div>
                     <div>
                         <AppTypography tag="h4" variant="text-l" :is-bold="true" :is-strong="true">
                             {{ lesson.title }}
@@ -59,7 +59,6 @@ console.log(course?.value);
                             {{ lesson.description }}
                         </AppTypography>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -68,6 +67,12 @@ console.log(course?.value);
 </template>
 
 <style scoped>
+.course {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
 .course_details {
     display: flex;
     flex-direction: column;
@@ -96,6 +101,10 @@ console.log(course?.value);
     }
 }
 
+.title {
+    margin-bottom: var(--space-m);
+}
+
 .list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
@@ -103,18 +112,21 @@ console.log(course?.value);
 
 
     .lesson {
-        .icon {
-            margin-bottom: var(--space-l);
-        }
-
-        display: flex;
-        flex-direction: column;
         padding: var(--space-sm);
-        gap: var(--space-xxs);
         grid-template-rows: subgrid;
 
         background-color: var(--background-terciary);
         border-radius: var(--border-radius-1);
+
+        .icon-wrapper {
+            display: inline-flex;
+            padding: var(--space-xs);
+            background-color: var(--color-brand-500);
+            border-radius: var(--border-radius-1);
+            margin-bottom: var(--space-l);
+            color: var(--background-terciary);
+        }
+
     }
 }
 </style>
