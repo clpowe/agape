@@ -66,6 +66,7 @@ export default defineContentConfig({
 				course_structure: z.array(
 					z
 						.object({
+							icon: z.string().optional(),
 							title: z.string(),
 							description: z.string().optional(),
 						})
