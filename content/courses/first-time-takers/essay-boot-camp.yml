@@ -6,4 +6,22 @@ course_structure:
   - title: Personalized Learning Plan
     description: Structured to help first-time takers swiftly identify and articulate legal issues.
     icon: book-copy
+  - title: Substantive Lectures
+    description: Three-hour writing crash course to build confidence and proficiency.
+    icon: lectern
+  - title: Small Group Tutoring
+    icon: users
+    description: Not applicable (personalized approach emphasized).
+  - title: Individualized Tutoring
+    icon: user
+    description: Two private tutoring sessions refining writing and analytical skills.
+  - title: Weekly Skill Development
+    description: Weekly timed writing assessments reviewed live by instructors.
+    icon: calendar-range
+  - title: Practical Drills
+    description: Seven graded essays with constructive feedback.
+    icon: notebook-pen
+  - icon: file-check-2
+    title: Final Intensive Review
+    description: Intensive morning essay sessions (7 weekday mornings) with timed practice and instructor reviews.
 price: $1,895.00
