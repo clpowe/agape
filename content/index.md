@@ -2,8 +2,12 @@
 title: Agape Christian Bar Prep
 ---
 
-::HomeHero{img="/AgapeHeroImage.png" alt="Successful Diverse Students Portraits In A Row, Collage" hydrate-never }
-
+::home-hero
+---
+hydrate-never: true
+alt: Successful Diverse Students Portraits In A Row, Collage
+img: /AgapeHeroImage.png
+---
 #title
 Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
 
@@ -11,16 +15,32 @@ Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
 At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress, build essential skills, and support you at every stage of your legal journey.
 
 #actions
-  ::button{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
+  :::button
+  ---
+  ariaLabel: Apply to Agape Christian Bar Prep
+  color: primary
+  href: /apply
+  size: xl
+  ---
   Apply Now
-  ::
-  ::button{variant="outline" href="/apply" size="xl" arialabel="Schedual an appointment with Agape Christian Bar Prep"}
-  Schedual a consoltation
-  ::
+  :::
 
+  :::button
+  ---
+  ariaLabel: Schedual an appointment with Agape Christian Bar Prep
+  href: /apply
+  size: xl
+  variant: outline
+  ---
+  Schedual a consoltation
+  :::
 ::
 
-::content-header{ img="/young_woman.png" alt="A young asian woman studying in a libraey with a laptop wearing a yellow shirt."}
+::content-header
+---
+alt: A young asian woman studying in a libraey with a laptop wearing a yellow shirt.
+img: /young_woman.png
+---
 #eyebrow
 The Agape Way
 
@@ -31,7 +51,7 @@ How Our Program Is Different
 Agape Christian Bar Prep empowers students to confidently conquer the bar exam and achieve their dreams of becoming attorneys.
 
 #content
-  ::ItemList
+  :::item-list
   ---
   items:
     - title: Emotional and Mental wellness
@@ -44,18 +64,22 @@ Agape Christian Bar Prep empowers students to confidently conquer the bar exam a
       icon: i-lucide-book-copy
       description: We ensure mastery of essential exam content
   ---
-  ::
+  :::
+
 #extra
 Discover a supportive path to exam success—built around you.
+
 #actions
-  ::button{color="primary" href="/apply" size="xl" arialabel="Apply to Agape Christian Bar Prep"}
+  :::button
+  ---
+  ariaLabel: Apply to Agape Christian Bar Prep
+  color: primary
+  href: /apply
+  size: xl
+  ---
   Apply Now
-  ::
-
+  :::
 ::
-
-
-
 
 ::content-header
 #title
@@ -65,29 +89,33 @@ Our [Services]{.highlight}
 The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need. Our personalized, faith-based coaching gets you where you need to be.
 
 #content
-  ::ItemList
+  :::item-list
   ---
   items:
     - title: First Time Takers
       icon: i-lucide-user
-      description: Specialized courses for first-time bar exam takers emphasizing essay mastery.
+      description: Specialized courses for first-time bar exam takers emphasizing
+        essay mastery.
     - title: Repeat Takers
       icon: i-lucide-refresh-cw
-      description: Comprehensive bar prep and tutoring tailored specifically for repeat takers.
+      description: Comprehensive bar prep and tutoring tailored specifically for
+        repeat takers.
     - title: Law School Prep
       icon: i-lucide-school
       description: Courses and tutoring to build foundational law exam writing skills.
     - title: Bar Prep Academy
       icon: i-lucide-notebook
-      description: Personalized bar exam prep for professionals, emphasizing writing and analysis.
+      description: Personalized bar exam prep for professionals, emphasizing writing
+        and analysis.
     - title: Multistate Bar Exam
       icon: i-lucide-spell-check
       description: Focused MBE tutoring and skill-building for targeted bar exam success.
     - title: School Partnerships
       icon: i-lucide-graduation-cap
-      description: Early, supplemental bar prep and workshops improving mindset, essay writing.
+      description: Early, supplemental bar prep and workshops improving mindset, essay
+        writing.
   ---
-  ::
+  :::
 ::
 
 ::content-header
@@ -95,7 +123,7 @@ The bar exam feels overwhelming, and traditional prep lacks the personalized and
 Quick [Links]{.highlight}
 
 #content
-  ::QuickList
+  :::quick-list
   ---
   items:
     - title: Bar Prep
@@ -115,13 +143,13 @@ Quick [Links]{.highlight}
       link: /services/law-school-partnerships
     - title: Current Students
       icon: notepad
-      description: Already enrolled? Quickly find your course updates and enrollment info here.
+      description: Already enrolled? Quickly find your course updates and enrollment
+        info here.
       linktext: Student Portal
       link: /student-portal
   ---
-  ::
+  :::
 ::
-
 
 ::testimonials-section
 ---
@@ -130,11 +158,16 @@ title: Student Testimonials
 ---
 ::
 
-::content-header{direction="horizontal" text="left" class="" }
+::content-header
+---
+class: ""
+direction: horizontal
+text: left
+---
 #title
 Frequently Asked [Questions]{.highlight}
 
 #content
-  ::FrequentlyAskedQuestions
-  ::
+  :::frequently-asked-questions
+  :::
 ::
