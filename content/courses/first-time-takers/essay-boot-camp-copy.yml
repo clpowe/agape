@@ -1,0 +1,29 @@
+title: Bar Prep 101
+description: Specialized supplemental course for first-time bar exam takers enrolled concurrently in general bar review, addressing often overlooked areas.
+duration: 10 weeks
+program: first-time-takers
+course_structure:
+  - title: Personalized Learning Plan
+    description: Customized sessions targeting specific student deficiencies.
+    icon: book-copy
+  - title: Substantive Lectures
+    icon: lectern
+    description: Access essential bar-tested topics through targeted lectures.
+  - title: Small Group Tutoring
+    description: 15 sessions focusing on specific topics to close knowledge gaps.
+    icon: users
+  - title: Individualized Tutoring
+    description: 5 hours of tailored tutoring to identify and address specific areas for improvement.
+    icon: user
+  - title: Weekly Skill Development
+    description: Timed writing assessments reviewed live by instructors.
+    icon: calendar-range
+  - title: 'Practical Drills:'
+    description: Regular rule drilling exercises assessing critical bar-exam rules.
+    icon: notebook-pen
+  - icon: file-check-2
+    title: Final Intensive Review
+    description: Morning writing sessions (7 weekday mornings) with timed practice essays and instructor-led reviews, plus tailored MBE strategies.
+price: $2,995.00
+seo:
+  description: ''
