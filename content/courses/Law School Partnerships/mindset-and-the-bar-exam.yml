@@ -1,0 +1,26 @@
+description: Cultivates essential psychological and strategic skills for successful bar exam preparation and performance.
+title: Mindset & The Bar Exam
+duration: Interactive workshop series
+program: law-school-partnerships
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Develops a growth mindset and effective learning habits.
+  - title: Substantive Lectures
+    icon: lectern
+    description: Workshops teaching practical learning strategies for bar exam success.
+  - title: Small Group Tutoring
+    icon: users
+    description: Group sessions on critical time management skills, prioritization, and goal setting.
+  - icon: user
+    title: Individualized Tutoring
+    description: Personal guidance for effective stress management and organization techniques.
+  - title: Weekly Skill Development
+    description: Strategies for mastering high-scoring essay writing.
+    icon: calendar-range
+  - title: Practical Drills
+    description: Regular exercises applying learned skills in realistic scenarios.
+    icon: notebook-pen
+  - title: Final Intensive Review
+    description: Assessment to ensure students understand active and independent learning principles for bar success.
+    icon: file-check-2
