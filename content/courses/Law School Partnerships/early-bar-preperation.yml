@@ -1,0 +1,26 @@
+description: Provides early intervention to enhance bar exam outcomes for at-risk law students who have completed at least two years of law school.
+title: Earl Bar Preparation Services
+duration: 8 weeks
+program: law-school-partnerships
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Develops critical thinking, reasoning, and active learning skills.
+  - title: Substantive Lectures
+    icon: lectern
+    description: Integrated workshops that combine doctrine and essential bar exam skills.
+  - title: Small Group Tutoring
+    icon: users
+    description: Automatic enrollment in writing clinics to strengthen analytical writing skills.
+  - icon: user
+    title: Individualized Tutoring
+    description: Personal attention to improving issue spotting and analytical reasoning.
+  - title: Weekly Skill Development
+    description: Regular exercises on writing high-scoring bar exam essays and answering multiple-choice questions.
+    icon: calendar-range
+  - title: Practical Drills
+    description: Skill-focused activities to reinforce learning and improve writing proficiency.
+    icon: notebook-pen
+  - title: Final Intensive Review
+    description: Comprehensive review initiating mastery of substantive law essential for bar success.
+    icon: file-check-2
