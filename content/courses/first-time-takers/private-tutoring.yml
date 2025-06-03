@@ -1,0 +1,24 @@
+title: Private Tutoring
+description: One-on-one tailored tutoring sessions designed to precisely meet each student's bar exam preparation needs.
+duration: Hourly sessions
+program: first-time-takers
+course_structure:
+  - title: Personalized Learning Plan
+    description: Active, personalized guidance through every stage of study.
+    icon: book-copy
+  - title: Substantive Lectures
+    description: Proven study techniques, effective habits, and exam-taking strategies.
+    icon: lectern
+  - title: Individualized Tutoring
+    icon: user
+    description: Sessions targeting specific weaknesses and developing targeted solutions.
+  - title: Weekly Skill Development
+    description: Focused improvement of essay writing skills and analytical clarity.
+    icon: calendar-range
+  - title: Practical Drills
+    description: Personalized feedback on submitted practice essays.
+    icon: notebook-pen
+  - icon: file-check-2
+    title: Final Intensive Review
+    description: Comprehensive review addressing remaining knowledge gaps and refining exam skills.
+price: $295.00 per hour or $1,250.00 for five hours
