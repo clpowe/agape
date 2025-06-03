@@ -23,13 +23,13 @@ console.log(course?.value);
                     </AppTypography>
                 </div>
                 <div class="stats flex gap-2 flex-wrap">
-                    <div class="course_time">
+                    <div v-if="course?.duration" class="course_time">
                         <Icon name="lucide:alarm-clock" size="1.5rem" alt="" class="icon" />
                         <AppTypography tag="p" variant="text-s" class="text-muted">
                             {{ course?.duration }}
                         </AppTypography>
                     </div>
-                    <div class="course_cost ">
+                    <div v-if="course?.price" class="course_cost ">
                         <Icon name="lucide:badge-dollar-sign" size="1.5rem" class="icon" />
                         <AppTypography tag="p" variant="text-s" class="text-muted">
                             {{ course?.price }}
