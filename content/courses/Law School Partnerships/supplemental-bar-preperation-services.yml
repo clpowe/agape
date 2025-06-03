@@ -1,0 +1,26 @@
+description: Comprehensive, individualized services that support law school graduates in effectively preparing for the bar exam.
+title: Supplemental Bar Preparation Services
+duration: 'Customized based on needs '
+program: law-school-partnerships
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Customized study plans addressing individual student needs.
+  - title: Substantive Lectures
+    icon: lectern
+    description: Access to recorded lectures enhancing understanding of bar-tested subjects.
+  - title: Small Group Tutoring
+    icon: users
+    description: Regular small group tutoring sessions.
+  - icon: user
+    title: Individualized Tutoring
+    description: Weekly one-on-one tutoring tailored to student-specific weaknesses.
+  - title: Weekly Skill Development
+    description: Weekly assessments identifying and improving weak areas.
+    icon: calendar-range
+  - title: Practical Drills
+    description: Essay grading with detailed written feedback and writing clinics.
+    icon: notebook-pen
+  - title: Final Intensive Review
+    description: Continuous guidance and support throughout bar exam preparation, including an accountability system.
+    icon: file-check-2

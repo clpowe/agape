@@ -1,0 +1,23 @@
+description: Specialized course enhancing analytical writing skills and essay performance for bar exam readiness.
+title: Essay Writing Boot Camp
+duration: Intensive short-term course
+program: law-school-partnerships
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Structured to help identify and articulate critical legal issues.
+  - title: Substantive Lectures
+    icon: lectern
+    description: Two-hour focused writing workshop.
+  - icon: user
+    title: Individualized Tutoring
+    description: Two private sessions refining analytical and essay-writing skills.
+  - title: Weekly Skill Development
+    description: Regular practice essays with personalized feedback.
+    icon: calendar-range
+  - title: Practical Drills
+    description: Daily timed essays in the two weeks preceding the bar exam.
+    icon: notebook-pen
+  - title: Final Intensive Review
+    description: Simulated bar exam administered one week prior to actual exam.
+    icon: file-check-2
