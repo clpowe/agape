@@ -1,0 +1,27 @@
+title: Bar Skills Crash Course
+description: Prepares students by strengthening essential bar exam skills prior to intensive exam study, enhancing confidence and success potential.
+duration: 5 weeks
+program: repeat-takers
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Structured guidance to actively engage with lectures and outlines.
+  - icon: lectern
+    title: Substantive Lectures
+    description: Sessions emphasizing effective interaction with practice questions and application of law to facts.
+  - icon: users
+    title: Small Group Tutoring
+    description: Classes fostering analytical skills, especially issue spotting and critical thinking.
+  - title: Individualized Tutoring (5 hours)
+    icon: user
+    description: Individual skill assessments to track progress and identify improvement areas.
+  - icon: calendar-range
+    title: Weekly Skill Development
+    description: Consistent instructor-graded homework assignments.
+  - title: Practical Drills
+    icon: notebook-pen
+    description: Active practice and skills reinforcement through class participation.
+  - title: Final Intensive Review
+    icon: file-check-2
+    description: Skills assessment to measure student growth and preparedness.
+price: $995.00

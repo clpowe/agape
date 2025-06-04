@@ -1,0 +1,27 @@
+title: Bar Prep 101 Plus (UBE)
+description: Customized to support repeat bar exam takers aiming to improve performance on the Uniform Bar Exam (UBE).
+duration: 10 weeks
+program: repeat-takers
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Guides structured learning to master key UBE subjects and skills.
+  - icon: lectern
+    title: Substantive Lectures
+    description: Covers essential bar-tested topics, supplemented by pretests and posttests.
+  - icon: users
+    title: Small Group Tutoring (21 sessions)
+    description: Focused sessions address specific topics to close knowledge gaps.
+  - title: Individualized Tutoring (5 hours)
+    icon: user
+    description: Tailored sessions targeting individual deficiencies with personalized feedback.
+  - icon: calendar-range
+    title: Weekly Skill Development
+    description: Weekly timed writing assessments evaluated with instructor feedback.
+  - title: Practical Drills
+    icon: notebook-pen
+    description: Consistent rule-drilling exercises for mastering frequently tested bar rules.
+  - title: Final Intensive Review
+    icon: file-check-2
+    description: Intensive morning essay sessions (7 weekday mornings) and MBE Boot Camp featuring timed questions and instructor-led reviews.
+price: $4,495.00

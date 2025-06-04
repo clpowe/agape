@@ -1,0 +1,24 @@
+title: Essay Boot Camp PLUS
+description: Specifically crafted for repeat bar exam takers, emphasizing skillful essay writing to improve bar performance.
+duration: Intensive preparation period
+program: repeat-takers
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Customized plan targeting areas that commonly challenge repeat test-takers.
+  - icon: lectern
+    title: Substantive Lectures
+    description: Access targeted lectures emphasizing crucial essay topics.
+  - title: Individualized Tutoring (5 hours)
+    icon: user
+    description: Two one-hour private tutoring sessions designed to refine essay writing and analytical skills.
+  - icon: calendar-range
+    title: Weekly Skill Development
+    description: Weekly timed writing assessments reviewed live by instructors.
+  - title: Practical Drills
+    icon: notebook-pen
+    description: Seven graded essays with personalized feedback addressing specific challenges.
+  - title: Final Intensive Review
+    icon: file-check-2
+    description: Morning writing sessions (7 weekday mornings) with timed practice and live instructor reviews.
+price: $2,895.00

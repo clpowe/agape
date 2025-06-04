@@ -1,0 +1,27 @@
+title: Bar Prep 101 Plus (FL)
+description: Tailored specifically for repeat bar exam takers, this intensive course maximizes preparation and boosts chances of passing.
+duration: 10 weeks
+program: repeat-takers
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Provides structured guidance on mastering laws and skills essential for bar exam success.
+  - icon: lectern
+    title: Substantive Lectures
+    description: Includes lectures on key bar-tested subjects, supported by pretests and posttests.
+  - icon: users
+    title: Small Group Tutoring (21 sessions)
+    description: Interactive sessions addressing focused topics within broader bar-tested areas.
+  - title: Individualized Tutoring (5 hours)
+    icon: user
+    description: Customized sessions target each student's specific weaknesses with personalized feedback.
+  - icon: calendar-range
+    title: Weekly Skill Development
+    description: Includes weekly timed writing assessments with live instructor feedback.
+  - title: Practical Drills
+    icon: notebook-pen
+    description: Regular rule-drilling sessions reinforcing key bar exam topics.
+  - title: Final Intensive Review
+    icon: file-check-2
+    description: Morning writing sessions (7 weekday mornings) and an MBE Boot Camp with timed exercises and instructor-led reviews.
+price: $4,495.00
