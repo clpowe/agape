@@ -158,7 +158,7 @@ p {
 
 :deep(.main-link:focus),
 .NavigationMenuLink:focus {
-    box-shadow: 0 0 0 2px var(--stroke-strong);
+    box-shadow: 0 0 0 2px var(--color-brand-500);
 }
 
 :deep(.main-link:hover),

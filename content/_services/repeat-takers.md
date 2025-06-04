@@ -1,18 +1,18 @@
 ---
-title: Repeat Takers 
+title: Repeat Takers
 navigation:
   title: Law School Preparation Services
-  description: Law school can be daunting and overwhelming for students; especially first year students because they have no idea what to expect or how to begin preparing for exams.  We offer several services to help law school students overcome the anxiety of law school and law school exams and reach their full potential academically.
+description: Law school can be daunting and overwhelming for students; especially first year students because they have no idea what to expect or how to begin preparing for exams.  We offer several services to help law school students overcome the anxiety of law school and law school exams and reach their full potential academically.
 seo:
   description: Law school can be daunting and overwhelming for students; especially first year students because they have no idea what to expect or how to begin preparing for exams.  We offer several services to help law school students overcome the anxiety of law school and law school exams and reach their full potential academically.
-  title: Law School Preparation Services
+title: Law School Preparation Services
 description: Law school can be daunting and overwhelming for students; especially first year students because they have no idea what to expect or how to begin preparing for exams.  We offer several services to help law school students overcome the anxiety of law school and law school exams and reach their full potential academically.
 ---
 
 # Repeat Takers
 
-## **Bar Prep 101 Plus (FL)**  
-**Duration:** 10 weeks  
+## **Bar Prep 101 Plus (FL)**
+**Duration:** 10 weeks
 **Description:** Tailored specifically for repeat bar exam takers, this intensive course maximizes preparation and boosts chances of passing.
 
 **Course Structure:**
@@ -28,8 +28,8 @@ description: Law school can be daunting and overwhelming for students; especiall
 
 ---
 
-## **Bar Prep 101 Plus (UBE)**  
-**Duration:** 10 weeks  
+## **Bar Prep 101 Plus (UBE)**
+**Duration:** 10 weeks
 **Description:** Customized to support repeat bar exam takers aiming to improve performance on the Uniform Bar Exam (UBE).
 
 **Course Structure:**
@@ -45,8 +45,8 @@ description: Law school can be daunting and overwhelming for students; especiall
 
 ---
 
-## **Essay Boot Camp PLUS**  
-**Duration:** Intensive preparation period  
+## **Essay Boot Camp PLUS**
+**Duration:** Intensive preparation period
 **Description:** Specifically crafted for repeat bar exam takers, emphasizing skillful essay writing to improve bar performance.
 
 **Course Structure:**
@@ -62,8 +62,8 @@ description: Law school can be daunting and overwhelming for students; especiall
 
 ---
 
-## **Bar Skills Crash Course**  
-**Duration:** 5 weeks  
+## **Bar Skills Crash Course**
+**Duration:** 5 weeks
 **Description:** Prepares students by strengthening essential bar exam skills prior to intensive exam study, enhancing confidence and success potential.
 
 **Course Structure:**
@@ -79,8 +79,8 @@ description: Law school can be daunting and overwhelming for students; especiall
 
 ---
 
-## **Private Tutoring**  
-**Duration:** Hourly sessions  
+## **Private Tutoring**
+**Duration:** Hourly sessions
 **Description:** Personalized one-on-one tutoring tailored specifically to each student's unique bar exam preparation needs.
 
 **Course Structure:**
