@@ -1,7 +1,7 @@
 title: MBE 101
 description: This comprehensive tutoring program is specifically designed for students preparing for the MBE portion of the bar exam, enhancing their understanding and maximizing success potential.
 duration: 12 weeks
-program: mbe-101
+program: mbe-only-takers
 course_structure:
   - icon: book-copy
     title: Personalized Learning Plan

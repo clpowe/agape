@@ -1,7 +1,7 @@
 title: Private Tutoring
 description: Customized one-on-one tutoring sessions specifically tailored to address the unique learning needs of each student.
 duration: '1Hourly sessions '
-program: mbe-101
+program: mbe-only-takers
 course_structure:
   - icon: book-copy
     title: Personalized Learning Plan
