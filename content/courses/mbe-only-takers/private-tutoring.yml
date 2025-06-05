@@ -1,0 +1,24 @@
+title: Private Tutoring
+description: Customized one-on-one tutoring sessions specifically tailored to address the unique learning needs of each student.
+duration: '1Hourly sessions '
+program: mbe-101
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Tutors actively engage students through individualized guidance at every stage of preparation.
+  - title: Substantive Lectures
+    description: Empowers students with proven learning techniques, effective study habits, and exam-taking strategies.
+    icon: lectern
+  - icon: user
+    title: Individualized Tutoring
+    description: Detailed attention to each student's individual weaknesses, providing targeted solutions.
+  - title: Weekly Skill Development
+    icon: calendar-range
+    description: Improves writing skills, enabling clear articulation of complex legal concepts.
+  - title: Practical Drills
+    description: Students practice exam-style essays and receive personalized, detailed feedback for continuous improvement.
+    icon: notebook-pen
+  - icon: file-check-2
+    title: Final Intensive Review
+    description: In-depth review sessions addressing lingering issues, ensuring complete clarity in substantive knowledge and exam strategies.
+price: $295.00 per hour or $1,250.00 for five hours

@@ -1,0 +1,27 @@
+title: Bar Skills Crash Course
+description: This comprehensive tutoring program is specifically designed for students preparing for the MBE portion of the bar exam, enhancing their understanding and maximizing success potential.
+duration: 12 weeks
+program: mbe-101
+course_structure:
+  - icon: book-copy
+    title: Personalized Learning Plan
+    description: Provides structured guidance to master essential laws and skills assessed on the MBE.
+  - title: Substantive Lectures
+    description: Includes targeted lectures on critical bar-tested subjects, complemented by pretests and posttests.
+    icon: lectern
+  - title: Small Group Tutoring (15 sessions)
+    icon: users
+    description: Interactive sessions addressing specific topics within broader subjects to fill knowledge gaps, such as "Individual Rights" in Constitutional Law and "Jurisdiction & Venue" in Civil Procedure.
+  - icon: user
+    title: Individualized Tutoring (5 hours)
+    description: Personalized sessions identifying and addressing each student's unique areas for improvement with customized feedback.
+  - title: Weekly Skill Development
+    icon: calendar-range
+    description: Regular IREAC exercises strengthen issue-spotting and analytical skills in answering MBE-style questions.
+  - title: Practical Drills
+    description: Rule-drilling exercises assess and reinforce knowledge of frequently tested MBE subjects.
+    icon: notebook-pen
+  - icon: file-check-2
+    title: Final Intensive Review
+    description: MBE Boot Camp includes seven 90-minute sessions focusing on timed multiple-choice questions, followed by instructor-led reviews.
+price: $2,995.00
