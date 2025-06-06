@@ -17,6 +17,7 @@ useSeoMeta({
 
 <template>
 	<div class="wrapper flow" data-width="wide">
+		<ContentRenderer v-if="data" :value="data" />
 		<CourseItem v-for="course in courses" :key="course.id" :course="course" />
 	</div>
 </template>

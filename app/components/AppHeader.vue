@@ -12,14 +12,7 @@ import {
 import NavigationItem from "./AppNavigation/NavigationItem.vue";
 import NavigationDrawer from './AppNavigation/NavigationDrawer.vue';
 
-
-
-const { data: items } = await useAsyncData("navigation-items", () => {
-    return queryCollection("navigation").all();
-});
-
-
-
+const { data: items } = await useNavigationItems();
 
 const currentTrigger = ref('')
 </script>

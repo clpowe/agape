@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { data: items } = await useAsyncData("navigation-items", () => {
-  return queryCollection("navigation").all();
-});
+const { data: items } = useNavigationItems();
 </script>
 
 <template>

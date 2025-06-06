@@ -8,7 +8,6 @@ const { course } = defineProps({
     },
 });
 
-console.log(course?.value);
 </script>
 <template>
     <section class="section course">
