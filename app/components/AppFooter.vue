@@ -29,9 +29,9 @@ const { data: items } = useNavigationItems();
         <div>
           <AppTypography tag="h3" variant="heading-xxs">Contact</AppTypography>
           <address>
-            P.O. Box 26586, Jacksonville, Florida 32226<br />
+            P.O. Box 26586, Jacksonville, Florida 32226<br >
             <a href="mailto:agapechristianbarprep@gmail.com">agapechristianbarprep@gmail.com</a>
-            <br />
+            <br >
             <a href="tel:904-2340-2853">904-2340-2853</a>
           </address>
         </div>

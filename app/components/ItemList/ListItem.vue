@@ -6,12 +6,15 @@ const { item } = defineProps({
     type: Object,
   },
 });
+
+console.log(item);
 </script>
 
 <template>
   <li class="bg-elevated rounded-2xl p-4 grid gap-2">
-    <Icon v-if="item.icon" :name="item.icon" mode="svg" class="h-8 w-8 text-primary" />
-
+    <template v-if="item.icon">
+      <Icon :icon="item.icon" mode="svg" class="h-10 w-10 text-primary" />
+    </template>
     <div>
       <AppTypography tag="h3" variant="heading-xxs" class="mb-1 text-default font-bold">
         {{ item.title }}

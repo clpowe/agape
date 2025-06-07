@@ -1,5 +1,4 @@
 <script setup>
-import { ConfigProvider } from 'reka-ui'
 useHead({
   htmlAttrs: {
     lang: "en",
@@ -7,11 +6,9 @@ useHead({
   },
   bodyAttrs: {},
 });
-const useIdFunction = () => useId()
 </script>
 
 <template>
-  <ConfigProvider :use-id="useIdFunction">
     <div>
       <AppHeader />
       <NuxtLoadingIndicator />
@@ -22,5 +19,4 @@ const useIdFunction = () => useId()
       </main>
       <AppFooter />
     </div>
-  </ConfigProvider>
 </template>

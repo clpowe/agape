@@ -10,23 +10,12 @@ defineProps<{
   description?: string;
   headline?: string;
 }>();
-const carousel = useTemplateRef("carousel");
 const activeIndex = ref(0);
 
-function onClickPrev() {
-  activeIndex.value--;
-}
-function onClickNext() {
-  activeIndex.value++;
-}
-function onSelect(index: number) {
-  activeIndex.value = index;
-}
 
 function select(index: number) {
   activeIndex.value = index;
 
-  carousel.value?.emblaApi?.scrollTo(index);
 }
 </script>
 
@@ -38,15 +27,6 @@ function select(index: number) {
       <template #description> {{ description }} </template>
       <template #content>
         <div class="flow">
-          <!-- <UCarousel ref="carousel" v-slot="{ item }" :items="testimonials" :prev="{ onClick: onClickPrev }"
-            :next="{ onClick: onClickNext }" active loop align="center" container-scroll="keepSnaps" :ui="{ item: '' }"
-            class="w-full mx-auto" @select="onSelect">
-            <motion.div class="box">
-              <AppTypography tag="p" variant="text-l" class="quote">
-                {{ item.quote }}
-              </AppTypography>
-            </motion.div>
-          </UCarousel> -->
           <div class="buton-wrapper">
             <button v-for="(item, index) in testimonials" :key="index"
               class="opacity-25 hover:opacity-100 transition-opacity" :class="{ 'opacity-100': activeIndex === index }"

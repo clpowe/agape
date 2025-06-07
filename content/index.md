@@ -1,5 +1,6 @@
 ---
 title: Agape Christian Bar Prep
+description: Agape Christian Bar Prep empowers students to confidently conquer the bar exam and achieve their dreams of becoming attorneys.
 ---
 
 ::home-hero
@@ -55,13 +56,13 @@ Agape Christian Bar Prep empowers students to confidently conquer the bar exam a
   ---
   items:
     - title: Emotional and Mental wellness
-      icon: i-lucide-brain
+      icon: lucide:brain
       description: We provide strategies for focus and resilience.
     - title: Spiritual growth
-      icon: i-lucide-twitter
+      icon: lucide:twitter
       description: We encourage strength and clarity throughout your preparation journey.
     - title: Academic needs
-      icon: i-lucide-book-copy
+      icon: lucide:book-copy
       description: We ensure mastery of essential exam content
   ---
   :::
@@ -72,7 +73,7 @@ Discover a supportive path to exam success—built around you.
 #actions
   :::button
   ---
-  ariaLabel: Apply to Agape Christian Bar Prep
+  
   color: primary
   href: /apply
   size: xl
@@ -123,7 +124,7 @@ The bar exam feels overwhelming, and traditional prep lacks the personalized and
 Quick [Links]{.highlight}
 
 #content
-  :::quick-list
+  ::quick-list
   ---
   items:
     - title: Bar Prep
@@ -148,7 +149,7 @@ Quick [Links]{.highlight}
       linktext: Student Portal
       link: /student-portal
   ---
-  :::
+  ::
 ::
 
 ::testimonials-section
@@ -168,6 +169,8 @@ text: left
 Frequently Asked [Questions]{.highlight}
 
 #content
-  :::frequently-asked-questions
-  :::
+  ::frequently-asked-questions
+  ::
 ::
+
+

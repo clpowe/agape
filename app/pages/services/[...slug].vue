@@ -10,14 +10,14 @@ const { data } = await useAsyncData(route.path, () =>
 	queryCollection("content").path(route.path).first(),
 );
 
-useSeoMeta({
-	description: data.value?.description,
-});
+// useSeoMeta({
+// 	description: data.value?.description,
+// });
 </script>
 
 <template>
 	<div class="wrapper flow" data-width="wide">
-		<ContentRenderer v-if="data" :value="data" />
+		<ContentRenderer v-if="data" :value="data" class="flow content-grid" />
 		<CourseItem v-for="course in courses" :key="course.id" :course="course" />
 	</div>
 </template>
