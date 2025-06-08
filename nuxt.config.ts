@@ -28,10 +28,12 @@ export default defineNuxtConfig({
 		'@nuxt/content',
 		'@nuxt/eslint',
 		'@nuxthub/core',
+		'vue3-carousel-nuxt',
 		'@nuxt/test-utils/module',
 		'@vueuse/nuxt',
 		'nuxt-svgo',
 		'@unocss/nuxt',
+		'vue3-carousel-nuxt',
 	],
 	css: ['~/assets/css/main.css'],
 	hub: {

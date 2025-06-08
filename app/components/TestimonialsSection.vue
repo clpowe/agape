@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Carousel } from 'vue3-carousel'
 const { data: testimonials } = await useAsyncData(() =>
   queryCollection("testimonials").all(),
 );
@@ -10,13 +11,17 @@ defineProps<{
   description?: string;
   headline?: string;
 }>();
-const activeIndex = ref(0);
 
+const currentSlide = ref(0)
 
-function select(index: number) {
-  activeIndex.value = index;
+const gallery = useTemplateRef<typeof Carousel>("gallery")
 
+function slideTo(idx: number) {
+  gallery.value?.slideTo(idx, false)
 }
+
+
+
 </script>
 
 <template>
@@ -26,15 +31,22 @@ function select(index: number) {
         {{ title }} </template>
       <template #description> {{ description }} </template>
       <template #content>
-        <div class="flow">
-          <div class="buton-wrapper">
-            <button v-for="(item, index) in testimonials" :key="index"
-              class="opacity-25 hover:opacity-100 transition-opacity" :class="{ 'opacity-100': activeIndex === index }"
-              @click="select(index)">
-              {{ item.name }}
-            </button>
-          </div>
-        </div>
+        <Carousel ref="gallery" v-model="currentSlide" :items-to-show="1" :wrap-around="true" :slide-effect="`slide`"
+          :touch-drag="true" :mouse-drag="true">
+          <Slide v-for="testimonial in testimonials" :key="testimonial.id">
+            <div class="quote">
+
+              {{ testimonial.quote }}
+            </div>
+          </Slide>
+        </Carousel>
+
+        <template v-for="(testimonial, idx) in testimonials" :key="testimonial.id">
+          <button class="name" :class="['thumbnail', { 'is-active': currentSlide === idx }]" @click="slideTo(idx)">
+            {{ testimonial.name }}
+          </button>
+        </template>
+
       </template>
     </ContentHeader>
   </section>
@@ -60,5 +72,18 @@ function select(index: number) {
   margin-inline: auto;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
   gap: 1rem;
+}
+
+.thumbnails {
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.name {
+  background-color: var(--background-terciary);
+}
+
+.is-active {
+  background-color: var(--color-brand-500);
 }
 </style>
