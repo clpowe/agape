@@ -31,9 +31,11 @@ export default defineNuxtConfig({
 		'vue3-carousel-nuxt',
 		'@nuxt/test-utils/module',
 		'@vueuse/nuxt',
+		'nuxt-posthog',
 		'nuxt-svgo',
 		'@unocss/nuxt',
 		'vue3-carousel-nuxt',
+		'nuxt-posthog',
 	],
 	css: ['~/assets/css/main.css'],
 	hub: {
