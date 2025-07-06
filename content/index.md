@@ -16,17 +16,11 @@ Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling.
 At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress, build essential skills, and support you at every stage of your legal journey.
 
 #actions
-  :::button{ id="apply-button" }
-  ---
-  ariaLabel: Apply to Agape Christian Bar Prep
-  color: primary
-  href: /apply
-  size: xl
-  ---
+  ::AppButton{ id="apply-button" on:myClick="captureCustomEvent" }
   Apply Now
-  :::
+  ::
 
-  :::button
+  ::button
   ---
   ariaLabel: Schedual an appointment with Agape Christian Bar Prep
   href: /apply
@@ -34,7 +28,7 @@ At Agape Christian Bar Prep, we help students succeed in law school and pass the
   variant: outline
   ---
   Schedual a consoltation
-  :::
+  ::
 ::
 
 ::content-header
@@ -52,7 +46,7 @@ How Our Program Is Different
 Agape Christian Bar Prep empowers students to confidently conquer the bar exam and achieve their dreams of becoming attorneys.
 
 #content
-  :::item-list
+  ::item-list
   ---
   items:
     - title: Emotional and Mental wellness
@@ -65,21 +59,21 @@ Agape Christian Bar Prep empowers students to confidently conquer the bar exam a
       icon: lucide:book-copy
       description: We ensure mastery of essential exam content
   ---
-  :::
+  ::
 
 #extra
 Discover a supportive path to exam success—built around you.
 
 #actions
-  :::button
+  ::button
   ---
-  
+
   color: primary
   href: /apply
   size: xl
   ---
   Apply Now
-  :::
+  ::
 ::
 
 ::content-header
@@ -90,33 +84,29 @@ Our [Services]{.highlight}
 The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need. Our personalized, faith-based coaching gets you where you need to be.
 
 #content
-  :::item-list
+  ::item-list
   ---
   items:
     - title: First Time Takers
       icon: i-lucide-user
-      description: Specialized courses for first-time bar exam takers emphasizing
-        essay mastery.
+      description: Specialized courses for first-time bar exam takers emphasizing essay mastery.
     - title: Repeat Takers
       icon: i-lucide-refresh-cw
-      description: Comprehensive bar prep and tutoring tailored specifically for
-        repeat takers.
+      description: Comprehensive bar prep and tutoring tailored specifically forrepeat takers.
     - title: Law School Prep
       icon: i-lucide-school
       description: Courses and tutoring to build foundational law exam writing skills.
     - title: Bar Prep Academy
       icon: i-lucide-notebook
-      description: Personalized bar exam prep for professionals, emphasizing writing
-        and analysis.
+      description: Personalized bar exam prep for professionals, emphasizing writing and analysis.
     - title: Multistate Bar Exam
       icon: i-lucide-spell-check
       description: Focused MBE tutoring and skill-building for targeted bar exam success.
     - title: School Partnerships
       icon: i-lucide-graduation-cap
-      description: Early, supplemental bar prep and workshops improving mindset, essay
-        writing.
+      description: Early, supplemental bar prep and workshops improving mindset, essay writing.
   ---
-  :::
+  ::
 ::
 
 ::content-header
@@ -144,8 +134,7 @@ Quick [Links]{.highlight}
       link: /services/law-school-partnerships
     - title: Current Students
       icon: notepad
-      description: Already enrolled? Quickly find your course updates and enrollment
-        info here.
+      description: Already enrolled? Quickly find your course updates and enrollment info here.
       linktext: Student Portal
       link: /student-portal
   ---

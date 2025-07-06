@@ -1,6 +1,5 @@
 <script setup lang="ts">
-
-const { $clientPosthog } = useNuxtApp();
+const { $clientPosthog } = useNuxtApp()
 
 const { data: home } = await useAsyncData(() =>
   queryCollection("content").path("/").first(),
@@ -12,18 +11,14 @@ useSeoMeta({
 });
 
 onMounted(() => {
-  $clientPosthog?.capture("$pageview", {
-    pagename: "home",
-  })
-
-
-
   const applyButton = document.getElementById('apply-button');
   if (applyButton) {
     applyButton.addEventListener('click', () => {
-      $clientPosthog?.capture('$autocapture', {
+      console.log('Custom event captured');
+      $clientPosthog?.capture('home_main_cta_clicked', {
         element: 'apply-button',
-        name: "Appy Now Click"
+        name: "Appy Now Click",
+        'user_name': "Max the Hedgehog"
       });
     });
   }
