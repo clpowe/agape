@@ -1,4 +1,5 @@
 <script setup>
+
 useHead({
   htmlAttrs: {
     lang: "en",
@@ -9,14 +10,12 @@ useHead({
 </script>
 
 <template>
-    <div>
-      <AppHeader />
-      <NuxtLoadingIndicator />
-      <main class="">
-        <NuxtLayout>
-          <NuxtPage />
-        </NuxtLayout>
-      </main>
-      <AppFooter />
-    </div>
+  <UApp>
+    <AppNavBar />
+    <NuxtLoadingIndicator />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+    <!--<AppFooter /> -->
+  </UApp>
 </template>

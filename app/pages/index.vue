@@ -1,13 +1,14 @@
 <script setup lang="ts">
 const { $clientPosthog } = useNuxtApp()
-
-const { data: home } = await useAsyncData(() =>
-  queryCollection("content").path("/").first(),
-);
+const route = useRoute()
+const { data: home } = await useAsyncData(route.path, () => {
+  return queryCollection('content').path('/').first()
+})
 
 useSeoMeta({
   title: home.value?.title,
   description: home.value?.description,
+
 });
 
 onMounted(() => {
@@ -27,7 +28,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <ContentRenderer v-if="home" :value="home" class="flow content-grid" />
-  </div>
+  <UContainer>
+      <ContentRenderer v-if="home" :value="home" />
+  </UContainer>
 </template>

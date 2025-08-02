@@ -4,5 +4,8 @@ export default defineConfig({
 	test: {
 		environment: 'happy-dom', // or 'jsdom'
 		globals: true
-	}
+	},
+	optimizeDeps: {
+		exclude: ['@tanstack/vue-form'],
+	  },
 })

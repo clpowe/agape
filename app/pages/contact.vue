@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const { data: contact } = await useAsyncData(() =>
-  queryCollection("content").path("/contact").first(),
-);
+const route = useRoute()
+const { data: contact } = await useAsyncData(route.path, () => {
+  return queryCollection('content').path('/contact').first()
+})
 
 useSeoMeta({
   title: contact.value?.title,
@@ -9,5 +10,13 @@ useSeoMeta({
 });
 </script>
 <template>
-  <ContentRenderer v-if="contact" :value="contact" class="flow content-grid" />
+  <UContainer>
+    <UCard>
+      <template #header>
+        <h1>{{ contact.title }}</h1>
+      </template>
+
+      <ContentRenderer v-if="contact" :value="contact" class="flow content-grid" />
+    </UCard>
+  </UContainer>
 </template>

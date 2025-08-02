@@ -1,23 +1,32 @@
 <script setup lang="ts">
-import CourseItem from '~/components/courses/CourseItem.vue';
 const route = useRoute();
 
-const { data: courses } = await useAsyncData(`courses-${route.path}`, () =>
-	queryCollection("courses").where("program", "=", route.params.slug).all(),
-);
+const { data: page } = await useAsyncData(route.path, () => {
+	return queryCollection('content').path(route.path).first()
+})
 
-const { data } = await useAsyncData(route.path, () =>
-	queryCollection("content").path(route.path).first(),
-);
+console.log(page.value)
 
-// useSeoMeta({
-// 	description: data.value?.description,
-// });
+const { data } = await useAsyncData(route.path, () => {
+	return queryCollection('courses').where('program', '=', route.params.slug).all()
+})
+
+
+
+useSeoMeta({
+
+});
 </script>
 
 <template>
-	<div class="wrapper flow" data-width="wide">
-		<ContentRenderer v-if="data" :value="data" class="flow content-grid" />
-		<CourseItem v-for="course in courses" :key="course.id" :course="course" />
-	</div>
+	<UContainer>
+		<UCard>
+			<template #header>
+				<!-- <h1>{{ data.title }}</h1> -->
+			</template>
+			<ContentRenderer v-if="page" :value="page" />
+			{{ data }}
+			<!-- <CourseItem v-for="course in courses" :key="course.id" :course="course" /> -->
+		</UCard>
+	</UContainer>
 </template>
