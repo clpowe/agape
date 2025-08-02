@@ -35,10 +35,7 @@ const { course } = defineProps({
                         </AppTypography>
                     </div>
                 </div>
-                <div>
-
-
-                </div>
+                <div/>
             </div>
         </div>
         <div class="structure flex flex-col">

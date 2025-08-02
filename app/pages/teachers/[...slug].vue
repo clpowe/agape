@@ -2,7 +2,7 @@
 const route = useRoute();
 
 const { data } = await useAsyncData(route.path, () =>
-	queryCollection("content").path(route.path).first(),
+	queryContent(route.path).findOne(),
 );
 
 useSeoMeta({
@@ -12,8 +12,14 @@ useSeoMeta({
 </script>
 
 <template>
-	<div>
-		<NuxtImg :src="data?.meta.image" width="300" height="400" format="avif" />
-		<ContentRenderer v-if="data" :value="data" />
-	</div>
+	<UContainer>
+		<UCard>
+			<template #header>
+				<h1>{{ data.title }}</h1>
+			</template>
+
+			<NuxtImg :src="data?.meta.image" width="300" height="400" format="avif" />
+			<ContentRenderer v-if="data" :value="data" />
+		</UCard>
+	</UContainer>
 </template>

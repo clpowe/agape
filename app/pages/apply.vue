@@ -1,14 +1,25 @@
 <script setup lang="ts">
-const { data } = await useAsyncData(() =>
-	queryCollection("content").path("/apply").first(),
-);
+const route = useRoute()
+
+const { data } = await useAsyncData(route.path, () => {
+  return queryCollection('content').path('/apply').first()
+})
+
 
 useSeoMeta({
-	title: data.value?.title,
-	description: data.value?.description,
+  title: data.value?.title,
+  description: data.value?.description,
 });
 </script>
 
 <template>
-  <ContentRenderer v-if="data" :value="data" class="flow content-grid" />
+  <UContainer>
+    <UCard>
+      <template #header>
+        <h1>{{ data.title }}</h1>
+      </template>
+
+      <ContentRenderer v-if="data" :value="data" class="flow content-grid" />
+    </UCard>
+  </UContainer>
 </template>

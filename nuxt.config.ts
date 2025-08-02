@@ -25,19 +25,21 @@ export default defineNuxtConfig({
 		'@nuxt/scripts',
 		'@nuxtjs/robots',
 		'@nuxt/test-utils',
-		'@nuxt/content',
 		'@nuxt/eslint',
 		'@nuxthub/core',
-		'vue3-carousel-nuxt',
 		'@nuxt/test-utils/module',
 		'@vueuse/nuxt',
 		'nuxt-posthog',
 		'nuxt-svgo',
-		'@unocss/nuxt',
 		'vue3-carousel-nuxt',
 		'nuxt-posthog',
+		'@nuxt/ui-pro',
+		'@nuxt/content',
 	],
 	css: ['~/assets/css/main.css'],
+  ui: {
+    colorMode: false
+  },
 	hub: {
 		// NuxtHub options
 	},
