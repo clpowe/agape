@@ -1,18 +1,25 @@
 ---
 title: Agape Christian Bar Prep
-description: Agape Christian Bar Prep empowers students to confidently conquer the bar exam and achieve their dreams of becoming attorneys.
+description: Agape Christian Bar Prep empowers students to confidently conquer
+  the bar exam and achieve their dreams of becoming attorneys.
 ---
 
-::UPageHero
+::u-page-hero
 ---
-
+links:
+  - label: Law School Prep
+    to: /services/law-school-prep
+    icon: i-lucide-arrow-right
+  - label: Law School Partnerships
+    to: /services/law-school-partnerships
+    variant: outline
+    icon: i-lucide-arrow-right
+description: At Agape Christian Bar Prep, we help students succeed in law school
+  and pass the bar with confidence. Our personalized programs reduce stress,
+  build essential skills, and support you at every stage of your legal journey.
 title: Conquer Law School. Master the Bar
-description: At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress, build essential skills, and support you at every stage of your legal journey.
-links: [{label: Law School Prep, to: /services/law-school-prep, icon: i-lucide-arrow-right}, {label: Law School Partnerships, to: /services/law-school-partnerships,variant: 'outline' ,icon: i-lucide-arrow-right}]
 ---
-
-![Nuxt Social Image](https://nuxt.com/new-social.jpg)
-
+![Nuxt Social Image](/AgapeHeroImage.png)
 ::
 
 # Conquer Law School. [Master the Bar.]{.highlight} Step Into Your Calling
@@ -20,7 +27,7 @@ links: [{label: Law School Prep, to: /services/law-school-prep, icon: i-lucide-a
 [Apply Now](/apply)
 
 [Schedual a consoltation](/apply)
-::
+\::
 
 ## The Agape Way
 
