@@ -40,9 +40,9 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false
   },
-	hub: {
-		// NuxtHub options
-	},
+  hub: {
+    blob: true
+  },
 	content: {
 		preview: {
 			api: 'https://api.nuxt.studio',
