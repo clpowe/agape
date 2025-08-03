@@ -6,17 +6,9 @@ description: Agape Christian Bar Prep empowers students to confidently conquer
 
 ::u-page-hero
 ---
-links:
-  - label: Law School Prep
-    to: /services/law-school-prep
-    icon: i-lucide-arrow-right
-  - label: Law School Partnerships
-    to: /services/law-school-partnerships
-    variant: outline
-    icon: i-lucide-arrow-right
-description: At Agape Christian Bar Prep, we help students succeed in law school
-  and pass the bar with confidence. Our personalized programs reduce stress,
-  build essential skills, and support you at every stage of your legal journey.
+
+links: [{label: Law School Prep, to: /services/law-school-prep, icon: i-lucide-arrow-right}, {label: Law School Partnerships, to: /services/law-school-partnerships, variant: outline, icon: i-lucide-arrow-right}]
+description: At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress, build essential skills, and support you at every stage of your legal journey.
 title: Conquer Law School. Master the Bar
 ---
 
@@ -57,10 +49,10 @@ The bar exam feels overwhelming, and traditional prep lacks the personalized and
 
 ### Quick [Links]{.highlight}
 
-  - **Bar Prep**: Get the personalized support you need to pass the bar exam with confidence. [Explore Bar Prep](/services/)
-  - **Law School Prep**: Build strong skills early and thrive through every stage of law school. [Start Lae School Prep](/services/law-school-prep)
-  - **Law Schools**: We help law schools boost student success and bar passage rates. [Learn More about Partnerships](/services/law-school-partnerships)
-  - **Current Students**: Already enrolled? Quickly find your course updates and enrollment info here. [Student Portal](/student-portal)
+- **Bar Prep**: Get the personalized support you need to pass the bar exam with confidence. [Explore Bar Prep](/services/)
+- **Law School Prep**: Build strong skills early and thrive through every stage of law school. [Start Lae School Prep](/services/law-school-prep)
+- **Law Schools**: We help law schools boost student success and bar passage rates. [Learn More about Partnerships](/services/law-school-partnerships)
+- **Current Students**: Already enrolled? Quickly find your course updates and enrollment info here. [Student Portal](/student-portal)
 
 ---
 
