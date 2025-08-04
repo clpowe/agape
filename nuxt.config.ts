@@ -53,6 +53,7 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		uiProLicense: '',
+    airtableApiKey: '',
 		public: {
 			posthogPublicKey: 'phc_U861r9C5hjKh8CRlC1uGW6NW6OG3yfhZstFtFEOjCxX',
 			posthogHost: 'https://us.i.posthog.com',
