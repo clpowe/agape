@@ -38,6 +38,7 @@
 		"lucide-vue-next": "^0.488.0",
 		"motion-v": "^1.1.0-alpha.1",
 		"nuxt": "^4.0.0",
+		"nuxt-csurf": "1.6.5",
 		"nuxt-posthog": "1.6.3",
 		"nuxt-schema-org": "^5.0.4",
 		"nuxt-seo": "^1.6.1",
