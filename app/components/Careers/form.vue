@@ -4,7 +4,14 @@ import type { FormSubmitEvent } from '@nuxt/ui';
 
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024 // 2MB
-const ACCEPTED_IMAGE_TYPES = ['.pdf', '.doc', '.docx', '.rtf','.txt']
+const ACCEPTED_IMAGE_TYPES = [
+  'application/pdf',
+  'application/msword',           // .doc
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // .docx
+  'application/rtf',
+  'text/plain'
+];
+
 
 const schema = z.object({
     name: z.string().min(2, { message: "Name is required" }),
@@ -45,11 +52,23 @@ async function onSubmit(event: FormSubmitEvent<Schema>){
 console.log(event.data)
 }
 
-async function onFileSelect(event: Event) {
-  const uploadFile = await upload(event.target as HTMLInputElement)
-  console.log(uploadFile)
-}
+watch(() => state.resume, async (file) => {
+  if (file instanceof File) {
+    const dt = new DataTransfer();
+    dt.items.add(file);
 
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.files = dt.files;
+
+    try {
+      const result = await upload(input);
+      console.log('Uploaded:', result);
+    } catch (err) {
+      console.error('Upload failed:', err);
+    }
+  }
+});
 </script>
 
 <template>
@@ -71,8 +90,7 @@ async function onFileSelect(event: Event) {
       <UFileUpload 
         v-slot="{ open, removeFile }" 
         v-model="state.resume" 
-        accept=".pdf,.doc,.docx,.rtf,.txt" 
-        @change="onFileSelect">
+      >
         <div class="flex flex-wrap items-center gap-3">
           <UAvatar
             size="lg"

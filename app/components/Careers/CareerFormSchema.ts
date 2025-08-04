@@ -1,7 +1,13 @@
 import { z } from "zod";
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024 // 2MB
-const ACCEPTED_IMAGE_TYPES = ['.pdf', '.doc', '.docx', '.rtf','.txt']
+const ACCEPTED_IMAGE_TYPES = [
+  'application/pdf',
+  'application/msword',           // .doc
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // .docx
+  'application/rtf',
+  'text/plain'
+];
 
 export const ApplicationSchema = z
   .object({
@@ -13,7 +19,7 @@ export const ApplicationSchema = z
       "Tutor",
       "Essay Grader",
     ]),
-    resume: z.instanceof(File,{
+    resume: z.instanceof(File ,{
     message: "Please upload a file",
   }).refine((file) => file.size <= MAX_FILE_SIZE,{
     message: 'The file is to large. Please choose a file smaller than 2mb'
