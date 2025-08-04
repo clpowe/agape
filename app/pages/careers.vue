@@ -1,6 +1,4 @@
 <script setup lang="ts">
-
-import CareerForm from '~/components/Careers/CareerForm.vue';
 const route = useRoute()
 
 const { data } = await useAsyncData(route.path, () => {
@@ -22,18 +20,10 @@ onMounted(() => {
 
 <template>
   <UContainer>
-    <UCard>
-      <template #header>
-        <h1>{{ data.title }}</h1>
-      </template>
 
       <ContentRenderer v-if="data" :value="data" class="flow content-grid" />
 
-      <CareerForm />
+      <CareersForm />
 
-      <iframe class="airtable-embed airtable-dynamic-height"
-        src="https://airtable.com/embed/shrTzhMuzpq3aoUVP?backgroundColor=gray" frameborder="0" onmousewheel=""
-        width="100%" height="1028" style="background: transparent; border: 1px solid #ccc" />
-    </UCard>
   </UContainer>
 </template>
