@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 				experimental: {
 								granularCachedData: true,
 				},
+
 				modules: [
 				 '@nuxtjs/seo',
 				 '@nuxt/fonts',
@@ -37,20 +38,21 @@ export default defineNuxtConfig({
 				 '@nuxthub/core',
 				 'nuxt-csurf',
 				],
+
 				css: ['~/assets/css/main.css'],
-  ui: {
-    colorMode: false
-  },
-  hub: {
-    projectUrl({ env }) {
-      if (env === 'preview'){
-        return 'https://f3119a7e.agape-67x.pages.dev/'
-      }
-      return 'https://agape.nuxt.dev/'
-    }, 
-    blob: true,
-    remote: true
-  },
+        ui: {
+          colorMode: false
+        },
+        hub: {
+          projectUrl({ env }) {
+            if (env === 'preview'){
+              return 'https://f3119a7e.agape-67x.pages.dev/'
+            }
+            return 'https://agape.nuxt.dev/'
+          }, 
+          blob: true,
+          remote: true,
+        },
 				content: {
 								preview: {
 												api: 'https://api.nuxt.studio',
@@ -61,14 +63,11 @@ export default defineNuxtConfig({
 				},
 				runtimeConfig: {
 								uiProLicense: '',
-    airtableApiKey: '',
+                airtableApiKey: '',
 								public: {
-												posthogPublicKey:
-																process.env.NUXT_PUBLIC_POSTHOG_KEY ||
-																'phc_U861r9C5hjKh8CRlC1uGW6NW6OG3yfhZstFtFEOjCxX',
-												posthogHost:
-																process.env.NUXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
-												posthogDefaults: '2025-05-24',
+												posthogPublicKey: process.env.NUXT_PUBLIC_POSTHOG_KEY || 'phc_U861r9C5hjKh8CRlC1uGW6NW6OG3yfhZstFtFEOjCxX',
+												posthogHost: process.env.NUXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
+										    posthogDefaults: '2025-05-24',
 								},
 				},
 });
