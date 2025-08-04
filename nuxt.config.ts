@@ -40,14 +40,17 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false
   },
+
 	hub: {
           blob: true,
           remote: true,
-        },	content: {
+        },	
+                                
+  content: {
 		preview: {
 			api: 'https://api.nuxt.studio',
 		},
-	},
+
 	robots: {
 		sitemap: 'https://agapechristianbarprep.com/sitemap.xml',
 	},
