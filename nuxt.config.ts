@@ -40,13 +40,7 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false
   },
-hub: {
-          projectUrl({ env }) {
-            if (env === 'preview'){
-              return 'https://f3119a7e.agape-67x.pages.dev/'
-            }
-            return 'https://agape.nuxt.dev/'
-          }, 
+	hub: {
           blob: true,
           remote: true,
         },	content: {
@@ -60,7 +54,7 @@ hub: {
 	runtimeConfig: {
 		uiProLicense: '',
     airtableApiKey: '',
-    hubProjectSecretKey:'',
+
 		public: {
 			posthogPublicKey: 'phc_U861r9C5hjKh8CRlC1uGW6NW6OG3yfhZstFtFEOjCxX',
 			posthogHost: 'https://us.i.posthog.com',
@@ -68,3 +62,4 @@ hub: {
 		},
 	},
 });
+
