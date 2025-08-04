@@ -50,6 +50,7 @@ export default defineNuxtConfig({
     }, 
     blob: true,
   },
+
   content: {
 		preview: {
 			api: 'https://api.nuxt.studio',

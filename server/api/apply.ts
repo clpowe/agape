@@ -1,4 +1,3 @@
-
 import { z } from 'zod'
 import { defineEventHandler, readBody } from 'h3'
 import { $fetch } from 'ofetch'
