@@ -64,9 +64,10 @@ export default defineNuxtConfig({
 				runtimeConfig: {
 								uiProLicense: '',
                 airtableApiKey: '',
+
 								public: {
-												posthogPublicKey: process.env.NUXT_PUBLIC_POSTHOG_KEY || 'phc_U861r9C5hjKh8CRlC1uGW6NW6OG3yfhZstFtFEOjCxX',
-												posthogHost: process.env.NUXT_PUBLIC_POSTHOG_HOST || 'https://us.i.posthog.com',
+												posthogPublicKey:  'phc_U861r9C5hjKh8CRlC1uGW6NW6OG3yfhZstFtFEOjCxX',
+												posthogHost:  'https://us.i.posthog.com',
 										    posthogDefaults: '2025-05-24',
 								},
 				},
