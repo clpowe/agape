@@ -40,13 +40,20 @@ export default defineNuxtConfig({
   ui: {
     colorMode: false
   },
-	hub: {
-		// NuxtHub options
-	},
-	content: {
-		preview: {
-			api: 'https://api.nuxt.studio',
-		},
+  hub: {
+    projectUrl({ env }) {
+      if (env === 'preview'){
+        return 'https://f3119a7e.agape-67x.pages.dev/'
+      }
+      return 'https://agape.nuxt.dev/'
+    }, 
+    blob: true,
+    remote: true,
+  },	
+  content: {
+    preview: {
+      api: 'https://api.nuxt.studio',
+    },
 	},
 	robots: {
 		sitemap: 'https://agapechristianbarprep.com/sitemap.xml',
@@ -54,6 +61,7 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		uiProLicense: '',
     airtableApiKey: '',
+    hubProjectSecretKey:'',
 		public: {
 			posthogPublicKey: 'phc_U861r9C5hjKh8CRlC1uGW6NW6OG3yfhZstFtFEOjCxX',
 			posthogHost: 'https://us.i.posthog.com',
