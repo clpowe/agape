@@ -48,7 +48,6 @@ export default defineNuxtConfig({
       return 'https://agape.nuxt.dev/'
     }, 
     blob: true,
-    remote: true,
   },	
   content: {
     preview: {
