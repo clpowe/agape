@@ -26,7 +26,6 @@ export default defineNuxtConfig({
 		'@nuxtjs/robots',
 		'@nuxt/test-utils',
 		'@nuxt/eslint',
-		'@nuxthub/core',
 		'@nuxt/test-utils/module',
 		'@vueuse/nuxt',
 		'nuxt-posthog',
@@ -35,13 +34,21 @@ export default defineNuxtConfig({
 		'nuxt-posthog',
 		'@nuxt/ui-pro',
 		'@nuxt/content',
+		'@nuxthub/core',
 	],
 	css: ['~/assets/css/main.css'],
   ui: {
     colorMode: false
   },
   hub: {
-    blob: true
+    projectUrl({ env }) {
+      if (env === 'preview'){
+        return 'https://f3119a7e.agape-67x.pages.dev/'
+      }
+      return 'https://agape.nuxt.dev/'
+    }, 
+    blob: true,
+    remote: true
   },
 	content: {
 		preview: {
@@ -53,6 +60,7 @@ export default defineNuxtConfig({
 	},
 	runtimeConfig: {
 		uiProLicense: '',
+    airtableApiKey: '',
 		public: {
 			posthogPublicKey:
 				process.env.NUXT_PUBLIC_POSTHOG_KEY ||

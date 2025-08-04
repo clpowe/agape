@@ -1,59 +1,35 @@
 <script setup lang="ts">
-import * as z from 'zod';
-import type { FormSubmitEvent } from '@nuxt/ui';
+import { z } from 'zod'
+import type { FormSubmitEvent } from '@nuxt/ui'
 
-
-const MAX_FILE_SIZE = 2 * 1024 * 1024 // 2MB
-const ACCEPTED_IMAGE_TYPES = [
+const MAX_FILE_SIZE = 2 * 1024 * 1024
+const ACCEPTED_TYPES = [
   'application/pdf',
-  'application/msword',           // .doc
-  'application/vnd.openxmlformats-officedocument.wordprocessingml.document', // .docx
+  'application/msword',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   'application/rtf',
-  'text/plain'
-];
-
+  'text/plain',
+]
 
 const schema = z.object({
-    name: z.string().min(2, { message: "Name is required" }),
-    email: z.string().email({ message: "Invalid email address" }),
-    phone: z.string().min(7, { message: "Invalid phone number" }),
-    position: z.enum([
-      "Learning and Writing Strategist",
-      "Tutor",
-      "Essay Grader",
-    ]),
-    resume: z.instanceof(File,{
-    message: "Please upload a file",
-  }).refine((file) => file.size <= MAX_FILE_SIZE,{
-    message: 'The file is to large. Please choose a file smaller than 2mb'
-  }).refine((file) => ACCEPTED_IMAGE_TYPES.includes(file.type),{
-    message: 'Please choose a file of type pdf, doc, docx, rtf, or txt'
-  })
+  name: z.string().min(2, { message: "Name is required" }),
+  email: z.string().email({ message: "Invalid email address" }),
+  phone: z.string().min(7, { message: "Invalid phone number" }),
+  position: z.enum(["Learning and Writing Strategist", "Tutor", "Essay Grader"]),
+  resume: z
+    .instanceof(File)
+    .refine(file => file.size <= MAX_FILE_SIZE, { message: 'Max size is 2MB' })
+    .refine(file => ACCEPTED_TYPES.includes(file.type), { message: 'Invalid file type' }),
 })
 
 type Schema = z.output<typeof schema>
-
-const state = reactive<Partial<Schema>>({
-  name: undefined,
-  email: undefined,
-  phone: undefined,
-  position: undefined,
-  resume: undefined,
-})
-
+const state = reactive<Partial<Schema>>({})
 const upload = useUpload('/api/blob',{method:'PUT'})
 
+async function onSubmit(event: FormSubmitEvent<Schema>) {
+  try {
+    const file = event.data.resume;
 
-function createObjectUrl(file: File): string {
-  return URL.createObjectURL(file)
-}
-
-async function onSubmit(event: FormSubmitEvent<Schema>){
-console.log(event.data)
-}
-
-watch(() => state.resume, async (file) => {
-  if (file instanceof File) {
     const dt = new DataTransfer();
     dt.items.add(file);
 
@@ -61,65 +37,54 @@ watch(() => state.resume, async (file) => {
     input.type = 'file';
     input.files = dt.files;
 
-    try {
-      const result = await upload(input);
-      console.log('Uploaded:', result);
-    } catch (err) {
-      console.error('Upload failed:', err);
+    const uploaded = await upload(input);
+
+    const { error } = await $fetch('/api/apply', {
+      method: 'POST',
+      body: {
+        name: event.data.name,
+        email: event.data.email,
+        phone: event.data.phone,
+        position: event.data.position,
+        resumeUrl: `https://pub-01f70a312027428c988ee19dfbe84fef.r2.dev/${uploaded[0].pathname}`
+      },
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (error.value) {
+      console.error('API Error:', error.value);
+    } else {
+      console.log('Submitted successfully');
     }
+  } catch (err) {
+    console.error('Submit error:', err);
   }
-});
+}
+
+
 </script>
 
 <template>
   <UForm :schema="schema" :state="state" @submit="onSubmit">
-    <UFormField label="Name" name="name">
+    <UFormField name="name" label="Name">
       <UInput v-model="state.name" />
     </UFormField>
-
-    <UFormField label="Email" name="email">
+    <UFormField name="email" label="Email">
       <UInput v-model="state.email" />
     </UFormField>
-
-
-    <UFormField label="Phone" name="phone">
+    <UFormField name="phone" label="Phone">
       <UInput v-model="state.phone" />
     </UFormField>
-
-    <UFormField name="resume" label="Resume" description="DOC, DOCX, PDF or TXT 1MB Max.">
-      <UFileUpload 
-        v-slot="{ open, removeFile }" 
-        v-model="state.resume" 
-      >
-        <div class="flex flex-wrap items-center gap-3">
-          <UAvatar
-            size="lg"
-            :src="state.resume ? createObjectUrl(state.resume) : undefined"
-            icon="i-lucide-image"
-          />
-
-          <UButton
-            :label="state.resume ? 'Change image' : 'Upload image'"
-            color="neutral"
-            variant="outline"
-            @click="open()"
-          />
-        </div>
-
-        <p v-if="state.resume" class="text-xs text-muted mt-1.5">
-          {{ state.resume.name }}
-
-          <UButton
-            label="Remove"
-            color="error"
-            variant="link"
-            size="xs"
-            class="p-0"
-            @click="removeFile()"
-          />
-        </p>
-      </UFileUpload>
+    <UFormField name="position" label="Position">
+      <USelect
+        v-model="state.position"
+        :items="['Learning and Writing Strategist', 'Tutor', 'Essay Grader']"
+      />
     </UFormField>
-  <UButton type="submit" label="Submit" color="neutral" />
+    <UFormField name="resume" label="Resume">
+      <UFileUpload v-model="state.resume" />
+    </UFormField>
+    <UButton type="submit" label="Submit" />
   </UForm>
 </template>
+
