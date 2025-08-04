@@ -42,15 +42,19 @@ export default defineNuxtConfig({
   },
 
 	hub: {
-          blob: true,
-          remote: true,
-        },	
-                                
+    projectUrl({ env }) {
+      if (env === 'preview'){
+        return 'https://f3119a7e.agape-67x.pages.dev/'
+      }
+      return 'https://agape.nuxt.dev/'
+    }, 
+    blob: true,
+  },
   content: {
 		preview: {
 			api: 'https://api.nuxt.studio',
 		},
-
+},
 	robots: {
 		sitemap: 'https://agapechristianbarprep.com/sitemap.xml',
 	},
