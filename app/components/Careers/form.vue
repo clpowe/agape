@@ -56,7 +56,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     if (error.value) {
       console.error('API Error:', error.value);
     } else {
-      console.log('Submitted successfully');
+      console.log('Submitted successfully, Good Job');
     }
   } catch (err) {
     console.error('Submit error:', err);
