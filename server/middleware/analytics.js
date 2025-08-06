@@ -1,4 +1,5 @@
 import { PostHog } from "posthog-node";
+import {  useRuntimeConfig, defineEventHandler } from '#imports';
 
 export default defineEventHandler(async (event) => {
   const runtimeConfig = useRuntimeConfig();

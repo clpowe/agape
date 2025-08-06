@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const route = useRoute();
 
-const { data: page } = await useAsyncData(route.path, () => {
+const { data: page } = await useAsyncData(() => {
 	return queryCollection('content').path(route.path).first()
 })
 
 console.log(page.value)
 
-const { data } = await useAsyncData(route.path, () => {
+const { data } = await useAsyncData(() => {
 	return queryCollection('courses').where('program', '=', route.params.slug).all()
 })
 

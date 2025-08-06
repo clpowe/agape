@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const { $clientPosthog } = useNuxtApp()
-const route = useRoute()
-const { data: home } = await useAsyncData(route.path, () => {
-  return queryCollection('content').path('/').first()
-})
+const { data: home,error } =  useAsyncData('home', () =>  queryCollection('content').path('/').first())
+
+if (error.value) {
+  console.error('Content loading error:', error.value)
+}
 
 useSeoMeta({
   title: home.value?.title,
@@ -11,19 +11,6 @@ useSeoMeta({
 
 });
 
-onMounted(() => {
-  const applyButton = document.getElementById('apply-button');
-  if (applyButton) {
-    applyButton.addEventListener('click', () => {
-      console.log('Custom event captured');
-      $clientPosthog?.capture('home_main_cta_clicked', {
-        element: 'apply-button',
-        name: "Appy Now Click",
-        'user_name': "Max the Hedgehog"
-      });
-    });
-  }
-})
 
 </script>
 

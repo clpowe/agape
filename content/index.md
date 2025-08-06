@@ -12,7 +12,7 @@ description: At Agape Christian Bar Prep, we help students succeed in law school
 title: Conquer Law School. Master the Bar
 ---
 
-![Nuxt Social Image]('../public/AgapeHeroImage.png')
+![Nuxt Social Image](/AgapeHeroImage.png)
 
 ::
 

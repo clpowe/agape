@@ -6,9 +6,17 @@ const schema = z.object({
   name: z.string().min(2),
   email: z.string().email(),
   phone: z.string().min(7),
-  position: z.enum(["Learning and Writing Strategist", "Tutor", "Essay Grader"]),
-  resumeUrl: z.string()
-})
+  position: z.enum([
+    "Learning and Writing Strategist",
+    "Tutor",
+    "Essay Grader"
+  ]),
+  resume: z.array(
+    z.object({
+      url: z.string().url()
+    })
+  )
+});
 
 const config = useRuntimeConfig()
 
@@ -30,11 +38,7 @@ export default defineEventHandler(async (event) => {
           email: parsed.data.email,
           phone: parsed.data.phone,
           position: parsed.data.position,
-          resume: [
-          {
-            url: parsed.data.resumeUrl
-          }
-        ]
+          resume:  parsed.data.resume
         },
       },
     ],
@@ -55,6 +59,8 @@ export default defineEventHandler(async (event) => {
       body: airtablePayload,
     }
   )
+
+  console.log(res)
 
   return res
 })

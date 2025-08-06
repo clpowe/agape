@@ -2,8 +2,6 @@
 import { z } from 'zod'
 import type { FormSubmitEvent } from '@nuxt/ui'
 
-const { $csrfFetch } = useNuxtApp()
-
 const MAX_FILE_SIZE = 2 * 1024 * 1024
 const ACCEPTED_TYPES = [
   'application/pdf',
@@ -41,15 +39,21 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
     const uploaded = await upload(input);
 
-    const { error } = await $csrfFetch('/api/apply', {
-      method: 'POST',
-      body: {
+    const body = {
         name: event.data.name,
         email: event.data.email,
         phone: event.data.phone,
         position: event.data.position,
-        resumeUrl: `https://pub-01f70a312027428c988ee19dfbe84fef.r2.dev/${uploaded[0]?.pathname}`
-      },
+        resume: [
+          {
+            url: `https://pub-01f70a312027428c988ee19dfbe84fef.r2.dev/${uploaded[0]?.pathname}`
+          }
+        ]
+    }
+
+    const { error } = await useCsrfFetch('/api/apply', {
+      method: 'POST',
+      body, 
       headers: { 'Content-Type': 'application/json' }
     });
 

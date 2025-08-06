@@ -1,7 +1,6 @@
 <script setup lang="ts">
-const route = useRoute()
 
-const { data } = await useAsyncData(route.path, () => {
+const { data } = await useAsyncData('apply', () => {
   return queryCollection('content').path('/apply').first()
 })
 
@@ -16,7 +15,7 @@ useSeoMeta({
   <UContainer>
     <UCard>
       <template #header>
-        <h1>{{ data.title }}</h1>
+        <h1>{{ data?.title }}</h1>
       </template>
 
       <ContentRenderer v-if="data" :value="data" class="flow content-grid" />
