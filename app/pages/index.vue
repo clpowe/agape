@@ -11,7 +11,6 @@ useSeoMeta({
 
 });
 
-
 </script>
 
 <template>
