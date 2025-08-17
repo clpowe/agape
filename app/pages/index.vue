@@ -14,7 +14,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <UContainer>
       <ContentRenderer v-if="home" :value="home" />
-  </UContainer>
 </template>
