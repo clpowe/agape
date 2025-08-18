@@ -30,24 +30,23 @@ links: [{label: Apply Now, to: '/apply'}]
 
 ::
 
-## The Agape Way
+::UPageSection
+---
 
-Discover a supportive path to exam success—built around you.
+title: Our Services
+description: The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need. Our personalized, faith-based coaching gets you where you need to be
+---
 
-[Apply Now](/apply)
+::list-component
+---
 
-### Our [Services]{.highlight}
-
-The bar exam feels overwhelming, and traditional prep lacks the personalized and spiritual support you need. Our personalized, faith-based coaching gets you where you need to be.
-
-- **First Time Takers**: Specialized courses for first-time bar exam takers emphasizing essay mastery.
-- **Repeat Takers**: Comprehensive bar prep and tutoring tailored specifically forrepeat takers.
-- **Law School Prep**: Courses and tutoring to build foundational law exam writing skills.
-- **Bar Prep Academy**: Personalized bar prep for professionals, emphasizing writing and analysis.
-- **Multistate Bar Exam**: Focused MBE tutoring and skill-building for targeted bar exam success.
-- **School Partnerships**: Early, supplemental bar prep and workshops improving mindset, essay writing.
+list: [{badge: 'Bar Preperation', title: 'First Time Takers', description: 'Specialized courses for first-time bar exam takers emphasizing essay mastery.', to: '/services/first-time-takers', image: '/young-student.jpg'},{badge: 'Bar Preperation', title: 'Repeat Takers', description: 'Comprehensive bar prep and tutoring tailored specifically for repeat takers.', to: '/services/repeat-takers', image: '/young-student.jpg' },{badge: 'Bar Preperation', title: 'Law School Prep', description: 'Courses and tutoring to build foundational law exam writing skills.', to: '/services/law-school-prep', image: '/young-student.jpg' },{badge: 'Bar Preperation', title: 'Multistate Bar Exam',description: 'Focused MBE tutoring and skill-building for targeted bar exam success.', to: '/services/multistate-bar-exam', image: '/young-student.jpg'},{ badge: 'Bar Preperation', title: 'School Partnerships', description: 'Early, supplemental bar prep and workshops improving mindset and essay performance.', to: '/services/school-partnerships', image: '/young-student.jpg'}]
 
 ---
+
+::
+
+::
 
 ### Quick [Links]{.highlight}
 
