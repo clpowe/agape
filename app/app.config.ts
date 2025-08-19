@@ -3,6 +3,13 @@ export default defineAppConfig({
    button:{
       slots: {
         base: ['rounded-full']
+      },
+      variants: {
+        size: {
+          xl: {
+            base: 'px-10 py-4 text-lg'
+          }
+        }
       }
     } 
   },
@@ -16,7 +23,7 @@ export default defineAppConfig({
         orientation:{
           vertical: {
             headline: 'justify-start',
-            title:'text-start',
+            title:'text-start max-w-[560px] text-balance',
             links: 'justify-start md:justify-end align-end',
             description: 'text-left max-w-[75ch]',
           }

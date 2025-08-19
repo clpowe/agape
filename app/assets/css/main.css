@@ -2,6 +2,8 @@
 @import '@nuxt/ui-pro';
 
 @theme static {
+	--font-sans: 'Inter', sans-serif;
+
 	/* ── Primary (deep crimson) ───────────────────────────── */
 	/* Base shade anchored at 600 = #900B10 */
 	--color-primary-50: #fbedee;
