@@ -1,5 +1,8 @@
 export default defineAppConfig({
   ui: {
+    colors: {
+      neutral: 'stone'
+    },
    button:{
       slots: {
         base: ['rounded-full']
@@ -7,7 +10,7 @@ export default defineAppConfig({
       variants: {
         size: {
           xl: {
-            base: 'px-10 py-4 text-lg'
+            base: 'px-6 py-3 text-xl'
           }
         }
       }
@@ -26,6 +29,17 @@ export default defineAppConfig({
             title:'text-start max-w-[560px] text-balance',
             links: 'justify-start md:justify-end align-end',
             description: 'text-left max-w-[75ch]',
+          },
+          horizontal: {
+            root: 'bg-primary',
+            headline: 'justify-end text-red',
+          },
+          accentdark:{
+            container: 'lg:grid-cols-2 lg:items-center ',
+            headline: 'justify-end text-white',
+            description: 'text-pretty',
+            features: 'gap-4 grid-cols-1 sm:grid-cols-2',
+            root: 'bg-accented',
           }
         }
       },
@@ -51,6 +65,20 @@ export default defineAppConfig({
             footer: 'mt-16 md:mt-auto grow'
           }
         },
+        {
+          orientation: 'horizontal',
+          body: true,
+          class: {
+            body: 'order-none lg:order-none',
+          }
+        },
+        {
+          orientation: 'accentdark',
+          body: true,
+          class: {
+            body: 'mt-0',
+          }
+        }
       ]
     },
     pageFeature: {

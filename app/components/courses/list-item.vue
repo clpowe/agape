@@ -11,7 +11,7 @@ defineProps<{
 
 <template>
        <div
-        class="grid items-start gap-12 md:grid-cols-[0.5fr_300px_1fr_0.3fr] py-5 md:py-5 border-t border-black/10"
+        class="item"
       >
         <!-- Badge -->
         <div >
@@ -24,13 +24,14 @@ defineProps<{
         <!-- Image + Copy -->
         <ULink
           :to="to"
-          class=" items-center group"
+          class=" items-center group col-span-full md:col-span-1"
+
         >
           <NuxtImg
             :src="image"
         width="300"
         height="180"
-            class="rounded w-full   object-cover"
+            class="rounded w-full object-cover max-h-52 md:max-h-80 "
           /></ULink>
 
         <ULink
@@ -48,7 +49,7 @@ defineProps<{
         </ULink>
 
         <!-- Arrow -->
-        <div class="md:flex md:justify-end">
+        <div class="md:flex md:justify-end mt-auto md:mt-0">
           <UButton
             :to="to"
             icon="i-lucide-arrow-right"
@@ -60,3 +61,25 @@ defineProps<{
         </div>
       </div>
 </template>
+
+<style scoped>
+.item {
+  display: grid;
+  align-items: start;
+  gap: 1rem;
+  grid-template-columns: auto 1fr; 
+  padding-top: 1.25rem;       
+  padding-bottom: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); 
+
+  @media (min-width: 768px) {
+    grid-template-columns: 0.5fr 300px 1fr 0.3fr; /* md:grid-cols-[...] */
+    padding-top: 1.5rem;       /* md:py-6 = 1.5rem top/bottom */
+    padding-bottom: 1.5rem;
+    gap: 3rem;
+  }
+}
+
+
+
+</style>>

@@ -13,32 +13,58 @@ description: At Agape Christian Bar Prep, we help students succeed in law school
 image: /AgapeHeroImage.png
 poster: /thumbnails/classroom.jpg
 title: Conquer Law School. Master the Bar
-
 ---
 ::
+
+
+
+
 
 ::u-page-section
 ---
-features:
-  - title: Emotional and Mental wellness
-    description: We provide strategies for focus and resilience.
-    icon: i-lucide-brain
-  - title: Spiritual Growth
-    description: We encourage strength and clarity throughout your preparation journey.
-    icon: i-lucide-brain
-  - title: Academic needs
-    description: We ensure mastery of essential exam content
-    icon: i-lucide-brain
-links:
-  - label: Apply Now
-    to: /apply
-    size: xl
-description: Agape Christian Bar Prep empowers students to confidently conquer
-  the bar exam and achieve their dreams of becoming attorneys.
-headline: The Agape Way
-title: How our program is diffrent
+  features:
+    - title: Emotional and Mental wellness
+      description: We provide strategies for focus and resilience.
+      icon: i-lucide-brain
+    - title: Spiritual Growth
+      description: We encourage strength and clarity throughout your preparation journey.
+      icon: i-lucide-brain
+    - title: Academic needs
+      description: We ensure mastery of essential exam content
+      icon: i-lucide-brain
+  links:
+    - label: Apply Now
+      to: /apply
+      size: xl
+  description: Agape Christian Bar Prep empowers students to confidently conquer
+    the bar exam and achieve their dreams of becoming attorneys.
+  headline: The Agape Way
+  title: How our program is diffrent
 ---
 ::
+
+
+::u-page-section
+---
+  orientation: accentdark
+  title: Agape Christian Bar Prep provides personalized, faith-based coaching.
+  links:
+    - label: Apply Now
+      to: /apply
+      size: xl
+  features:
+    - description: From tailored study plans to one-on-one mentorship, we equip you with the tools, strategies, and encouragement to excel.
+      icon: i-lucide-minus
+      orientation: vertical
+    - description: Our coaching is designed to help you overcome any hurdle standing in your way of bar exam success.
+      icon: i-lucide-minus
+      orientation: vertical
+---
+
+  ![Agape Bar Prep team](/Agape_team.jpg){.w-full}
+
+::
+
 
 ::u-page-section
 ---
@@ -49,66 +75,58 @@ description: The bar exam feels overwhelming, and traditional prep lacks the
 title: Our Services
 ---
 
-::courses-list-item
----
+::list-animation
 
-badge: Bar Preperation
-title: First Time Takers
-description: Specialized courses for first-time bar exam takers emphasizing essay mastery.
-to: /services/first-time-takers
-image: /young-student.jpg
----
+    ::courses-list-item
+    ---
+    badge: Bar Preperation
+    title: First Time Takers
+    description: Specialized courses for first-time bar exam takers emphasizing essay mastery.
+    to: /services/first-time-takers
+    image: /young-student.jpg
+    ---
+    ::
 
+    ::courses-list-item
+    ---
+    badge: Bar Preperation
+    title: Repeat Takers
+    description: Comprehensive bar prep and tutoring tailored specifically for repeat takers.
+    to: /services/repeat-takers
+    image: /young-student.jpg
+    ---
+    ::
+
+    ::courses-list-item
+    ---
+    badge: Bar Preperation
+    title: Law School Prep
+    description: Courses and tutoring to build foundational law exam writing skills.
+    to: /services/law-school-prep
+    image: /young-student.jpg
+    ---
+    ::
+
+    ::courses-list-item
+    ---
+    badge: Bar Preperation
+    title: Multistate Bar Exam
+    description: Focused MBE tutoring and skill-building for targeted bar exam success.
+    to: /services/multistate-bar-exam
+    image: /young-student.jpg
+    ---
+    ::
+
+    ::courses-list-item
+    ---
+    badge: Bar Preperation
+    title: School Partnerships
+    description: Early, supplemental bar prep and workshops improving mindset and essay performance.
+    to: /services/school-partnerships
+    image: /young-student.jpg
+    ---
+    ::
 ::
-
-::courses-list-item
----
-
-badge: Bar Preperation
-title: Repeat Takers
-description: Comprehensive bar prep and tutoring tailored specifically for repeat takers.
-to: /services/repeat-takers
-image: /young-student.jpg
----
-
-::
-
-::courses-list-item
----
-
-badge: Bar Preperation
-title: Law School Prep
-description: Courses and tutoring to build foundational law exam writing skills.
-to: /services/law-school-prep
-image: /young-student.jpg
----
-
-::
-
-::courses-list-item
----
-
-badge: Bar Preperation
-title: Multistate Bar Exam
-description: Focused MBE tutoring and skill-building for targeted bar exam success.
-to: /services/multistate-bar-exam
-image: /young-student.jpg
----
-
-::
-
-::courses-list-item
----
-
-badge: Bar Preperation
-title: School Partnerships
-description: Early, supplemental bar prep and workshops improving mindset and essay performance.
-to: /services/school-partnerships
-image: /young-student.jpg
----
-
-::
-
 ::
 
 ### Quick [Links]{.highlight}

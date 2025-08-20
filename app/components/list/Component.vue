@@ -3,11 +3,12 @@ defineProps<{
   list: T[]
 }>()
 </script>
+
 <template>
   <div>
-    <div v-for="item in list">
+    <div v-for="item in list" :key="item.title">
        <div
-        class="grid items-start gap-12 md:grid-cols-[0.5fr_300px_1fr_0.3fr] py-5 md:py-6 border-t border-black/10"
+        class="item"
       >
         <!-- Badge -->
         <div >
@@ -25,13 +26,13 @@ defineProps<{
           <NuxtImg
             :src="item.image"
             class="rounded w-full aspect-[16/9] object-cover"
-          /></ULink>
+          />
+        </ULink>
 
         <ULink
           :to="item.to"
           class=" grid gap-5 "
         >
-         
           <div>
             <h3 class="text-3xl font-semibold text-gray-900">
               {{ item.title }}
@@ -53,6 +54,29 @@ defineProps<{
             square
           />
         </div>
-      </div>    </div>
+
+      </div>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.item {
+  display: grid;
+  align-items: start;
+  gap: 3rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  padding-top: 1.25rem;       
+  padding-bottom: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1); 
+
+  @media (min-width: 768px) {
+    grid-template-columns: 0.5fr 300px 1fr 0.3fr; /* md:grid-cols-[...] */
+    padding-top: 1.5rem;       /* md:py-6 = 1.5rem top/bottom */
+    padding-bottom: 1.5rem;
+  }
+}
+
+
+
+</style>
