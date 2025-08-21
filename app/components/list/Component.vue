@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div>
-    <div v-for="item in list" :key="item.title">
+    <div v-for="item in list" :key="item.title" >
        <div
         class="item"
       >
@@ -60,23 +60,4 @@ defineProps<{
   </div>
 </template>
 
-<style scoped>
-.item {
-  display: grid;
-  align-items: start;
-  gap: 3rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); 
-  padding-top: 1.25rem;       
-  padding-bottom: 1.25rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); 
 
-  @media (min-width: 768px) {
-    grid-template-columns: 0.5fr 300px 1fr 0.3fr; /* md:grid-cols-[...] */
-    padding-top: 1.5rem;       /* md:py-6 = 1.5rem top/bottom */
-    padding-bottom: 1.5rem;
-  }
-}
-
-
-
-</style>
