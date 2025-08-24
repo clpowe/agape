@@ -24,39 +24,33 @@ defineProps<{
         <!-- Image + Copy -->
         <ULink
           :to="to"
-          class=" items-center group col-span-full md:col-span-1"
-
+          class="overflow-hidden w-full h-44 rounded  col-span-2 md:col-auto"
         >
           <NuxtImg
             :src="image"
-        width="300"
-        height="180"
-            class="rounded w-full object-cover max-h-52 md:max-h-80 "
-          /></ULink>
-
-        <ULink
-          :to="to"
-          class=" grid gap-5 "
-        >
-          <div>
-            <h3 class="text-3xl font-semibold text-gray-900">
-              {{ title }}
-            </h3>
-            <p  class="mt-2 text-balance text-gray-700">
-              {{ description }}
-            </p>
-          </div>
+            class="w-full h-full object-cover "
+          />
         </ULink>
 
+        <div class="flex flex-col gap-2 max-w-80">
+          <ULink :to="to">
+            <h3 class="title">
+              {{ title }}
+            </h3>
+          </ULink>
+            <p  class="text-balance text-muted">
+              {{ description }}
+            </p>
+        </div>
+
         <!-- Arrow -->
-        <div class="md:flex md:justify-end mt-auto md:mt-0">
+        <div class="md:flex md:justify-end mt-auto md:mt-0 ml-auto">
           <UButton
             :to="to"
             icon="i-lucide-arrow-right"
             color="neutral"
             size="xl"
-            class="rounded-full md:self-center transition-transform group-hover:translate-x-0.5 size-11 grid items-center"
-            square
+            
           />
         </div>
       </div>
@@ -68,16 +62,25 @@ defineProps<{
   align-items: start;
   gap: 1rem;
   grid-template-columns: auto 1fr; 
-  padding-top: 1.25rem;       
+  padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); 
+  border-top: 1px solid var(--ui-border); 
 
   @media (min-width: 768px) {
     grid-template-columns: 0.5fr 300px 1fr 0.3fr; /* md:grid-cols-[...] */
+    grid-template-rows: auto;
+    grid-auto-columns: 1fr;
     padding-top: 1.5rem;       /* md:py-6 = 1.5rem top/bottom */
     padding-bottom: 1.5rem;
-    gap: 3rem;
+    gap: 2.5rem;
   }
+}
+
+.title {
+  font-weight:600;
+  font-size: 1.875rem;
+  color: var(--ui-text-highlighted);
+  line-height: 1.2em;
 }
 
 

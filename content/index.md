@@ -61,7 +61,7 @@ title: Conquer Law School. Master the Bar
       orientation: vertical
 ---
 
-  ![Agape Bar Prep team](/Agape_team.jpg){.w-full}
+  ![Agape Bar Prep team](/Agape_team.jpg){.rounded}
 
 ::
 
@@ -130,6 +130,47 @@ title: Our Services
 ::
 
 ### Quick [Links]{.highlight}
+
+::home-link-grid
+
+    ::list-item
+    ---
+    title: Bar Preperation
+    description: Get the personalized support you need to pass the bar exam with confidence.
+    to: /services/law-school-prep
+    icon: i-lucide-arrow-right
+    ---
+    ::
+
+    ::list-item
+    ---
+    title: Bar Preperation
+    description: Get the personalized support you need to pass the bar exam with confidence.
+    to: /services/law-school-prep
+    icon: i-lucide-arrow-right
+    ---
+    ::
+
+    ::list-item
+    ---
+    title: Bar Preperation
+    description: Get the personalized support you need to pass the bar exam with confidence.
+    to: /services/law-school-prep
+    icon: i-lucide-arrow-right
+    ---
+    ::
+
+
+    ::list-item
+    ---
+    title: Bar Preperation
+    description: Get the personalized support you need to pass the bar exam with confidence.
+    to: /services/law-school-prep
+    icon: i-lucide-arrow-right
+    ---
+    ::
+::
+
 
 - **Bar Prep**: Get the personalized support you need to pass the bar exam with confidence. [Explore Bar Prep](/services/)
 - **Law School Prep**: Build strong skills early and thrive through every stage of law school. [Start Lae School Prep](/services/law-school-prep)

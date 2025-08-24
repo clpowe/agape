@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import 'tailwindcss';
 @import '@nuxt/ui-pro';
 
 @theme static {
-	--font-sans: 'Inter tight', sans-serif;
+	--font-sans: 'Inter Tight', sans-serif;
 
 	/* ── Primary (deep crimson) ───────────────────────────── */
 	/* Base shade anchored at 600 = #900B10 */

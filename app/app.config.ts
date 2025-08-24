@@ -85,7 +85,7 @@ export default defineAppConfig({
       slots: {
         root: 'border-t border-default pt-5',
         wrapper: '',
-        title:'text-xl md:text-2xl',
+        title:'text-[1.35rem] ',
         description: 'text-lg',
         leadingIcon:'text-3xl'
       }
