@@ -34,7 +34,7 @@ defineProps<{
           class=" grid gap-5 "
         >
           <div>
-            <h3 class="text-3xl font-semibold text-gray-900">
+            <h3 class="text-3xl font-sans font-bold text-gray-900">
               {{ item.title }}
             </h3>
             <p  class="mt-2 text-balance text-gray-700">
