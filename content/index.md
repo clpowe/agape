@@ -129,7 +129,8 @@ title: Our Services
 ::
 ::
 
-### Quick [Links]{.highlight}
+::path-to-esquire
+::
 
 ::home-link-grid
 
@@ -144,8 +145,8 @@ title: Our Services
 
     ::list-item
     ---
-    title: Bar Preperation
-    description: Get the personalized support you need to pass the bar exam with confidence.
+    title: Law School Prep
+    description: Build strong skills early and thrive through every stage of law school.
     to: /services/law-school-prep
     icon: i-lucide-arrow-right
     ---
@@ -153,8 +154,8 @@ title: Our Services
 
     ::list-item
     ---
-    title: Bar Preperation
-    description: Get the personalized support you need to pass the bar exam with confidence.
+    title: Law Schools
+    description: We help law schools boost student success and bar passage rates.
     to: /services/law-school-prep
     icon: i-lucide-arrow-right
     ---
@@ -163,8 +164,8 @@ title: Our Services
 
     ::list-item
     ---
-    title: Bar Preperation
-    description: Get the personalized support you need to pass the bar exam with confidence.
+    title: Current Students
+    description: Already enrolled? Quickly find your course updates and enrollment info here.
     to: /services/law-school-prep
     icon: i-lucide-arrow-right
     ---
@@ -172,10 +173,6 @@ title: Our Services
 ::
 
 
-- **Bar Prep**: Get the personalized support you need to pass the bar exam with confidence. [Explore Bar Prep](/services/)
-- **Law School Prep**: Build strong skills early and thrive through every stage of law school. [Start Lae School Prep](/services/law-school-prep)
-- **Law Schools**: We help law schools boost student success and bar passage rates. [Learn More about Partnerships](/services/law-school-partnerships)
-- **Current Students**: Already enrolled? Quickly find your course updates and enrollment info here. [Student Portal](/student-portal)
 
 ---
 
