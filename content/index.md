@@ -6,13 +6,21 @@ description: Agape Christian Bar Prep empowers students to confidently conquer
 
 ::home-hero-banner
 ---
-links: '[{"label":"Law School
-  Prep","to":"/services/law-school-prep","icon":"i-lucide-arrow-right","color":"primary","variant":"solid","size":"xl"},{"label":"Law
-  School
-  Partnerships","to":"/services/law-school-partnerships","variant":"outline","icon":"i-lucide-arrow-right","color":"neutral","size":"xl"}]'
-description: At Agape Christian Bar Prep, we help students succeed in law school
-  and pass the bar with confidence. Our personalized programs reduce stress,
-  build essential skills, and support you at every stage of your legal journey.
+links:
+  - label: Law School Prep
+    to: /services/law-school-prep
+    icon: i-lucide-arrow-right
+    color: primary
+    variant: solid
+    size: xl
+  - label: Law School Partnerships
+    to: /services/law-school-partnerships
+    variant: outline
+    icon: i-lucide-arrow-right
+    color: neutral
+    size: xl
+
+description: At Agape Christian Bar Prep, we help students succeed in law school and pass the bar with confidence. Our personalized programs reduce stress,build essential skills, and support you at every stage of your legal journey.
 image: /AgapeHeroImage.png
 poster: /thumbnails/classroom.jpg
 title: Conquer Everything Law School. Master the Bar
@@ -80,7 +88,7 @@ title: Our Services
     to: /services/first-time-takers
     ---
     ::::
-  
+
     ::::courses-list-item
     ---
     badge: Bar Preperation
@@ -90,7 +98,7 @@ title: Our Services
     to: /services/repeat-takers
     ---
     ::::
-  
+
     ::::courses-list-item
     ---
     badge: Bar Preperation
@@ -100,7 +108,7 @@ title: Our Services
     to: /services/law-school-prep
     ---
     ::::
-  
+
     ::::courses-list-item
     ---
     badge: Bar Preperation
@@ -110,7 +118,7 @@ title: Our Services
     to: /services/multistate-bar-exam
     ---
     ::::
-  
+
     ::::courses-list-item
     ---
     badge: Bar Preperation
